@@ -76,7 +76,7 @@ See also: (Official IU Calendar for Spring 2019)[https://registrar.indiana.edu/o
 |-------|-------|--------------------------------|--------------------------------------|------------|
 | 01/07 | Mon   | Intro, Linux CLI               | [Essential Linux Commands][cli]      | A00a       |
 | 01/08 | Tues  | Python CLI, number conversion  | [Python builtin functions][pyth]     | A00b       |
-| 01/10 | Thurs | MyHDL, Autograder practice     | MyHDL manual [m1][1] [m2][2] [m3][3] | A00c       |
+| 01/10 | Thurs | MyHDL, Autograder practice     | MyHDL manual [1][m1] [2][m2] [3][m3] | A00c       |
 | 01/14 | Mon   | Boolean Logic                  | Ch.1                                 | A01        |
 | 01/15 | Tues  | truth tables                   |                                      |            |
 | 01/17 | Thurs | truth tables, continued        |                                      |            |
