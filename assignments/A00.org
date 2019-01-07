@@ -1,0 +1,189 @@
+#+TITLE: A00
+#+AUTHOR: Alex Shroyer
+#+OPTIONS: toc:nil date:nil num:nil
+
+* Linux CLI
+  Due: 2019/01/14 at 09:00 AM.
+
+  Get to know the Linux Command Line Interface (CLI).
+  This assignment can be done on the lab computers in Luddy 4111.
+
+  For extra style points (no extra credit though, sorry) you can optionally complete this assignment without ever physically visiting Luddy 4111.  Hint: use ~ssh~.
+
+* Background
+  Below is a crash course on using the Linux CLI.  Refer to https://beebom.com/essential-linux-commands/ for info on some of the commands used.
+
+  - Important :: No one is born knowing all of Linux (or any operating system for that matter).  It is fine to start small and grow your knowledge gradually, as needed.  You can accomplish a whole lot with just 5 commands: ~ls~, ~cd~, ~cat~, ~mkdir~, and ~rm~.  These 5 easily account for 80% of my CLI usage.
+
+** Terminal and Shell
+   The usual way to access the Linux CLI is through a program called a /terminal emulator/, or just /terminal/.  To get a terminal, you can browse through the programs to find one called ~xterm~ and click on it, or a slightly faster way is to type the Windows key on the keyboard, then start typing "t" "e" "r" "m" to search for programs on the machine.  When you see ~xterm~ you can select it with the arrow keys and hit Enter to run it.
+
+   The main point of the terminal is to display a grid of text characters, and to accept input from the keyboard.  The program that does most of the work of deciding /what characters/ get displayed is called the /Shell/.  Think of it as a "shell" of interactive functionality around the "core" or /Kernel/ of the operating system.  Most modern operating systems have a kernel with one or more "shells".  The shells can be text-based (as in this case) or graphical (think MacOS or Windows).  The default shell used by the terminal in SICE computers and many other Linux-based operating systems is called ~bash~.
+
+   - xterm :: a terminal emulator that provides a place for keyboard input and text output
+   - bash :: the default shell program
+
+   There are other terminal programs, and other shell programs.  The differences are typically minor.  Stick with the defaults if you're starting out.
+
+** Running Commands
+   After launching the terminal, you should see a small amount of text and a (possibly blinking) cursor.  You can type or paste in text-only commands, and typing the Enter key (or providing a newline character in your pasted text) will execute everything typed before the newline/Enter.
+
+   Examples:
+
+   #+begin_src shell
+ ashroyer@~ ls
+ ashroyer@~ ls -la
+ ashroyer@~ ls -la /tmp
+ ashroyer@~ pwd
+ ashroyer@~ man -k python
+ ashroyer@~ man -k python  # comments start with "#" and go to the end of the line
+   #+end_src
+
+   Notice the syntax: each line begins with a /prompt/ which is read-only (~ashroyer@~~), followed by a command.  Spaces separate different parts of commands.  Some only need the name of the command, such as ~ls~.  Others add /flags/ or /options/ to modify the command, such as ~ls -la~.  Still others take /arguments/ as in ~ls -la /tmp~ (the *argument* here is ~/tmp~).
+
+** If you are unsure
+   ~man~ pages can take some getting used to.  For quick examples, check out the tldr pages.  They don't replace the ~man~ pages, but are a good supplement: https://tldr.ostera.io/
+
+   In addition, there is built-in help and user manuals in Linux, but because it's text-only you have to know how to find it.
+
+   - man :: the "manual" pages.  ~man ls~ sends you to the manual for ~ls~.  ~man -k python~ shows a list of manual pages related to python.  Pick one and use it as your next argument to ~man~.
+   - help :: for functionality built-in to the ~shell~.  Often overlaps with ~man~.
+
+   Running ~man python~ launches a special program called a /pager/ which is a read-only view of a file.  The default pager program is usually one called ~less~.  You can scroll down and up inside of ~less~ using the ~j~ and ~k~ keys, respectively.  You can quit the pager program to go back to the shell by typing ~q~, and you can search within the document by typing ~/~ followed by the word you want to find, then typing Enter.
+ 
+** Echo
+   The ~echo~ command takes whatever you type after the first space and repeats it back to you.
+
+   #+begin_src shell
+ ashroyer@~ echo stop copying me
+ stop copying me
+   #+end_src
+
+   This will actually come in handy later.
+
+** Redirection
+   Printing output to the terminal screen is useful, but sometimes we want to save the output of a command to a file.  The ~bash~ shell provides a single character command for this: ~>~, example:
+
+   #+begin_src shell
+ ashroyer@~ ls > myfile.txt
+   #+end_src
+
+   This saves the output of ~ls~ to a file called ~myfile.txt~.  If there was already a file with the same name, it is now overwritten.  There is no "are you sure?" prompt, so be sure when you type.  To /append/ to a file you can use ~>>~ instead:
+
+   #+begin_src shell
+ ashroyer@~ ls >> myfile.txt
+   #+end_src
+
+** Pipes
+   The output text of one command can be used as input for another command.  For example, you can run ~ls~ to see a list of folders and files, but if you want to know how many items total, you can send the output of ~ls~ into the program ~wc~ (word count).  For example:
+
+   #+begin_src shell
+ ashroyer@~ ls | wc  # newline count, word count, character count
+      26      26     276
+ ashroyer@~ ls | wc -l  # lines only
+ 26
+   #+end_src
+
+** Where does one command end and another begin?
+   This can be confusing when you're new to the CLI.  For the most part, "words" including commands, options, and arguments, are separated from each other by spaces.  But what if you want an argument that contains spaces?  This can often be solved by wrapping the multi-word phrase in double quotes:
+
+   #+begin_src shell
+ ashroyer@~ ls -lA | wc  # a command
+      67     596    4031
+ ashroyer@~ echo ls -lA | wc  # oops, this count the output of echo ls -lA, or just "ls -lA" (7 characters)
+       1       2       7
+ ashroyer@~ echo "ls -lA | wc"  # what I wanted instead was to echo the whole command
+ ls -lA | wc
+   #+end_src
+
+** PATHs through the file system
+   Most operating systems have the concept of /directories/ (or /folders/) and /files/.  Files are the data, and folders are places to put data or other folders.  Linux is no different, but in a text-only environment we have text-based ways to find files and run commands in different folders.
+
+   A command called ~pwd~, short for "print working directory" lists the full path from the root of the filesystem to your shell's current execution context.
+
+   Example (with output):
+
+   #+begin_src shell
+ ashroyer@~ pwd
+ /u/ashroyer
+   #+end_src
+
+   The first line contains the prompt and the command; the second line contains the output of ~pwd~.  Here, the working directory is ~/u/ashroyer~.  The first slash character (~/~) indicates the root of the filesystem.  The next part (~u~) is a folder called ~u~.  Next comes another slash, which serves to visually separate folders, and finally ~ashroyer~ which is another folder name.
+
+   This becomes clear if you /change directory/ and use ~pwd~ again.  The command ~cd~ changes directories.  It takes as argument the path to the directory you want to go to.
+
+   #+begin_src shell
+ ashroyer@~ cd /tmp
+ ashroyer@~ pwd
+ /tmp
+ ashroyer@~ cd
+ ashroyer@~ pwd
+ /u/ashroyer
+   #+end_src
+
+  
+   Above, I first changed my current directory to ~/tmp~, then I ran ~cd~ again (this time with no argument) and it sent me to ~/u/ashroyer~ again, because that's the *home directory* for my account.  The *home directory* is often abbreviated with a tilde: ~~~, as in ~cd ~/myfolder~ (which is short for ~cd /u/ashroyer/myfolder~).   Another nice feature of ~cd~ is when you want to change back to the previous directory, you can use ~cd -~.  This can save a lot of typing:
+
+   #+begin_src shell
+ ashroyer@~ cd /some/very/long/directory/path
+ ashroyer@~ cd /some/other/very/long/path
+ ashroyer@~ cd -
+ ashroyer@~ pwd
+ /some/very/long/directory/path
+   #+end_src
+
+   You can ~cd ..~ to move /up/ one directory, or ~cd ../../~ to move up two levels, etc:
+
+   #+begin_src shell
+ ashroyer@~ mkdir -p some/very/long/directory/path  # make directory
+ ashroyer@~ cd some/very/long/directory/path
+ ashroyer@~ pwd
+ /u/ashroyer/some/very/long/directory/path
+ ashroyer@~ cd ../
+ ashroyer@~ pwd
+ /u/ashroyer/some/very/long/directory
+ ashroyer@~ cd ../../../
+ ashroyer@~ pwd
+ /u/ashroyer/some
+   #+end_src
+
+   Finally, you can ~cd~ up and down a different path in a single command:
+
+   #+begin_src shell
+ ashroyer@~ cd some/very/long/directory/path
+ ashroyer@~ cd ../../../other/long/path
+ ashroyer@~ pwd
+ /u/ashroyer/some/other/long/path
+   #+end_src
+
+
+* Assignment
+  Using some of the [[https://beebom.com/essential-linux-commands/][Linux commands listed here]], plus output redirection (~>~ and ~>>~), create a text file called ~A00.txt~.  You can edit this file using a /text editor/ on the SICE machines (text editors include ~vim~, ~nano~, ~emacs~, and ~gedit~.  Use ~gedit~ if you don't prefer one of the others in that list.  However, do not use copy-paste from the terminal.
+
+  Begin by following these steps (run these *exact* commands in the terminal):
+
+  #+begin_src shell
+yourusername@~ mkdir -p ~/a/b/c  # make a nested group of folders
+yourusername@~ mkdir -p ~/a/x/y  # both b and x are directly "under" folder a
+yourusername@~ find ~/a >> ~/a/x/y/A00.txt  # create the file
+yourusername@~ cd ~/a/x/y  # change directory so we can use shorter path names
+yourusername@~ pwd >> A00.txt  # add the current working directory to the file
+  #+end_src
+
+  Your prompt will look different from this (no one is actually named ~yourusername~) but everyone's ~A00.txt~ will look the same for the first few lines.
+
+  To finish, append the output of 5 more commands to ~A00.txt~.  These *must* be commands which produce output, because otherwise it will be very boring.
+
+  However, before appending the output, list the commands you will be using.  For example, if I decided to forfeit some points and use only 2 commands (~ls~ and ~wc~), then my next steps would be:
+
+
+  #+begin_src shell
+yourusername@~ echo ls wc >> A00.txt # tell the graders what commands you will use
+yourusername@~ ls >> A00.txt # append the output of the first command to the file
+yourusername@~ wc >> A00.txt # append the output of the second command to the file
+  #+end_src
+
+  Submit your ~A00.txt~ to the Autograder before the due date for credit.
+
+  # TODO create autograder assignment
+
