@@ -20,6 +20,7 @@ Students will finish E110 with knowledge in:
 - intermediate Python
 
 # People
+
 | name            | role       | office     | email           |
 |-----------------|------------|------------|-----------------|
 | Alex Shroyer    | instructor | Luddy 4148 | ashroyer@iu.edu |
@@ -27,12 +28,14 @@ Students will finish E110 with knowledge in:
 | Daniel Osei     | AI         | Luddy 4125 | dosei@iu.edu    |
 
 # Classroom location, meeting times
+
 | section | lecture           | lab                      | location   |
 |---------|-------------------|--------------------------|------------|
 |   10678 | (Mon) 10:10-11:00 | (Tues;Thurs) 11:15-12:30 | Luddy 4111 |
 |   29714 | (Mon) 11:15-12:05 | (Tues;Thurs) 04:00-05:15 | Luddy 4111 |
 
 # Office Hours
+
 | time                | location   |
 |---------------------|------------|
 | (Tues) 01:00-02:00  | Luddy 4148 |
@@ -40,8 +43,8 @@ Students will finish E110 with knowledge in:
 
 # Materials/Textbooks
 - Textbook: /The Elements of Computing Systems/ by Noam Nisan and Shimon Schocken. ISBN 978-0262640688
-  This course covers chapters 1-6: https://www.nand2tetris.org/course
-- Python: Use the docs for Python version 3.7.2 (latest stable release): https://docs.python.org/3/
+  This course covers chapters 1-6 of the [Nand to Tetris course](https://www.nand2tetris.org/course)
+- Python: Use the [docs for Python version 3.7.2 (latest stable release)](https://docs.python.org/3/)
 - MyHDL: [Manual](http://docs.myhdl.org/en/stable/) and [Examples](http://www.myhdl.org/docs/examples/)
 
 # Conduct
