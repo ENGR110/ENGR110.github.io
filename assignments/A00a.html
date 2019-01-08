@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-01-08 Tue 10:24 -->
+<!-- 2019-01-08 Tue 10:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 00a</title>
@@ -230,11 +230,14 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Assignment 00a</h1>
+<h1 class="title">Assignment 00a
+<br />
+<span class="subtitle">Linux CLI</span>
+</h1>
 
-<div id="outline-container-org5472e50" class="outline-2">
-<h2 id="org5472e50">Linux CLI</h2>
-<div class="outline-text-2" id="text-org5472e50">
+<div id="outline-container-orgd07063d" class="outline-2">
+<h2 id="orgd07063d">Linux CLI</h2>
+<div class="outline-text-2" id="text-orgd07063d">
 <p>
 Due: 2019/01/14 at 09:00 AM.
 </p>
@@ -250,9 +253,9 @@ For extra style points (no extra credit though, sorry) you can optionally comple
 </div>
 </div>
 
-<div id="outline-container-org84d6a57" class="outline-2">
-<h2 id="org84d6a57">Background</h2>
-<div class="outline-text-2" id="text-org84d6a57">
+<div id="outline-container-orgd28c1ff" class="outline-2">
+<h2 id="orgd28c1ff">Background</h2>
+<div class="outline-text-2" id="text-orgd28c1ff">
 <p>
 Below is a crash course on using the Linux CLI.  Refer to <a href="https://beebom.com/essential-linux-commands/">https://beebom.com/essential-linux-commands/</a> for info on some of the commands used.
 </p>
@@ -262,9 +265,9 @@ Below is a crash course on using the Linux CLI.  Refer to <a href="https://beebo
 </dl>
 </div>
 
-<div id="outline-container-orgb2c7261" class="outline-3">
-<h3 id="orgb2c7261">Terminal and Shell</h3>
-<div class="outline-text-3" id="text-orgb2c7261">
+<div id="outline-container-org5f41cd4" class="outline-3">
+<h3 id="org5f41cd4">Terminal and Shell</h3>
+<div class="outline-text-3" id="text-org5f41cd4">
 <p>
 The usual way to access the Linux CLI is through a program called a <i>terminal emulator</i>, or just <i>terminal</i>.  To get a terminal, you can browse through the programs to find one called <code>xterm</code> and click on it, or a slightly faster way is to type the Windows key on the keyboard, then start typing "t" "e" "r" "m" to search for programs on the machine.  When you see <code>xterm</code> you can select it with the arrow keys and hit Enter to run it.
 </p>
@@ -284,9 +287,9 @@ There are other terminal programs, and other shell programs.  The differences ar
 </div>
 </div>
 
-<div id="outline-container-org1737768" class="outline-3">
-<h3 id="org1737768">Running Commands</h3>
-<div class="outline-text-3" id="text-org1737768">
+<div id="outline-container-org4ae5825" class="outline-3">
+<h3 id="org4ae5825">Running Commands</h3>
+<div class="outline-text-3" id="text-org4ae5825">
 <p>
 After launching the terminal, you should see a small amount of text and a (possibly blinking) cursor.  You can type or paste in text-only commands, and typing the Enter key (or providing a newline character in your pasted text) will execute everything typed before the newline/Enter.
 </p>
@@ -311,9 +314,9 @@ Notice the syntax: each line begins with a <i>prompt</i> which is read-only (<co
 </div>
 </div>
 
-<div id="outline-container-orgeb20041" class="outline-3">
-<h3 id="orgeb20041">If you are unsure</h3>
-<div class="outline-text-3" id="text-orgeb20041">
+<div id="outline-container-org590158e" class="outline-3">
+<h3 id="org590158e">If you are unsure</h3>
+<div class="outline-text-3" id="text-org590158e">
 <p>
 <code>man</code> pages can take some getting used to.  For quick examples, check out the tldr pages.  They don't replace the <code>man</code> pages, but are a good supplement: <a href="https://tldr.ostera.io/">https://tldr.ostera.io/</a>
 </p>
@@ -333,9 +336,9 @@ Running <code>man python</code> launches a special program called a <i>pager</i>
 </div>
 </div>
 
-<div id="outline-container-org2e2ff2b" class="outline-3">
-<h3 id="org2e2ff2b">Echo</h3>
-<div class="outline-text-3" id="text-org2e2ff2b">
+<div id="outline-container-org1af1ed1" class="outline-3">
+<h3 id="org1af1ed1">Echo</h3>
+<div class="outline-text-3" id="text-org1af1ed1">
 <p>
 The <code>echo</code> command takes whatever you type after the first space and repeats it back to you.
 </p>
@@ -352,9 +355,9 @@ This will actually come in handy later.
 </div>
 </div>
 
-<div id="outline-container-org5070ed5" class="outline-3">
-<h3 id="org5070ed5">Redirection</h3>
-<div class="outline-text-3" id="text-org5070ed5">
+<div id="outline-container-orgafc260c" class="outline-3">
+<h3 id="orgafc260c">Redirection</h3>
+<div class="outline-text-3" id="text-orgafc260c">
 <p>
 Printing output to the terminal screen is useful, but sometimes we want to save the output of a command to a file.  The <code>bash</code> shell provides a single character command for this: <code>&gt;</code>, example:
 </p>
@@ -375,9 +378,9 @@ This saves the output of <code>ls</code> to a file called <code>myfile.txt</code
 </div>
 </div>
 
-<div id="outline-container-org8215fd7" class="outline-3">
-<h3 id="org8215fd7">Pipes</h3>
-<div class="outline-text-3" id="text-org8215fd7">
+<div id="outline-container-org82c89d4" class="outline-3">
+<h3 id="org82c89d4">Pipes</h3>
+<div class="outline-text-3" id="text-org82c89d4">
 <p>
 The output text of one command can be used as input for another command.  For example, you can run <code>ls</code> to see a list of folders and files, but if you want to know how many items total, you can send the output of <code>ls</code> into the program <code>wc</code> (word count).  For example:
 </p>
@@ -392,9 +395,9 @@ ashroyer@~ ls | wc -l  <span style="color: #008b45;"># </span><span style="color
 </div>
 </div>
 
-<div id="outline-container-orgef2b2dd" class="outline-3">
-<h3 id="orgef2b2dd">Where does one command end and another begin?</h3>
-<div class="outline-text-3" id="text-orgef2b2dd">
+<div id="outline-container-org705e0ad" class="outline-3">
+<h3 id="org705e0ad">Where does one command end and another begin?</h3>
+<div class="outline-text-3" id="text-org705e0ad">
 <p>
 This can be confusing when you're new to the CLI.  For the most part, "words" including commands, options, and arguments, are separated from each other by spaces.  But what if you want an argument that contains spaces?  This can often be solved by wrapping the multi-word phrase in double quotes:
 </p>
@@ -411,9 +414,9 @@ ls -lA | wc
 </div>
 </div>
 
-<div id="outline-container-org7f3f74d" class="outline-3">
-<h3 id="org7f3f74d">PATHs through the file system</h3>
-<div class="outline-text-3" id="text-org7f3f74d">
+<div id="outline-container-orga319eb3" class="outline-3">
+<h3 id="orga319eb3">PATHs through the file system</h3>
+<div class="outline-text-3" id="text-orga319eb3">
 <p>
 Most operating systems have the concept of <i>directories</i> (or <i>folders</i>) and <i>files</i>.  Files are the data, and folders are places to put data or other folders.  Linux is no different, but in a text-only environment we have text-based ways to find files and run commands in different folders.
 </p>
@@ -498,9 +501,9 @@ ashroyer@~ pwd
 </div>
 
 
-<div id="outline-container-org3dfc3c6" class="outline-2">
-<h2 id="org3dfc3c6">Assignment</h2>
-<div class="outline-text-2" id="text-org3dfc3c6">
+<div id="outline-container-org09d347b" class="outline-2">
+<h2 id="org09d347b">Assignment</h2>
+<div class="outline-text-2" id="text-org09d347b">
 <p>
 Using some of the <a href="https://beebom.com/essential-linux-commands/">Linux commands listed here</a>, plus output redirection (<code>&gt;</code> and <code>&gt;&gt;</code>), create a text file called <code>A00a.txt</code>.  You can edit this file using a <i>text editor</i> on the SICE machines (text editors include <code>vim</code>, <code>nano</code>, <code>emacs</code>, and <code>gedit</code>.  Use <code>gedit</code> if you don't prefer one of the others in that list.  However, do not use copy-paste from the terminal.
 </p>

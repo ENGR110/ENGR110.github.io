@@ -1,4 +1,5 @@
-#+TITLE: Assignment 00-a
+#+TITLE: Assignment 00a
+#+SUBTITLE: Linux CLI
 #+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
