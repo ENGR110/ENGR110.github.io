@@ -1,6 +1,6 @@
-#+TITLE: A00
-#+AUTHOR: Alex Shroyer
-#+OPTIONS: toc:nil date:nil num:nil
+#+TITLE: Assignment 00-a
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
 * Linux CLI
   Due: 2019/01/14 at 09:00 AM.
@@ -88,11 +88,11 @@
    This can be confusing when you're new to the CLI.  For the most part, "words" including commands, options, and arguments, are separated from each other by spaces.  But what if you want an argument that contains spaces?  This can often be solved by wrapping the multi-word phrase in double quotes:
 
    #+begin_src shell
- ashroyer@~ ls -lA | wc  # a command
+ ashroyer@~ ls -lA | wc         # a command (ls -lA) piped into another command (wc)
       67     596    4031
- ashroyer@~ echo ls -lA | wc  # oops, this count the output of echo ls -lA, or just "ls -lA" (7 characters)
+ ashroyer@~ echo ls -lA | wc    # Oops! This counted the output of echo ls -lA ("ls -lA" ) which was only 7 characters
        1       2       7
- ashroyer@~ echo "ls -lA | wc"  # what I wanted instead was to echo the whole command
+ ashroyer@~ echo "ls -lA | wc"  # What I wanted instead was to echo the text of the command, rather than its output
  ls -lA | wc
    #+end_src
 
@@ -135,7 +135,7 @@
    You can ~cd ..~ to move /up/ one directory, or ~cd ../../~ to move up two levels, etc:
 
    #+begin_src shell
- ashroyer@~ mkdir -p some/very/long/directory/path  # make directory
+ ashroyer@~ mkdir -p some/very/long/directory/path  # mkdir means "make directory", the -p flag means "even if it doesn't already exist"
  ashroyer@~ cd some/very/long/directory/path
  ashroyer@~ pwd
  /u/ashroyer/some/very/long/directory/path
@@ -158,32 +158,32 @@
 
 
 * Assignment
-  Using some of the [[https://beebom.com/essential-linux-commands/][Linux commands listed here]], plus output redirection (~>~ and ~>>~), create a text file called ~A00.txt~.  You can edit this file using a /text editor/ on the SICE machines (text editors include ~vim~, ~nano~, ~emacs~, and ~gedit~.  Use ~gedit~ if you don't prefer one of the others in that list.  However, do not use copy-paste from the terminal.
+  Using some of the [[https://beebom.com/essential-linux-commands/][Linux commands listed here]], plus output redirection (~>~ and ~>>~), create a text file called ~A00a.txt~.  You can edit this file using a /text editor/ on the SICE machines (text editors include ~vim~, ~nano~, ~emacs~, and ~gedit~.  Use ~gedit~ if you don't prefer one of the others in that list.  However, do not use copy-paste from the terminal.
 
   Begin by following these steps (run these *exact* commands in the terminal):
 
   #+begin_src shell
-yourusername@~ mkdir -p ~/a/b/c  # make a nested group of folders
-yourusername@~ mkdir -p ~/a/x/y  # both b and x are directly "under" folder a
-yourusername@~ find ~/a >> ~/a/x/y/A00.txt  # create the file
-yourusername@~ cd ~/a/x/y  # change directory so we can use shorter path names
-yourusername@~ pwd >> A00.txt  # add the current working directory to the file
+yourusername@~ mkdir -p ~/a/b/c              # make a nested group of folders
+yourusername@~ mkdir -p ~/a/x/y              # both b and x are directly "under" folder a
+yourusername@~ find ~/a >> ~/a/x/y/A00a.txt  # create the file
+yourusername@~ cd ~/a/x/y                    # change directory so we can use shorter path names
+yourusername@~ pwd >> A00a.txt               # add the current working directory to the file
   #+end_src
 
-  Your prompt will look different from this (no one is actually named ~yourusername~) but everyone's ~A00.txt~ will look the same for the first few lines.
+  Your prompt will look different from this (no one is actually named ~yourusername~) but everyone's ~A00a.txt~ will look the same for the first few lines.
 
-  To finish, append the output of 5 more commands to ~A00.txt~.  These *must* be commands which produce output, because otherwise it will be very boring.
+  To finish, append the output of 5 more commands to ~A00a.txt~.  These *must* be commands which produce output, because otherwise it will be very boring.
 
   However, before appending the output, list the commands you will be using.  For example, if I decided to forfeit some points and use only 2 commands (~ls~ and ~wc~), then my next steps would be:
 
 
   #+begin_src shell
-yourusername@~ echo ls wc >> A00.txt # tell the graders what commands you will use
-yourusername@~ ls >> A00.txt # append the output of the first command to the file
-yourusername@~ wc >> A00.txt # append the output of the second command to the file
+yourusername@~ echo ls wc >> A00a.txt # tell the graders what commands you will use
+yourusername@~ ls >> A00a.txt         # append the output of the first command to the file
+yourusername@~ wc >> A00a.txt         # append the output of the second command to the file
   #+end_src
 
-  Submit your ~A00.txt~ to the Autograder before the due date for credit.
+  Submit your ~A00a.txt~ to the Autograder before the due date for credit.
 
   # TODO create autograder assignment
 
