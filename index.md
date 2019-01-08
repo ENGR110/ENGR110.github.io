@@ -97,40 +97,40 @@ See also: [Official IU Calendar for Spring 2019]
 | 01/21 | Mon   | MLK Jr. Day                    |                               |            |
 | 01/22 | Tues  | Gates: 16-input and/or/etc.    | [Ch.2] [slides2]              |            |
 | 01/24 | Thurs | Gates: Mux, Demux              |                               |            |
-| 01/28 | Mon   |                                |                               | [A03]      |
+| 01/28 | Mon   |                                |                               | [A02]      |
 | 01/29 | Tues  |                                |                               |            |
 | 01/31 | Thurs |                                |                               |            |
-| 02/04 | Mon   |                                | [Ch.2]                        | [A04]      |
+| 02/04 | Mon   |                                |                               | [A03]      |
 | 02/05 | Tues  |                                |                               |            |
 | 02/07 | Thurs |                                |                               |            |
-| 02/11 | Mon   |                                | [Ch.3] [slides3]              | [A05]      |
+| 02/11 | Mon   |                                | [Ch.3] [slides3]              | [A04]      |
 | 02/12 | Tues  |                                |                               |            |
 | 02/14 | Thurs |                                |                               |            |
-| 02/18 | Mon   |                                | [Ch.3]                        | [A06]      |
+| 02/18 | Mon   |                                |                               | [A05]      |
 | 02/19 | Tues  |                                |                               |            |
 | 02/21 | Thurs |                                |                               |            |
-| 02/25 | Mon   |                                | [Ch.4] [slides4]              | [A07]      |
+| 02/25 | Mon   |                                | [Ch.4] [slides4]              | [A06]      |
 | 02/26 | Tues  |                                |                               |            |
 | 02/28 | Thurs |                                |                               |            |
-| 03/04 | Mon   |                                |                               | [A08]      |
+| 03/04 | Mon   |                                |                               | [A07]      |
 | 03/05 | Tues  | Midterm Review                 |                               |            |
 | 03/07 | Thurs | Midterm - normal class time    |                               |            |
 | 03/11 | Mon   | Spring Break                   |                               |            |
 | 03/12 | Tues  | Spring Break                   |                               |            |
 | 03/14 | Thurs | Spring Break                   |                               |            |
-| 03/18 | Mon   |                                | [Ch.5] [slides5]              | [A09]      |
+| 03/18 | Mon   |                                | [Ch.5] [slides5]              |            |
 | 03/19 | Tues  |                                |                               |            |
 | 03/21 | Thurs |                                |                               |            |
-| 03/25 | Mon   |                                | [Ch.5]                        | [A10]      |
+| 03/25 | Mon   |                                |                               | [A08]      |
 | 03/26 | Tues  |                                |                               |            |
 | 03/28 | Thurs |                                |                               |            |
-| 04/01 | Mon   |                                | [Ch.6] [slides6]              | [A11]      |
+| 04/01 | Mon   |                                | [Ch.6] [slides6]              | [A09]      |
 | 04/02 | Tues  |                                |                               |            |
 | 04/04 | Thurs |                                |                               |            |
-| 04/08 | Mon   |                                | [Ch.6]                        | [A12]      |
+| 04/08 | Mon   |                                |                               | [A10]      |
 | 04/09 | Tues  |                                |                               |            |
 | 04/11 | Thurs |                                |                               |            |
-| 04/15 | Mon   |                                |                               |            |
+| 04/15 | Mon   |                                |                               | [A11]      |
 | 04/16 | Tues  |                                |                               |            |
 | 04/18 | Thurs |                                |                               |            |
 | 04/22 | Mon   |                                |                               |            |
