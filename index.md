@@ -74,28 +74,28 @@ See also: [Official IU Calendar for Spring 2019]
 
 | Date  | Day   | Topic                          | Reading                              | Assignment |
 |-------|-------|--------------------------------|--------------------------------------|------------|
-| 01/07 | Mon   | Intro, Linux CLI               | [Essential Linux Commands]           | [A00a]     |
-| 01/08 | Tues  | Python CLI, number conversion  | [Python builtin functions]           | [A00b]     |
-| 01/10 | Thurs | MyHDL, Autograder practice     | MyHDL manual [part1] [part2] [part3] | [A00c]     |
-| 01/14 | Mon   | Boolean Logic                  | [Ch.1]                               | [A01]      |
+| 01/07 | Mon   | Intro, Linux CLI               | [Essential Linux Commands]           |            |
+| 01/08 | Tues  | Python CLI, number conversion  | [Python builtin functions]           | [A00a]     |
+| 01/10 | Thurs | MyHDL, Autograder practice     | MyHDL manual [part1] [part2] [part3] | [A00b]     |
+| 01/14 | Mon   | Boolean Logic                  | [Ch.1] [slides1]                     | [A01]      |
 | 01/15 | Tues  | truth tables                   |                                      |            |
 | 01/17 | Thurs | truth tables, continued        |                                      |            |
 | 01/21 | Mon   | MLK Jr. Day                    |                                      |            |
-| 01/22 | Tues  | Gates: 16-input and/or/etc.    |                                      |            |
+| 01/22 | Tues  | Gates: 16-input and/or/etc.    | [Ch.2] [slides2]                     |            |
 | 01/24 | Thurs | Gates: Mux, Demux              |                                      |            |
-| 01/28 | Mon   |                                | [Ch.2]                               | [A03]      |
+| 01/28 | Mon   |                                |                                      | [A03]      |
 | 01/29 | Tues  |                                |                                      |            |
 | 01/31 | Thurs |                                |                                      |            |
 | 02/04 | Mon   |                                | [Ch.2]                               | [A04]      |
 | 02/05 | Tues  |                                |                                      |            |
 | 02/07 | Thurs |                                |                                      |            |
-| 02/11 | Mon   |                                | [Ch.3]                               | [A05]      |
+| 02/11 | Mon   |                                | [Ch.3] [slides3]                     | [A05]      |
 | 02/12 | Tues  |                                |                                      |            |
 | 02/14 | Thurs |                                |                                      |            |
 | 02/18 | Mon   |                                | [Ch.3]                               | [A06]      |
 | 02/19 | Tues  |                                |                                      |            |
 | 02/21 | Thurs |                                |                                      |            |
-| 02/25 | Mon   |                                | [Ch.4]                               | [A07]      |
+| 02/25 | Mon   |                                | [Ch.4] [slides4]                     | [A07]      |
 | 02/26 | Tues  |                                |                                      |            |
 | 02/28 | Thurs |                                |                                      |            |
 | 03/04 | Mon   |                                |                                      | [A08]      |
@@ -104,13 +104,13 @@ See also: [Official IU Calendar for Spring 2019]
 | 03/11 | Mon   | Spring Break                   |                                      |            |
 | 03/12 | Tues  | Spring Break                   |                                      |            |
 | 03/14 | Thurs | Spring Break                   |                                      |            |
-| 03/18 | Mon   |                                | [Ch.5]                               | [A09]      |
+| 03/18 | Mon   |                                | [Ch.5] [slides5]                     | [A09]      |
 | 03/19 | Tues  |                                |                                      |            |
 | 03/21 | Thurs |                                |                                      |            |
 | 03/25 | Mon   |                                | [Ch.5]                               | [A10]      |
 | 03/26 | Tues  |                                |                                      |            |
 | 03/28 | Thurs |                                |                                      |            |
-| 04/01 | Mon   |                                | [Ch.6]                               | [A11]      |
+| 04/01 | Mon   |                                | [Ch.6] [slides6]                     | [A11]      |
 | 04/02 | Tues  |                                |                                      |            |
 | 04/04 | Thurs |                                |                                      |            |
 | 04/08 | Mon   |                                | [Ch.6]                               | [A12]      |
@@ -142,3 +142,9 @@ See also: [Official IU Calendar for Spring 2019]
 [Ch.5]: https://docs.wixstatic.com/ugd/44046b_b2cad2eea33847869b86c541683551a7.pdf
 [Ch.6]: https://docs.wixstatic.com/ugd/44046b_89a8e226476741a3b7c5204575b8a0b2.pdf
 [A00a]: assignments/A00a.html
+[slides1]: https://drive.google.com/file/d/1MY1buFHo_Wx5DPrKhCNSA2cm5ltwFJzM/view
+[slides2]: https://docs.wixstatic.com/ugd/56440f_2e6113c60ec34ed0bc2035c9d1313066.pdf
+[slides3]: https://docs.wixstatic.com/ugd/56440f_3b9f5721e3e149fba8687847da395c43.pdf
+[slides4]: https://docs.wixstatic.com/ugd/56440f_12f488fe481344328506857e6a799f79.pdf
+[slides5]: https://docs.wixstatic.com/ugd/56440f_96cbb9c6b8b84760a04c369453b62908.pdf
+[slides6]: https://docs.wixstatic.com/ugd/56440f_65a2d8eef0ed4e0ea2471030206269b5.pdf
