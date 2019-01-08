@@ -41,6 +41,14 @@ Students will finish E110 with knowledge in:
 | (Tues) 01:00-02:00  | Luddy 4148 |
 | (Thurs) 01:00-02:00 | Luddy 4148 |
 
+# Announcements
+We will post to Canvas with updates/clarifications/announcements.  By default, you should already have notifications from Canvas enabled.  It is your responsibility to ensure you can receive such announcements.
+
+# Autograder
+We will an automated grading system for assignments: https://autograder.sice.indiana.edu 
+
+For security reasons, you must access it through the IU network - either access it while on campus, or use a [VPN] service to make the site think you're on campus.
+
 # Materials/Textbooks
 - Textbook: /The Elements of Computing Systems/ by Noam Nisan and Shimon Schocken. ISBN 978-0262640688
   This course covers chapters 1-6 of the [Nand to Tetris course](https://www.nand2tetris.org/course)
@@ -48,22 +56,28 @@ Students will finish E110 with knowledge in:
 - MyHDL: [Manual](http://docs.myhdl.org/en/stable/) and [Examples](http://www.myhdl.org/docs/examples/)
 
 # Conduct
-Lab/Classroom etiquette
+**Lab/Classroom etiquette**
 
 1. Respect others who want to work or listen quietly, minimize distractions.
 2. No food or open drinks.  Non-spill bottles are OK.
 3. Leave the lab at least as clean as you found it.
 4. Log out before leaving.
 
-Do your own work
-Collaboration for learning and helping each other is encouraged, however all assignments must be exclusively _your own work_.  Cheating results in 0 credit for the assignment, reporting to the Dean, and possible further consequences.
+**Do your own work**
+Collaboration for learning and helping each other is encouraged, however all assignments must be exclusively _your own work_.  Cheating results in 0 credit for the assignment, reporting to the Dean, and possible further consequences.  Cheating also includes allowing others to copy your work.
 
 See the [official IU policy](http://studentcode.iu.edu/responsibilities/academic-misconduct.html) for more information.
 
-No late work
+**No late work**
 You may submit multiple times to the Autograder; the highest scoring submission is the one that will be used in grading. No submissions after the deadline will be accepted. Sometimes the Autograder server may be heavily used and respond more slowly, so plan accordingly.
 
 Extensions may be given to _individuals_ in extreme circumstances, such as medical emergencies (Dr. note required). Extensions may be given to the **whole class**, if 5+ students request more time.
+
+**Disability Assistance**
+If you require accommodations for a disability, please let your instructor know within the first 3 weeks of the semester.  As soon as we are aware of your needs, we can work with the Office of Disability Services for Students (DSS) to help determine appropriate academic accommodations.  Any information you share with us will be treated as confidential.
+
+**Tutoring**
+SICE tutoring is available to all students.
 
 # Schedule
 See also: [Official IU Calendar for Spring 2019]
@@ -148,3 +162,4 @@ See also: [Official IU Calendar for Spring 2019]
 [slides4]: https://docs.wixstatic.com/ugd/56440f_12f488fe481344328506857e6a799f79.pdf
 [slides5]: https://docs.wixstatic.com/ugd/56440f_96cbb9c6b8b84760a04c369453b62908.pdf
 [slides6]: https://docs.wixstatic.com/ugd/56440f_65a2d8eef0ed4e0ea2471030206269b5.pdf
+[VPN]: https://kb.iu.edu/d/ajrq
