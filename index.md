@@ -71,7 +71,7 @@ See the [official IU policy](http://studentcode.iu.edu/responsibilities/academic
 **No late work**
 You may submit multiple times to the Autograder; the highest scoring submission is the one that will be used in grading. No submissions after the deadline will be accepted. Sometimes the Autograder server may be heavily used and respond more slowly, so plan accordingly.
 
-Extensions may be given to _individuals_ in extreme circumstances, such as medical emergencies (Dr. note required). Extensions may be given to the **whole class**, if 5+ students request more time.
+Extensions may, at the instructor's discretion, be given to _individuals_ in extreme circumstances, such as medical emergencies (Dr. note required).
 
 **Disability Assistance**
 If you require accommodations for a disability, please let your instructor know within the first 3 weeks of the semester.  As soon as we are aware of your needs, we can work with the Office of Disability Services for Students (DSS) to help determine appropriate academic accommodations.  Any information you share with us will be treated as confidential.
