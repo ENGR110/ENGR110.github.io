@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-01-08 Tue 09:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Assignment 00-a</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="lx" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Assignment 00-a</h1>
+
+<div id="outline-container-org0f9d2ae" class="outline-2">
+<h2 id="org0f9d2ae">Linux CLI</h2>
+<div class="outline-text-2" id="text-org0f9d2ae">
+<p>
+Due: 2019/01/14 at 09:00 AM.
+</p>
+
+<p>
+Get to know the Linux Command Line Interface (CLI).
+This assignment can be done on the lab computers in Luddy 4111.
+</p>
+
+<p>
+For extra style points (no extra credit though, sorry) you can optionally complete this assignment without ever physically visiting Luddy 4111.  Hint: use <code>ssh</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbdcf3b5" class="outline-2">
+<h2 id="orgbdcf3b5">Background</h2>
+<div class="outline-text-2" id="text-orgbdcf3b5">
+<p>
+Below is a crash course on using the Linux CLI.  Refer to <a href="https://beebom.com/essential-linux-commands/">https://beebom.com/essential-linux-commands/</a> for info on some of the commands used.
+</p>
+
+<dl class="org-dl">
+<dt>Important</dt><dd>No one is born knowing all of Linux (or any operating system for that matter).  It is fine to start small and grow your knowledge gradually, as needed.  You can accomplish a whole lot with just 5 commands: <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>mkdir</code>, and <code>rm</code>.  These 5 easily account for 80% of my CLI usage.</dd>
+</dl>
+</div>
+
+<div id="outline-container-orgbe5a52a" class="outline-3">
+<h3 id="orgbe5a52a">Terminal and Shell</h3>
+<div class="outline-text-3" id="text-orgbe5a52a">
+<p>
+The usual way to access the Linux CLI is through a program called a <i>terminal emulator</i>, or just <i>terminal</i>.  To get a terminal, you can browse through the programs to find one called <code>xterm</code> and click on it, or a slightly faster way is to type the Windows key on the keyboard, then start typing "t" "e" "r" "m" to search for programs on the machine.  When you see <code>xterm</code> you can select it with the arrow keys and hit Enter to run it.
+</p>
+
+<p>
+The main point of the terminal is to display a grid of text characters, and to accept input from the keyboard.  The program that does most of the work of deciding <i>what characters</i> get displayed is called the <i>Shell</i>.  Think of it as a "shell" of interactive functionality around the "core" or <i>Kernel</i> of the operating system.  Most modern operating systems have a kernel with one or more "shells".  The shells can be text-based (as in this case) or graphical (think MacOS or Windows).  The default shell used by the terminal in SICE computers and many other Linux-based operating systems is called <code>bash</code>.
+</p>
+
+<dl class="org-dl">
+<dt>xterm</dt><dd>a terminal emulator that provides a place for keyboard input and text output</dd>
+<dt>bash</dt><dd>the default shell program</dd>
+</dl>
+
+<p>
+There are other terminal programs, and other shell programs.  The differences are typically minor.  Stick with the defaults if you're starting out.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9890a15" class="outline-3">
+<h3 id="org9890a15">Running Commands</h3>
+<div class="outline-text-3" id="text-org9890a15">
+<p>
+After launching the terminal, you should see a small amount of text and a (possibly blinking) cursor.  You can type or paste in text-only commands, and typing the Enter key (or providing a newline character in your pasted text) will execute everything typed before the newline/Enter.
+</p>
+
+<p>
+Examples:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ ls
+ashroyer@~ ls -la
+ashroyer@~ ls -la /tmp
+ashroyer@~ pwd
+ashroyer@~ man -k python
+ashroyer@~ man -k python  <span style="color: #008b45;"># </span><span style="color: #008b45;">comments start with "#" and go to the end of the line</span>
+</pre>
+</div>
+
+<p>
+Notice the syntax: each line begins with a <i>prompt</i> which is read-only (<code>ashroyer@~</code>), followed by a command.  Spaces separate different parts of commands.  Some only need the name of the command, such as <code>ls</code>.  Others add <i>flags</i> or <i>options</i> to modify the command, such as <code>ls -la</code>.  Still others take <i>arguments</i> as in <code>ls -la /tmp</code> (the <b>argument</b> here is <code>/tmp</code>).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb3049be" class="outline-3">
+<h3 id="orgb3049be">If you are unsure</h3>
+<div class="outline-text-3" id="text-orgb3049be">
+<p>
+<code>man</code> pages can take some getting used to.  For quick examples, check out the tldr pages.  They don't replace the <code>man</code> pages, but are a good supplement: <a href="https://tldr.ostera.io/">https://tldr.ostera.io/</a>
+</p>
+
+<p>
+In addition, there is built-in help and user manuals in Linux, but because it's text-only you have to know how to find it.
+</p>
+
+<dl class="org-dl">
+<dt>man</dt><dd>the "manual" pages.  <code>man ls</code> sends you to the manual for <code>ls</code>.  <code>man -k python</code> shows a list of manual pages related to python.  Pick one and use it as your next argument to <code>man</code>.</dd>
+<dt>help</dt><dd>for functionality built-in to the <code>shell</code>.  Often overlaps with <code>man</code>.</dd>
+</dl>
+
+<p>
+Running <code>man python</code> launches a special program called a <i>pager</i> which is a read-only view of a file.  The default pager program is usually one called <code>less</code>.  You can scroll down and up inside of <code>less</code> using the <code>j</code> and <code>k</code> keys, respectively.  You can quit the pager program to go back to the shell by typing <code>q</code>, and you can search within the document by typing <code>/</code> followed by the word you want to find, then typing Enter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge51e8d8" class="outline-3">
+<h3 id="orge51e8d8">Echo</h3>
+<div class="outline-text-3" id="text-orge51e8d8">
+<p>
+The <code>echo</code> command takes whatever you type after the first space and repeats it back to you.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ echo stop copying me
+stop copying me
+</pre>
+</div>
+
+<p>
+This will actually come in handy later.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28c3e07" class="outline-3">
+<h3 id="org28c3e07">Redirection</h3>
+<div class="outline-text-3" id="text-org28c3e07">
+<p>
+Printing output to the terminal screen is useful, but sometimes we want to save the output of a command to a file.  The <code>bash</code> shell provides a single character command for this: <code>&gt;</code>, example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ ls &gt; myfile.txt
+</pre>
+</div>
+
+<p>
+This saves the output of <code>ls</code> to a file called <code>myfile.txt</code>.  If there was already a file with the same name, it is now overwritten.  There is no "are you sure?" prompt, so be sure when you type.  To <i>append</i> to a file you can use <code>&gt;&gt;</code> instead:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ ls &gt;&gt; myfile.txt
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org54a9194" class="outline-3">
+<h3 id="org54a9194">Pipes</h3>
+<div class="outline-text-3" id="text-org54a9194">
+<p>
+The output text of one command can be used as input for another command.  For example, you can run <code>ls</code> to see a list of folders and files, but if you want to know how many items total, you can send the output of <code>ls</code> into the program <code>wc</code> (word count).  For example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ ls | wc  <span style="color: #008b45;"># </span><span style="color: #008b45;">newline count, word count, character count</span>
+     <span style="color: #259ea2;">26</span>      <span style="color: #259ea2;">26</span>     <span style="color: #259ea2;">276</span>
+ashroyer@~ ls | wc -l  <span style="color: #008b45;"># </span><span style="color: #008b45;">lines only</span>
+<span style="color: #259ea2;">26</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8690d45" class="outline-3">
+<h3 id="org8690d45">Where does one command end and another begin?</h3>
+<div class="outline-text-3" id="text-org8690d45">
+<p>
+This can be confusing when you're new to the CLI.  For the most part, "words" including commands, options, and arguments, are separated from each other by spaces.  But what if you want an argument that contains spaces?  This can often be solved by wrapping the multi-word phrase in double quotes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ ls -lA | wc         <span style="color: #008b45;"># </span><span style="color: #008b45;">a command (ls -lA) piped into another command (wc)</span>
+     <span style="color: #259ea2;">67</span>     <span style="color: #259ea2;">596</span>    <span style="color: #259ea2;">4031</span>
+ashroyer@~ echo ls -lA | wc    <span style="color: #008b45;"># </span><span style="color: #008b45;">Oops! This counted the output of echo ls -lA ("ls -lA" ) which was only 7 characters</span>
+      <span style="color: #259ea2;">1</span>       <span style="color: #259ea2;">2</span>       <span style="color: #259ea2;">7</span>
+ashroyer@~ echo <span style="color: #fa5151;">"ls -lA | wc"</span>  <span style="color: #008b45;"># </span><span style="color: #008b45;">What I wanted instead was to echo the text of the command, rather than its output</span>
+ls -lA | wc
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc97bdac" class="outline-3">
+<h3 id="orgc97bdac">PATHs through the file system</h3>
+<div class="outline-text-3" id="text-orgc97bdac">
+<p>
+Most operating systems have the concept of <i>directories</i> (or <i>folders</i>) and <i>files</i>.  Files are the data, and folders are places to put data or other folders.  Linux is no different, but in a text-only environment we have text-based ways to find files and run commands in different folders.
+</p>
+
+<p>
+A command called <code>pwd</code>, short for "print working directory" lists the full path from the root of the filesystem to your shell's current execution context.
+</p>
+
+<p>
+Example (with output):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ pwd
+/u/ashroyer
+</pre>
+</div>
+
+<p>
+The first line contains the prompt and the command; the second line contains the output of <code>pwd</code>.  Here, the working directory is <code>/u/ashroyer</code>.  The first slash character (<code>/</code>) indicates the root of the filesystem.  The next part (<code>u</code>) is a folder called <code>u</code>.  Next comes another slash, which serves to visually separate folders, and finally <code>ashroyer</code> which is another folder name.
+</p>
+
+<p>
+This becomes clear if you <i>change directory</i> and use <code>pwd</code> again.  The command <code>cd</code> changes directories.  It takes as argument the path to the directory you want to go to.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ cd /tmp
+ashroyer@~ pwd
+/tmp
+ashroyer@~ cd
+ashroyer@~ pwd
+/u/ashroyer
+</pre>
+</div>
+
+
+<p>
+Above, I first changed my current directory to <code>/tmp</code>, then I ran <code>cd</code> again (this time with no argument) and it sent me to <code>/u/ashroyer</code> again, because that's the <b>home directory</b> for my account.  The <b>home directory</b> is often abbreviated with a tilde: <code>~</code>, as in <code>cd ~/myfolder</code> (which is short for <code>cd /u/ashroyer/myfolder</code>).   Another nice feature of <code>cd</code> is when you want to change back to the previous directory, you can use <code>cd -</code>.  This can save a lot of typing:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ cd /some/very/long/directory/path
+ashroyer@~ cd /some/other/very/long/path
+ashroyer@~ cd -
+ashroyer@~ pwd
+/some/very/long/directory/path
+</pre>
+</div>
+
+<p>
+You can <code>cd ..</code> to move <i>up</i> one directory, or <code>cd ../../</code> to move up two levels, etc:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ mkdir -p some/very/long/directory/path  <span style="color: #008b45;"># </span><span style="color: #008b45;">mkdir means "make directory", the -p flag means "even if it doesn't already exist"</span>
+ashroyer@~ cd some/very/long/directory/path
+ashroyer@~ pwd
+/u/ashroyer/some/very/long/directory/path
+ashroyer@~ cd ../
+ashroyer@~ pwd
+/u/ashroyer/some/very/long/directory
+ashroyer@~ cd ../../../
+ashroyer@~ pwd
+/u/ashroyer/some
+</pre>
+</div>
+
+<p>
+Finally, you can <code>cd</code> up and down a different path in a single command:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">ashroyer@~ cd some/very/long/directory/path
+ashroyer@~ cd ../../../other/long/path
+ashroyer@~ pwd
+/u/ashroyer/some/other/long/path
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org7007846" class="outline-2">
+<h2 id="org7007846">Assignment</h2>
+<div class="outline-text-2" id="text-org7007846">
+<p>
+Using some of the <a href="https://beebom.com/essential-linux-commands/">Linux commands listed here</a>, plus output redirection (<code>&gt;</code> and <code>&gt;&gt;</code>), create a text file called <code>A00a.txt</code>.  You can edit this file using a <i>text editor</i> on the SICE machines (text editors include <code>vim</code>, <code>nano</code>, <code>emacs</code>, and <code>gedit</code>.  Use <code>gedit</code> if you don't prefer one of the others in that list.  However, do not use copy-paste from the terminal.
+</p>
+
+<p>
+Begin by following these steps (run these <b>exact</b> commands in the terminal):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">yourusername@~ mkdir -p ~/a/b/c              <span style="color: #008b45;"># </span><span style="color: #008b45;">make a nested group of folders</span>
+yourusername@~ mkdir -p ~/a/x/y              <span style="color: #008b45;"># </span><span style="color: #008b45;">both b and x are directly "under" folder a</span>
+yourusername@~ find ~/a &gt;&gt; ~/a/x/y/A00a.txt  <span style="color: #008b45;"># </span><span style="color: #008b45;">create the file</span>
+yourusername@~ cd ~/a/x/y                    <span style="color: #008b45;"># </span><span style="color: #008b45;">change directory so we can use shorter path names</span>
+yourusername@~ pwd &gt;&gt; A00a.txt               <span style="color: #008b45;"># </span><span style="color: #008b45;">add the current working directory to the file</span>
+</pre>
+</div>
+
+<p>
+Your prompt will look different from this (no one is actually named <code>yourusername</code>) but everyone's <code>A00a.txt</code> will look the same for the first few lines.
+</p>
+
+<p>
+To finish, append the output of 5 more commands to <code>A00a.txt</code>.  These <b>must</b> be commands which produce output, because otherwise it will be very boring.
+</p>
+
+<p>
+However, before appending the output, list the commands you will be using.  For example, if I decided to forfeit some points and use only 2 commands (<code>ls</code> and <code>wc</code>), then my next steps would be:
+</p>
+
+
+<div class="org-src-container">
+<pre class="src src-shell">yourusername@~ echo ls wc &gt;&gt; A00a.txt <span style="color: #008b45;"># </span><span style="color: #008b45;">tell the graders what commands you will use</span>
+yourusername@~ ls &gt;&gt; A00a.txt         <span style="color: #008b45;"># </span><span style="color: #008b45;">append the output of the first command to the file</span>
+yourusername@~ wc &gt;&gt; A00a.txt         <span style="color: #008b45;"># </span><span style="color: #008b45;">append the output of the second command to the file</span>
+</pre>
+</div>
+
+<p>
+Submit your <code>A00a.txt</code> to the Autograder before the due date for credit.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
