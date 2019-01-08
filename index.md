@@ -1,9 +1,3 @@
----
-title: ENGR-E110
-subtitle: Engineering Computing Architecture
----
-<link rel="stylesheet" type="text/css" href="org.css"/>
-
 Welcome to E110!  "Engineering Computing Architecture" is about how computers are built from simpler components, and how they encode information into physical parts.  Along the way, we will also cover the Linux shell, Hardware Description Languages (HDL) and intermediate Python programming.
 
 # Prerequisites
