@@ -1,0 +1,12 @@
+#+TITLE: A00-b
+#+AUTHOR: Alex Shroyer
+#+OPTIONS: toc:nil date:nil num:nil
+
+* SSH and MyHDL
+This assignment will introduce ~ssh~ as well as ~MyHDL~.  ~ssh~ or /secure shell/ is a method for connecting from one computer to another over an encrypted channel.  While you may not have anything to hide, the encryption provides a measure of trust - you can be reasonably sure that your traffic is not being tampered with.
+
+In Linux, the syntax for connecting to the machine called ~silo.sice.indiana.edu~ is:
+
+#+begin_src
+ssh yourusername@silo.sice.indiana.edu
+#+end_src

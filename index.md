@@ -85,7 +85,7 @@ See also: [Official IU Calendar for Spring 2019]
  <!-- Linux Command-Line Interface (CLI): execute a program with arguments,  -->
  <!-- write a program that takes arguments. -->
  <!-- Digital Inputs and Outputs - valid designs, fan-in, fan-out, electrical characteristics -->
-
+ 
 | Date  | Day   | Topic                          | Reading                       | Assignment |
 |-------|-------|--------------------------------|-------------------------------|------------|
 | 01/07 | Mon   | Intro, Linux CLI               | [Essential Linux Commands]    |            |
