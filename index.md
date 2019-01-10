@@ -86,62 +86,62 @@ See also: [Official IU Calendar for Spring 2019]
  <!-- write a program that takes arguments. -->
  <!-- Digital Inputs and Outputs - valid designs, fan-in, fan-out, electrical characteristics -->
  
-| Date  | Day   | Topic                          | Reading                       | Assignment |
-|-------|-------|--------------------------------|-------------------------------|------------|
-| 01/07 | Mon   | Intro, Linux CLI               | [Essential Linux Commands]    |            |
-| 01/08 | Tues  | Python CLI, number conversion  | [Python builtin functions]    | [A00a]     |
-| 01/10 | Thurs | MyHDL, Autograder practice     | MyHDL manual [M1], [M2], [M3] | [A00b]     |
-| 01/14 | Mon   | Boolean Logic                  | [Ch1], [slides1]              | [A01]      |
-| 01/15 | Tues  | truth tables                   |                               |            |
-| 01/17 | Thurs | truth tables, continued        |                               |            |
-| 01/21 | Mon   | MLK Jr. Day                    |                               |            |
-| 01/22 | Tues  | Gates: 16-input and/or/etc.    | [Ch2] and [slides2]           |            |
-| 01/24 | Thurs | Gates: Mux, Demux              |                               |            |
-| 01/28 | Mon   |                                |                               | [A02]      |
-| 01/29 | Tues  |                                |                               |            |
-| 01/31 | Thurs |                                |                               |            |
-| 02/04 | Mon   |                                |                               | [A03]      |
-| 02/05 | Tues  |                                |                               |            |
-| 02/07 | Thurs |                                |                               |            |
-| 02/11 | Mon   |                                | [Ch3] and [slides3]           | [A04]      |
-| 02/12 | Tues  |                                |                               |            |
-| 02/14 | Thurs |                                |                               |            |
-| 02/18 | Mon   |                                |                               | [A05]      |
-| 02/19 | Tues  |                                |                               |            |
-| 02/21 | Thurs |                                |                               |            |
-| 02/25 | Mon   |                                | [Ch4] and [slides4]           | [A06]      |
-| 02/26 | Tues  |                                |                               |            |
-| 02/28 | Thurs |                                |                               |            |
-| 03/04 | Mon   |                                |                               | [A07]      |
-| 03/05 | Tues  | Midterm Review                 |                               |            |
-| 03/07 | Thurs | Midterm - normal class time    |                               |            |
-| 03/11 | Mon   | Spring Break                   |                               |            |
-| 03/12 | Tues  | Spring Break                   |                               |            |
-| 03/14 | Thurs | Spring Break                   |                               |            |
-| 03/18 | Mon   |                                | [Ch5] and [slides5]           |            |
-| 03/19 | Tues  |                                |                               |            |
-| 03/21 | Thurs |                                |                               |            |
-| 03/25 | Mon   |                                |                               | [A08]      |
-| 03/26 | Tues  |                                |                               |            |
-| 03/28 | Thurs |                                |                               |            |
-| 04/01 | Mon   |                                | [Ch6] and [slides6]           | [A09]      |
-| 04/02 | Tues  |                                |                               |            |
-| 04/04 | Thurs |                                |                               |            |
-| 04/08 | Mon   |                                |                               | [A10]      |
-| 04/09 | Tues  |                                |                               |            |
-| 04/11 | Thurs |                                |                               |            |
-| 04/15 | Mon   |                                |                               | [A11]      |
-| 04/16 | Tues  |                                |                               |            |
-| 04/18 | Thurs |                                |                               |            |
-| 04/22 | Mon   |                                |                               |            |
-| 04/23 | Tues  | Final Review                   | None                          | None       |
-| 04/25 | Thurs | Final Exam - normal class time | None                          | None       |
-| 04/29 | Mon   | Finals Week                    |                               |            |
-| 04/30 | Tues  | Finals Week                    |                               |            |
-| 05/02 | Thurs | Finals Week                    |                               |            |
-| 05/06 | Mon   |                                |                               |            |
-| 05/07 | Tues  |                                |                               |            |
-| 05/09 | Thurs | Semester Ends                  |                               |            |
+| Date  | Day   | Topic                          | Reading                           | Assignment |
+|-------|-------|--------------------------------|-----------------------------------|------------|
+| 01/07 | Mon   | Intro, Linux CLI               | [Essential Linux Commands]        |            |
+| 01/08 | Tues  | Python CLI, number conversion  | [Python builtin functions]        | [A00a]     |
+| 01/10 | Thurs | MyHDL, Autograder practice     | MyHDL manual [M1], [M2], [M3]     | [A00b]     |
+| 01/14 | Mon   | Boolean Logic                  | [Ch1][Ch1] and [slides1][slides1] | [A01]      |
+| 01/15 | Tues  | truth tables                   |                                   |            |
+| 01/17 | Thurs | truth tables, continued        |                                   |            |
+| 01/21 | Mon   | MLK Jr. Day                    |                                   |            |
+| 01/22 | Tues  | Gates: 16-input and/or/etc.    | [Ch2][Ch2] and [slides2][slides2] |            |
+| 01/24 | Thurs | Gates: Mux, Demux              |                                   |            |
+| 01/28 | Mon   |                                |                                   | [A02]      |
+| 01/29 | Tues  |                                |                                   |            |
+| 01/31 | Thurs |                                |                                   |            |
+| 02/04 | Mon   |                                |                                   | [A03]      |
+| 02/05 | Tues  |                                |                                   |            |
+| 02/07 | Thurs |                                |                                   |            |
+| 02/11 | Mon   |                                | [Ch3][Ch3] and [slides3][slides3] | [A04]      |
+| 02/12 | Tues  |                                |                                   |            |
+| 02/14 | Thurs |                                |                                   |            |
+| 02/18 | Mon   |                                |                                   | [A05]      |
+| 02/19 | Tues  |                                |                                   |            |
+| 02/21 | Thurs |                                |                                   |            |
+| 02/25 | Mon   |                                | [Ch4][Ch4] and [slides4][slides4] | [A06]      |
+| 02/26 | Tues  |                                |                                   |            |
+| 02/28 | Thurs |                                |                                   |            |
+| 03/04 | Mon   |                                |                                   | [A07]      |
+| 03/05 | Tues  | Midterm Review                 |                                   |            |
+| 03/07 | Thurs | Midterm - normal class time    |                                   |            |
+| 03/11 | Mon   | Spring Break                   |                                   |            |
+| 03/12 | Tues  | Spring Break                   |                                   |            |
+| 03/14 | Thurs | Spring Break                   |                                   |            |
+| 03/18 | Mon   |                                | [Ch5][Ch5] and [slides5][slides5] |            |
+| 03/19 | Tues  |                                |                                   |            |
+| 03/21 | Thurs |                                |                                   |            |
+| 03/25 | Mon   |                                |                                   | [A08]      |
+| 03/26 | Tues  |                                |                                   |            |
+| 03/28 | Thurs |                                |                                   |            |
+| 04/01 | Mon   |                                | [Ch6][Ch6] and [slides6][slides6] | [A09]      |
+| 04/02 | Tues  |                                |                                   |            |
+| 04/04 | Thurs |                                |                                   |            |
+| 04/08 | Mon   |                                |                                   | [A10]      |
+| 04/09 | Tues  |                                |                                   |            |
+| 04/11 | Thurs |                                |                                   |            |
+| 04/15 | Mon   |                                |                                   | [A11]      |
+| 04/16 | Tues  |                                |                                   |            |
+| 04/18 | Thurs |                                |                                   |            |
+| 04/22 | Mon   |                                |                                   |            |
+| 04/23 | Tues  | Final Review                   | None                              | None       |
+| 04/25 | Thurs | Final Exam - normal class time | None                              | None       |
+| 04/29 | Mon   | Finals Week                    |                                   |            |
+| 04/30 | Tues  | Finals Week                    |                                   |            |
+| 05/02 | Thurs | Finals Week                    |                                   |            |
+| 05/06 | Mon   |                                |                                   |            |
+| 05/07 | Tues  |                                |                                   |            |
+| 05/09 | Thurs | Semester Ends                  |                                   |            |
 
 [Essential Linux Commands]: https://beebom.com/essential-linux-commands/
 [Python builtin functions]: https://docs.python.org/3/library/functions.html#int
