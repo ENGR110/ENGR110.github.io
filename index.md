@@ -50,8 +50,9 @@ We will an automated grading system for assignments: [autograder link][autograde
 For security reasons, you must access it through the IU network - either access it while on campus, or use a [VPN] service to make the site think you're on campus.
 
 # Materials/Textbooks
-- Textbook: /The Elements of Computing Systems/ by Noam Nisan and Shimon Schocken. ISBN 978-0262640688
-  This course covers chapters 1-6 of the [Nand to Tetris course]
+- Textbook: _The Elements of Computing Systems_ by Noam Nisan and Shimon Schocken. ISBN 978-0262640688
+  
+  (This course covers chapters 1-6 of the [Nand to Tetris course])
 - Python: Use the [docs for Python version 3.7.2 (latest stable release)][python3doc]
 - MyHDL: [Manual](http://docs.myhdl.org/en/stable/) and [Examples](http://www.myhdl.org/docs/examples/)
 
@@ -64,19 +65,23 @@ For security reasons, you must access it through the IU network - either access 
 4. Log out before leaving.
 
 **Do your own work**
+
 Collaboration for learning and helping each other is encouraged, however all assignments must be exclusively _your own work_.  Cheating results in 0 credit for the assignment, reporting to the Dean, and possible further consequences.  Cheating also includes allowing others to copy your work.
 
 See the [official IU policy] for more information.
 
 **No late work**
+
 You may submit multiple times to the Autograder; the highest scoring submission is the one that will be used in grading. No submissions after the deadline will be accepted. Sometimes the Autograder server may be heavily used and respond more slowly, so plan accordingly.
 
 Extensions may, at the instructor's discretion, be given to _individuals_ in extreme circumstances, such as medical emergencies (Dr. note required).
 
 **Disability Assistance**
+
 If you require accommodations for a disability, please let your instructor know within the first 3 weeks of the semester.  As soon as we are aware of your needs, we can work with the Office of Disability Services for Students (DSS) to help determine appropriate academic accommodations.  Any information you share with us will be treated as confidential.
 
 **Tutoring**
+
 SICE tutoring is available to all students.
 
 # Schedule
@@ -164,3 +169,4 @@ See also: [Official IU Calendar for Spring 2019][iucal]
 [autograder]: https://autograder.sice.indiana.edu 
 [Nand to Tetris course]: https://www.nand2tetris.org/course
 [docs for Python version 3.7.2 (latest stable release)]: https://docs.python.org/3/
+[python3doc]: https://docs.python.org/3/index.html
