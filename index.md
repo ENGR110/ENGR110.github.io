@@ -156,6 +156,7 @@ See also: [Official IU Calendar for Spring 2019]
 [Ch.5]: https://docs.wixstatic.com/ugd/44046b_b2cad2eea33847869b86c541683551a7.pdf
 [Ch.6]: https://docs.wixstatic.com/ugd/44046b_89a8e226476741a3b7c5204575b8a0b2.pdf
 [A00a]: assignments/A00a.html
+[A00b]: assignments/A00b.html
 [slides1]: https://drive.google.com/file/d/1MY1buFHo_Wx5DPrKhCNSA2cm5ltwFJzM/view
 [slides2]: https://docs.wixstatic.com/ugd/56440f_2e6113c60ec34ed0bc2035c9d1313066.pdf
 [slides3]: https://docs.wixstatic.com/ugd/56440f_3b9f5721e3e149fba8687847da395c43.pdf
