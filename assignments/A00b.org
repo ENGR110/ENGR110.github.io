@@ -2,11 +2,42 @@
 #+AUTHOR: Alex Shroyer
 #+OPTIONS: toc:nil date:nil num:nil
 
-* SSH and MyHDL
-This assignment will introduce ~ssh~ as well as ~MyHDL~.  ~ssh~ or /secure shell/ is a method for connecting from one computer to another over an encrypted channel.  While you may not have anything to hide, the encryption provides a measure of trust - you can be reasonably sure that your traffic is not being tampered with.
+* SSH, SCP, Autograder
+  This assignment will introduce more tools: ~ssh~, ~scp~, and the Autograder.
 
-In Linux, the syntax for connecting to the machine called ~silo.sice.indiana.edu~ is:
+  ~ssh~ or /secure shell/ is a method for connecting from one computer to another over an encrypted channel.  
 
-#+begin_src
+** SSH
+   In Linux and MacOS, the syntax for connecting to the machine called ~silo.sice.indiana.edu~ is:
+
+   #+begin_src
 ssh yourusername@silo.sice.indiana.edu
-#+end_src
+   #+end_src
+
+   In Windows, you can use ~PuTTY~ to accomplish the same task.  Download PuTTY from [[https://putty.org/][here]], enter the name of the host (~silo.sice.indiana.edu~) and select SSH in the choices of protocol.  See [[https://the.earth.li/~sgtatham/putty/0.70/htmldoc/Chapter2.html#gs][the PuTTY documentation on SSH]] for more detail.
+
+   You can send more than just text over ssh, using a technology called ~X11~, which is similar to remote desktop or desktop sharing applications, except typically X11 only sends one application at a time (not the whole desktop).  That can be useful for using a graphical program on a remote machine.
+
+** SCP
+   For our purposes, the only other thing we might need in addition to ssh is the ability to move files from the remote machine to the local machine (or from local to remote).  A program for that is called ~scp~.
+
+   Here is how it works on MacOS and Linux:
+
+   #+begin_src shell
+# copy a file from my local machine's home directory to the home directory on silo:
+scp ~/thisfile.txt ashroyer@silo.sice.indiana.edu:~/thisfile.txt
+
+# copy a file from silo to my home directory, renaming it to "thisfile.txt" at the same time:
+scp ashroyer@silo.sice.indiana.edu:~/thatfile.txt ~/thisfile.txt
+
+# copy an entire folder from the remote:
+scp -r ashroyer@silo.sice.indiana.edu:/tmp/somefolder ~/my_local_copy_of_somefolder
+   #+end_src
+
+   For more examples, see the user manual (~man scp~ on MacOS or Linux) or the [[https://tldr.ostera.io/scp][tldr page]].
+
+   On Windows, you can use ~WinSCP~ [[https://winscp.net/eng/index.php][(link)]] which has the same functionality plus a graphical interface.
+
+** Autograder
+   Visit [[https://autograder.sice.indiana.edu/web/courses][autograder.sice.indiana.edu]] from an IU-networked computer (or use a [[https://kb.iu.edu/d/ajrq][VPN]] to get on the IU network) and find the link for [[https://autograder.sice.indiana.edu/web/course/7][Engr110 S19]].
+
