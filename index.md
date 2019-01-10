@@ -80,7 +80,7 @@ If you require accommodations for a disability, please let your instructor know 
 SICE tutoring is available to all students.
 
 # Schedule
-See also: [Official IU Calendar for Spring 2019]
+See also: [Official IU Calendar for Spring 2019][iucal]
  
 | Date  | Day   | Topic                          | Reading                           | Assignment |
 |-------|-------|--------------------------------|-----------------------------------|------------|
@@ -144,8 +144,7 @@ See also: [Official IU Calendar for Spring 2019]
 [M1]: http://docs.myhdl.org/en/stable/manual/preface.html
 [M2]: http://docs.myhdl.org/en/stable/manual/background.html
 [M3]: http://docs.myhdl.org/en/stable/manual/intro.html
-[Official IU Calendar for Spring 2019]: https://registrar.indiana.edu/official-calendar/official-calendar-spring.shtml?s=16w
-https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf
+[iucal]: https://registrar.indiana.edu/official-calendar/official-calendar-spring.shtml?s=16w
 [Ch1]: https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf
 [Ch2]: https://docs.wixstatic.com/ugd/44046b_f0eaab042ba042dcb58f3e08b46bb4d7.pdf
 [Ch3]: https://docs.wixstatic.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf
