@@ -45,14 +45,14 @@ Students will finish E110 with knowledge in:
 We will post to Canvas with updates/clarifications/announcements.  By default, you should already have notifications from Canvas enabled.  It is your responsibility to ensure you can receive such announcements.
 
 # Autograder
-We will an automated grading system for assignments: https://autograder.sice.indiana.edu 
+We will an automated grading system for assignments: [link][autograder link]
 
 For security reasons, you must access it through the IU network - either access it while on campus, or use a [VPN] service to make the site think you're on campus.
 
 # Materials/Textbooks
 - Textbook: /The Elements of Computing Systems/ by Noam Nisan and Shimon Schocken. ISBN 978-0262640688
-  This course covers chapters 1-6 of the [Nand to Tetris course](https://www.nand2tetris.org/course)
-- Python: Use the [docs for Python version 3.7.2 (latest stable release)](https://docs.python.org/3/)
+  This course covers chapters 1-6 of the [Nand to Tetris course]
+- Python: Use the [docs for Python version 3.7.2 (latest stable release)][python3doc]
 - MyHDL: [Manual](http://docs.myhdl.org/en/stable/) and [Examples](http://www.myhdl.org/docs/examples/)
 
 # Conduct
@@ -66,7 +66,7 @@ For security reasons, you must access it through the IU network - either access 
 **Do your own work**
 Collaboration for learning and helping each other is encouraged, however all assignments must be exclusively _your own work_.  Cheating results in 0 credit for the assignment, reporting to the Dean, and possible further consequences.  Cheating also includes allowing others to copy your work.
 
-See the [official IU policy](http://studentcode.iu.edu/responsibilities/academic-misconduct.html) for more information.
+See the [official IU policy] for more information.
 
 **No late work**
 You may submit multiple times to the Autograder; the highest scoring submission is the one that will be used in grading. No submissions after the deadline will be accepted. Sometimes the Autograder server may be heavily used and respond more slowly, so plan accordingly.
@@ -81,17 +81,13 @@ SICE tutoring is available to all students.
 
 # Schedule
 See also: [Official IU Calendar for Spring 2019]
- <!-- Python interpreter: REPL and CLI usage -->
- <!-- Linux Command-Line Interface (CLI): execute a program with arguments,  -->
- <!-- write a program that takes arguments. -->
- <!-- Digital Inputs and Outputs - valid designs, fan-in, fan-out, electrical characteristics -->
  
 | Date  | Day   | Topic                          | Reading                           | Assignment |
 |-------|-------|--------------------------------|-----------------------------------|------------|
 | 01/07 | Mon   | Intro, Linux CLI               | [Essential Linux Commands]        |            |
 | 01/08 | Tues  | Python CLI, number conversion  | [Python builtin functions]        | [A00a]     |
-| 01/10 | Thurs | MyHDL, Autograder practice     | MyHDL manual [M1], [M2], [M3]     | [A00b]     |
-| 01/14 | Mon   | Boolean Logic                  | [Ch1](Ch1) and [slides1](slides1) | [A01]      |
+| 01/10 | Thurs | Autograder practice            | MyHDL manual [M1], [M2], [M3]     | [A00b]     |
+| 01/14 | Mon   | MyHDL, Boolean Logic           | [Ch1](Ch1) and [slides1](slides1) | [A01]      |
 | 01/15 | Tues  | truth tables                   |                                   |            |
 | 01/17 | Thurs | truth tables, continued        |                                   |            |
 | 01/21 | Mon   | MLK Jr. Day                    |                                   |            |
@@ -165,3 +161,7 @@ https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf
 [slides5]: https://docs.wixstatic.com/ugd/56440f_96cbb9c6b8b84760a04c369453b62908.pdf
 [slides6]: https://docs.wixstatic.com/ugd/56440f_65a2d8eef0ed4e0ea2471030206269b5.pdf
 [VPN]: https://kb.iu.edu/d/ajrq
+[official IU policy]: http://studentcode.iu.edu/responsibilities/academic-misconduct.html
+[autograder link]: https://autograder.sice.indiana.edu 
+[Nand to Tetris course]: https://www.nand2tetris.org/course
+[docs for Python version 3.7.2 (latest stable release)]: https://docs.python.org/3/
