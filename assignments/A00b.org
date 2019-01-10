@@ -1,6 +1,7 @@
-#+TITLE: A00-b
-#+AUTHOR: Alex Shroyer
-#+OPTIONS: toc:nil date:nil num:nil
+#+TITLE: Assignment 00b
+#+SUBTITLE: SSH, SCP, Autograder
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
 * SSH, SCP, Autograder
   This assignment will introduce more tools: ~ssh~, ~scp~, and the Autograder.
