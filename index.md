@@ -45,7 +45,7 @@ Students will finish E110 with knowledge in:
 We will post to Canvas with updates/clarifications/announcements.  By default, you should already have notifications from Canvas enabled.  It is your responsibility to ensure you can receive such announcements.
 
 # Autograder
-We will an automated grading system for assignments: [link][autograder link]
+We will an automated grading system for assignments: [autograder link][autograder]
 
 For security reasons, you must access it through the IU network - either access it while on campus, or use a [VPN] service to make the site think you're on campus.
 
@@ -161,6 +161,6 @@ See also: [Official IU Calendar for Spring 2019][iucal]
 [slides6]: https://docs.wixstatic.com/ugd/56440f_65a2d8eef0ed4e0ea2471030206269b5.pdf
 [VPN]: https://kb.iu.edu/d/ajrq
 [official IU policy]: http://studentcode.iu.edu/responsibilities/academic-misconduct.html
-[autograder link]: https://autograder.sice.indiana.edu 
+[autograder]: https://autograder.sice.indiana.edu 
 [Nand to Tetris course]: https://www.nand2tetris.org/course
 [docs for Python version 3.7.2 (latest stable release)]: https://docs.python.org/3/
