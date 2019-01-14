@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-01-13 Sun 21:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ENGR-E110</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="assignments/org.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">ENGR-E110</h1>
+<p>
+Welcome to E110!  "Engineering Computing Architecture" is about how computers are built from simpler components, and how they encode information into physical parts.  Along the way, we will also cover the Linux shell, Hardware Description Languages (HDL) and intermediate Python programming.
+</p>
+
+<div id="outline-container-org54ef649" class="outline-2">
+<h2 id="org54ef649">Prerequisites</h2>
+<div class="outline-text-2" id="text-org54ef649">
+<p>
+Students should have already taken ENGR-E 101 Innovation and Design: <a href="https://registrar.indiana.edu/browser/soc4192/ENGR/ENGR-E101.shtml">https://registrar.indiana.edu/browser/soc4192/ENGR/ENGR-E101.shtml</a>
+</p>
+
+<p>
+Students should also come to E110 prepared with:
+</p>
+<ul class="org-ul">
+<li>intermediate computer literacy</li>
+<li>editing, saving, and sharing documents</li>
+<li>working knowledge of Windows, MacOS, and/or Linux</li>
+<li>beginner experience in Python programming language (variables, functions, loops, lists)</li>
+<li>beginner experience with electronics (knowledge of transistors, microcontrollers, voltage, electricity)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7f374de" class="outline-2">
+<h2 id="org7f374de">Outcomes</h2>
+<div class="outline-text-2" id="text-org7f374de">
+<p>
+Students will finish E110 with knowledge in:
+</p>
+<ul class="org-ul">
+<li>fundamentals of digital logic (gates from transistors, complex gates from simple gates)</li>
+<li>how a CPU is constructed, as a system, from simpler components</li>
+<li>number representations (decimal, hexadecimal, binary)</li>
+<li>Linux command-line interface (CLI)</li>
+<li>MyHDL (hardware description language in the form of a Python library)</li>
+<li>intermediate Python</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org21a309d" class="outline-2">
+<h2 id="org21a309d">People</h2>
+<div class="outline-text-2" id="text-org21a309d">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">name</th>
+<th scope="col" class="org-left">role</th>
+<th scope="col" class="org-left">office</th>
+<th scope="col" class="org-left">email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Alex Shroyer</td>
+<td class="org-left">instructor</td>
+<td class="org-left">Luddy 4148</td>
+<td class="org-left">ashroyer@iu.edu</td>
+</tr>
+
+<tr>
+<td class="org-left">Juliette Zerick</td>
+<td class="org-left">AI</td>
+<td class="org-left">Luddy 4125</td>
+<td class="org-left">jzerick@iu.edu</td>
+</tr>
+
+<tr>
+<td class="org-left">Daniel Osei</td>
+<td class="org-left">AI</td>
+<td class="org-left">Luddy 4125</td>
+<td class="org-left">dosei@iu.edu</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orge948465" class="outline-2">
+<h2 id="orge948465">Classroom location, meeting times</h2>
+<div class="outline-text-2" id="text-orge948465">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">section</th>
+<th scope="col" class="org-left">lecture</th>
+<th scope="col" class="org-left">lab</th>
+<th scope="col" class="org-left">location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">10678</td>
+<td class="org-left">(Mon) 10:10-11:00</td>
+<td class="org-left">(Tues;Thurs) 11:15-12:30</td>
+<td class="org-left">Luddy 4111</td>
+</tr>
+
+<tr>
+<td class="org-right">29714</td>
+<td class="org-left">(Mon) 11:15-12:05</td>
+<td class="org-left">(Tues;Thurs) 04:00-05:15</td>
+<td class="org-left">Luddy 4111</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orga27db4a" class="outline-2">
+<h2 id="orga27db4a">Office Hours</h2>
+<div class="outline-text-2" id="text-orga27db4a">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">time</th>
+<th scope="col" class="org-left">location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">(Tues) 01:00-02:00</td>
+<td class="org-left">Luddy 4148</td>
+</tr>
+
+<tr>
+<td class="org-left">(Thurs) 01:00-02:00</td>
+<td class="org-left">Luddy 4148</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgb27e2a4" class="outline-2">
+<h2 id="orgb27e2a4">Announcements</h2>
+<div class="outline-text-2" id="text-orgb27e2a4">
+<p>
+We will post to Canvas with updates/clarifications/announcements.  By default, you should already have notifications from Canvas enabled.  It is your responsibility to ensure you can receive such announcements.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c55835" class="outline-2">
+<h2 id="org6c55835">Autograder</h2>
+<div class="outline-text-2" id="text-org6c55835">
+<p>
+We will an automated grading system for assignments: <a href="https://autograder.sice.indiana.edu">autograder link</a>
+</p>
+
+<p>
+For security reasons, you must access it through the IU network - either access it while on campus, or use a [VPN] service to make the site think you're on campus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a3908e" class="outline-2">
+<h2 id="org5a3908e">Materials/Textbooks</h2>
+<div class="outline-text-2" id="text-org5a3908e">
+<ul class="org-ul">
+<li><p>
+Textbook: <span class="underline">The Elements of Computing Systems</span> by Noam Nisan and Shimon Schocken. ISBN 978-0262640688
+</p>
+
+<p>
+(This course covers chapters 1-6 of the [Nand to Tetris course])
+</p></li>
+<li>Python: Use the [docs for Python version 3.7.2 (latest stable release)][python3doc]</li>
+<li>MyHDL: [Manual](<a href="http://docs.myhdl.org/en/stable/">http://docs.myhdl.org/en/stable/</a>) and [Examples](<a href="http://www.myhdl.org/docs/examples/">http://www.myhdl.org/docs/examples/</a>)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org461ba55" class="outline-2">
+<h2 id="org461ba55">Conduct</h2>
+<div class="outline-text-2" id="text-org461ba55">
+<p>
+<b><b>Lab/Classroom etiquette</b></b>
+</p>
+
+<ol class="org-ol">
+<li>Respect others who want to work or listen quietly, minimize distractions.</li>
+<li>No food or open drinks.  Non-spill bottles are OK.</li>
+<li>Leave the lab at least as clean as you found it.</li>
+<li>Log out before leaving.</li>
+</ol>
+
+<p>
+<b><b>Do your own work</b></b>
+</p>
+
+<p>
+Collaboration for learning and helping each other is encouraged, however all assignments must be exclusively <span class="underline">your own work</span>.  Cheating results in 0 credit for the assignment, reporting to the Dean, and possible further consequences.  Cheating also includes allowing others to copy your work.
+</p>
+
+<p>
+See the [official IU policy] for more information.
+</p>
+
+<p>
+<b><b>No late work</b></b>
+</p>
+
+<p>
+You may submit multiple times to the Autograder; the highest scoring submission is the one that will be used in grading. No submissions after the deadline will be accepted. Sometimes the Autograder server may be heavily used and respond more slowly, so plan accordingly.
+</p>
+
+<p>
+Extensions may, at the instructor's discretion, be given to <span class="underline">individuals</span> in extreme circumstances, such as medical emergencies (Dr. note required).
+</p>
+
+<p>
+<b><b>Disability Assistance</b></b>
+</p>
+
+<p>
+If you require accommodations for a disability, please let your instructor know within the first 3 weeks of the semester.  As soon as we are aware of your needs, we can work with the Office of Disability Services for Students (DSS) to help determine appropriate academic accommodations.  Any information you share with us will be treated as confidential.
+</p>
+
+<p>
+<b><b>Tutoring</b></b>
+</p>
+
+<p>
+SICE tutoring is available to all students.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb668c3a" class="outline-2">
+<h2 id="orgb668c3a">Schedule</h2>
+<div class="outline-text-2" id="text-orgb668c3a">
+<p>
+See also: <a href="https://registrar.indiana.edu/official-calendar/official-calendar-spring.shtml?s=16w">Official IU Calendar for Spring 2019</a>
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Date</th>
+<th scope="col" class="org-left">Day</th>
+<th scope="col" class="org-left">Topic</th>
+<th scope="col" class="org-left">Reading</th>
+<th scope="col" class="org-left">Assignment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">01/07</td>
+<td class="org-left">Mon</td>
+<td class="org-left">Intro, Linux CLI</td>
+<td class="org-left">[Essential Linux Commands]</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">01/08</td>
+<td class="org-left">Tues</td>
+<td class="org-left">Python CLI, number conversion</td>
+<td class="org-left">[Python builtin functions]</td>
+<td class="org-left"><a href="./assignments/A00a.html">A00a</a></td>
+</tr>
+
+<tr>
+<td class="org-left">01/10</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">Autograder practice</td>
+<td class="org-left">MyHDL manual <a href="http://docs.myhdl.org/en/stable/manual/preface.html">M1</a>, <a href="http://docs.myhdl.org/en/stable/manual/background.html">M2</a>, <a href="http://docs.myhdl.org/en/stable/manual/intro.html">M3</a></td>
+<td class="org-left"><a href="./assignments/A00b.html">A00b</a></td>
+</tr>
+
+<tr>
+<td class="org-left">01/14</td>
+<td class="org-left">Mon</td>
+<td class="org-left">MyHDL, Boolean Logic</td>
+<td class="org-left"><a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf">Ch1</a> and <a href="https://drive.google.com/file/d/1MY1buFHo_Wx5DPrKhCNSA2cm5ltwFJzM/view">slides1</a></td>
+<td class="org-left">[A01]</td>
+</tr>
+
+<tr>
+<td class="org-left">01/15</td>
+<td class="org-left">Tues</td>
+<td class="org-left">truth tables</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">01/17</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">truth tables, continued</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">01/21</td>
+<td class="org-left">Mon</td>
+<td class="org-left">MLK Jr. Day</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">01/22</td>
+<td class="org-left">Tues</td>
+<td class="org-left">Gates: 16-input and/or/etc.</td>
+<td class="org-left">[Ch2] and [slides2]</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">01/24</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">Gates: Mux, Demux</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">01/28</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[A02]</td>
+</tr>
+
+<tr>
+<td class="org-left">01/29</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">01/31</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">02/04</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[A03]</td>
+</tr>
+
+<tr>
+<td class="org-left">02/05</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">02/07</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">02/11</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[Ch3] and [slides3]</td>
+<td class="org-left">[A04]</td>
+</tr>
+
+<tr>
+<td class="org-left">02/12</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">02/14</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">02/18</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[A05]</td>
+</tr>
+
+<tr>
+<td class="org-left">02/19</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">02/21</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">02/25</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[Ch4] and [slides4]</td>
+<td class="org-left">[A06]</td>
+</tr>
+
+<tr>
+<td class="org-left">02/26</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">02/28</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/04</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[A07]</td>
+</tr>
+
+<tr>
+<td class="org-left">03/05</td>
+<td class="org-left">Tues</td>
+<td class="org-left">Midterm Review</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/07</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">Midterm - normal class time</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/11</td>
+<td class="org-left">Mon</td>
+<td class="org-left">Spring Break</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/12</td>
+<td class="org-left">Tues</td>
+<td class="org-left">Spring Break</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/14</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">Spring Break</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/18</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[Ch5] and [slides5]</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/19</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/21</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/25</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[A08]</td>
+</tr>
+
+<tr>
+<td class="org-left">03/26</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">03/28</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">04/01</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[Ch6] and [slides6]</td>
+<td class="org-left">[A09]</td>
+</tr>
+
+<tr>
+<td class="org-left">04/02</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">04/04</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">04/08</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[A10]</td>
+</tr>
+
+<tr>
+<td class="org-left">04/09</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">04/11</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">04/15</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">[A11]</td>
+</tr>
+
+<tr>
+<td class="org-left">04/16</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">04/18</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">04/22</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">04/23</td>
+<td class="org-left">Tues</td>
+<td class="org-left">Final Review</td>
+<td class="org-left">None</td>
+<td class="org-left">None</td>
+</tr>
+
+<tr>
+<td class="org-left">04/25</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">Final Exam - normal class time</td>
+<td class="org-left">None</td>
+<td class="org-left">None</td>
+</tr>
+
+<tr>
+<td class="org-left">04/29</td>
+<td class="org-left">Mon</td>
+<td class="org-left">Finals Week</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">04/30</td>
+<td class="org-left">Tues</td>
+<td class="org-left">Finals Week</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">05/02</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">Finals Week</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">05/06</td>
+<td class="org-left">Mon</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">05/07</td>
+<td class="org-left">Tues</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">05/09</td>
+<td class="org-left">Thurs</td>
+<td class="org-left">Semester Ends</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+[Essential Linux Commands]: <a href="https://beebom.com/essential-linux-commands/">https://beebom.com/essential-linux-commands/</a>
+[Python builtin functions]: <a href="https://docs.python.org/3/library/functions.html#int">https://docs.python.org/3/library/functions.html#int</a>
+[M1]: 
+[M2]: 
+[M3]: 
+[iucal]: 
+[Ch1]: <a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf">https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf</a>
+[Ch2]: <a href="https://docs.wixstatic.com/ugd/44046b_f0eaab042ba042dcb58f3e08b46bb4d7.pdf">https://docs.wixstatic.com/ugd/44046b_f0eaab042ba042dcb58f3e08b46bb4d7.pdf</a>
+[Ch3]: <a href="https://docs.wixstatic.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf">https://docs.wixstatic.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf</a>
+[Ch4]: <a href="https://docs.wixstatic.com/ugd/44046b_7ef1c00a714c46768f08c459a6cab45a.pdf">https://docs.wixstatic.com/ugd/44046b_7ef1c00a714c46768f08c459a6cab45a.pdf</a>
+[Ch5]: <a href="https://docs.wixstatic.com/ugd/44046b_b2cad2eea33847869b86c541683551a7.pdf">https://docs.wixstatic.com/ugd/44046b_b2cad2eea33847869b86c541683551a7.pdf</a>
+[Ch6]: <a href="https://docs.wixstatic.com/ugd/44046b_89a8e226476741a3b7c5204575b8a0b2.pdf">https://docs.wixstatic.com/ugd/44046b_89a8e226476741a3b7c5204575b8a0b2.pdf</a>
+</p>
+
+<p>
+[A00a]: 
+[A00b]: 
+</p>
+
+<p>
+[slides1]: 
+[slides2]: <a href="https://docs.wixstatic.com/ugd/56440f_2e6113c60ec34ed0bc2035c9d1313066.pdf">https://docs.wixstatic.com/ugd/56440f_2e6113c60ec34ed0bc2035c9d1313066.pdf</a>
+[slides3]: <a href="https://docs.wixstatic.com/ugd/56440f_3b9f5721e3e149fba8687847da395c43.pdf">https://docs.wixstatic.com/ugd/56440f_3b9f5721e3e149fba8687847da395c43.pdf</a>
+[slides4]: <a href="https://docs.wixstatic.com/ugd/56440f_12f488fe481344328506857e6a799f79.pdf">https://docs.wixstatic.com/ugd/56440f_12f488fe481344328506857e6a799f79.pdf</a>
+[slides5]: <a href="https://docs.wixstatic.com/ugd/56440f_96cbb9c6b8b84760a04c369453b62908.pdf">https://docs.wixstatic.com/ugd/56440f_96cbb9c6b8b84760a04c369453b62908.pdf</a>
+[slides6]: <a href="https://docs.wixstatic.com/ugd/56440f_65a2d8eef0ed4e0ea2471030206269b5.pdf">https://docs.wixstatic.com/ugd/56440f_65a2d8eef0ed4e0ea2471030206269b5.pdf</a>
+[VPN]: <a href="https://kb.iu.edu/d/ajrq">https://kb.iu.edu/d/ajrq</a>
+[official IU policy]: <a href="http://studentcode.iu.edu/responsibilities/academic-misconduct.html">http://studentcode.iu.edu/responsibilities/academic-misconduct.html</a>
+[autograder]: 
+[Nand to Tetris course]: <a href="https://www.nand2tetris.org/course">https://www.nand2tetris.org/course</a>
+[docs for Python version 3.7.2 (latest stable release)]: <a href="https://docs.python.org/3/">https://docs.python.org/3/</a>
+[python3doc]: <a href="https://docs.python.org/3/index.html">https://docs.python.org/3/index.html</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
