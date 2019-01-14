@@ -119,7 +119,7 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
   | 02/18 | Mon   |                                |                          | [[./assignments/A05.html][A05]]        |
   | 02/19 | Tues  |                                |                          |            |
   | 02/21 | Thurs |                                |                          |            |
-  | 02/25 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_7ef1c00a714c46768f08c459a6cab45a.pdf][Ch4]] and [[https://docs.wixstatic.com/ugd/56440f_12f488fe481344328506857e6a799f79.pdf][slides4]]          | [[A06.html][A06]]        |
+  | 02/25 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_7ef1c00a714c46768f08c459a6cab45a.pdf][Ch4]] and [[https://docs.wixstatic.com/ugd/56440f_12f488fe481344328506857e6a799f79.pdf][slides4]]          | [[./assignments/A06.html][A06]]        |
   | 02/26 | Tues  |                                |                          |            |
   | 02/28 | Thurs |                                |                          |            |
   | 03/04 | Mon   |                                |                          | [[./assignments/A07.html][A07]]        |
