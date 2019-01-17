@@ -30,20 +30,24 @@
 * Background
   Recall that Nand is a "universal gate" and can be used to construct all the other gates.
 
-  For example, Not can be synthesized from Nand like this (pseudocode):
+  For example, if ~Nand~ was a regular function in Python, it might look like this:
 
-  #+begin_src python
-  not_x = Nand(x, 1)  # make one of the inputs 1
-  #end_src
 
-  There can be multiple correct solutions, so the following also works:
+  We could use it to generate the other Boolean functions.
 
-  #+begin_src python
-  not_x = Nand(x, x)  # copy both inputs
-  #end_src
+  #+BEGIN_SRC python
+def Not(x):
+    return Nand(x, 1)
+
+def Or(x, y):
+    return Nand(Not(x), Not(y))
+
+def And(x, y):
+    return Not(Nand(x, y))
+  #END_SRC
+
+  Similarly we could write functions in terms of Nand:
 
 * MyHDL boilerplate
   For each primitive gate, you can start with the following "boilerplate" code and add your implementation.
 
-  #+begin_src python
-  #+end_src
