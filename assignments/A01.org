@@ -1,0 +1,49 @@
+#+TITLE: Assignment 01
+#+SUBTITLE: Logic Gates in MyHDL
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
+
+* Assignment
+  Using only ~Nand~, ~0~, and ~1~, create MyHDL code for the following functions (see also Figure 1.2 in [[https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf][Ch1]]):
+
+  | Function    | x                                  | 0 0 1 1 |
+  |             | y                                  | 0 1 0 1 |
+  |-------------+------------------------------------+---------|
+  | constant 0  | 0                                  | 0 0 0 0 |
+  | And         | x and y                            | 0 0 0 1 |
+  | x And Not y | x and (not y)                      | 0 0 1 0 |
+  | x           | x                                  | 0 0 1 1 |
+  | Not x And y | not (x and y)                      | 0 1 0 0 |
+  | y           | y                                  | 0 1 0 1 |
+  | Xor         | (x and (not y)) or (not (x and y)) | 0 1 1 0 |
+  | Or          | x or y                             | 0 1 1 1 |
+  | Nor         | not (x or y)                       | 1 0 0 0 |
+  | Equivalence | x is y                             | 1 0 0 1 |
+  | Not y       | not y                              | 1 0 1 0 |
+  | If y then x | x or (not y)                       | 1 0 1 1 |
+  | Not x       | not x                              | 1 1 0 0 |
+  | If x then y | (not x) or y                       | 1 1 0 1 |
+  | Nand        | not (x and y)                      | 1 1 1 0 |
+  | constant 1  | 1                                  | 1 1 1 1 |
+
+
+* Background
+  Recall that Nand is a "universal gate" and can be used to construct all the other gates.
+
+  For example, Not can be synthesized from Nand like this (pseudocode):
+
+  #+begin_src python
+  not_x = Nand(x, 1)  # make one of the inputs 1
+  #end_src
+
+  There can be multiple correct solutions, so the following also works:
+
+  #+begin_src python
+  not_x = Nand(x, x)  # copy both inputs
+  #end_src
+
+* MyHDL boilerplate
+  For each primitive gate, you can start with the following "boilerplate" code and add your implementation.
+
+  #+begin_src python
+  #+end_src
