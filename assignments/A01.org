@@ -4,7 +4,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
 * Assignment
-  Using only ~Nand~, ~0~, and ~1~, create MyHDL code for the following functions (see also Figure 1.2 in [[https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf][Ch1]]):
+  Using only ~Nand~, ~0~, and ~1~, create MyHDL code for the following 16 functions (see also Figure 1.2 in [[https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf][Ch1]]).  Submissions are due 1 week after A01 appears in the autograder.
 
   | Function    | x                                  | 0 0 1 1 |
   |             | y                                  | 0 1 0 1 |
@@ -178,6 +178,7 @@ def test_one(func):
 A complete example like you would turn in for ~Or~ is shown below:
 
 #+begin_src python
+# save this file as Or.py
 from myhdl import block, always_comb, Signal
 from Nand import Nand
 from Not import Not
