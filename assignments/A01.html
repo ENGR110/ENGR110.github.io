@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-01-18 Fri 10:22 -->
+<!-- 2019-01-18 Fri 13:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 01</title>
@@ -235,9 +235,9 @@ for the JavaScript code in this tag.
 <span class="subtitle">Logic Gates in MyHDL</span>
 </h1>
 
-<div id="outline-container-org11f674f" class="outline-2">
-<h2 id="org11f674f">Assignment</h2>
-<div class="outline-text-2" id="text-org11f674f">
+<div id="outline-container-orgaef1690" class="outline-2">
+<h2 id="orgaef1690">Assignment</h2>
+<div class="outline-text-2" id="text-orgaef1690">
 <p>
 Using only <code>Nand</code>, <code>0</code>, and <code>1</code>, create MyHDL code for the following 16 functions (see also Figure 1.2 in <a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf">Ch1</a>).  Submissions are due 1 week after A01 appears in the autograder.
 </p>
@@ -383,15 +383,22 @@ The exact names of the files you should submit are:
 <li>Ifythenx.py</li>
 <li>Notx.py</li>
 <li>Ifxtheny.py</li>
-<li>Nand.py</li>
 <li>Constant1.py</li>
 </ul>
+
+<p>
+Note that you do not have to submit a <code>Nand.py</code> file. It will already be available for your modules to use.  Your files can use <code>from Nand import Nand</code> to use the provided implementation.  Also, your files can <code>import</code> other implementations you upload.  For example, if you uploaded <code>And.py</code>, <code>Or.py</code> and <code>Not.py</code>, then your implementation of <code>Xor.py</code> can include <code>from And import And</code> etc.
+</p>
+
+<p>
+Hint: when you are working on this assignment (either on your personal machine or silo), if you keep all these files in the same directory, it simplifies importing.
+</p>
 </div>
 </div>
 
-<div id="outline-container-orga675878" class="outline-2">
-<h2 id="orga675878">MyHDL boilerplate</h2>
-<div class="outline-text-2" id="text-orga675878">
+<div id="outline-container-org5ff6d85" class="outline-2">
+<h2 id="org5ff6d85">MyHDL boilerplate</h2>
+<div class="outline-text-2" id="text-org5ff6d85">
 <p>
 For each primitive gate, you can start with the following "boilerplate" code and add your implementation:
 </p>
@@ -443,9 +450,9 @@ For each primitive gate, you can start with the following "boilerplate" code and
 </div>
 </div>
 
-<div id="outline-container-orgcc26db2" class="outline-2">
-<h2 id="orgcc26db2">Provided gate: Nand</h2>
-<div class="outline-text-2" id="text-orgcc26db2">
+<div id="outline-container-org74f3ad0" class="outline-2">
+<h2 id="org74f3ad0">Provided gate: Nand</h2>
+<div class="outline-text-2" id="text-org74f3ad0">
 <p>
 Below is the implementation of <code>Nand</code>.  Remember that this one is allowed to use Python's <code>and</code> and <code>not</code> keywords.
 </p>
@@ -465,9 +472,9 @@ Below is the implementation of <code>Nand</code>.  Remember that this one is all
 </div>
 </div>
 
-<div id="outline-container-org1f7de54" class="outline-2">
-<h2 id="org1f7de54">Provided gate: Not</h2>
-<div class="outline-text-2" id="text-org1f7de54">
+<div id="outline-container-org06d6251" class="outline-2">
+<h2 id="org06d6251">Provided gate: Not</h2>
+<div class="outline-text-2" id="text-org06d6251">
 <p>
 Below is an implementation of <code>Not</code>, using <code>Nand</code> as its building block.
 </p>
@@ -492,9 +499,9 @@ Below is an implementation of <code>Not</code>, using <code>Nand</code> as its b
 </div>
 </div>
 
-<div id="outline-container-org2afe499" class="outline-2">
-<h2 id="org2afe499">Provided gate: Or</h2>
-<div class="outline-text-2" id="text-org2afe499">
+<div id="outline-container-org7bc55dc" class="outline-2">
+<h2 id="org7bc55dc">Provided gate: Or</h2>
+<div class="outline-text-2" id="text-org7bc55dc">
 <p>
 As a final example, the <code>Or</code> gate can be implmented using any of the gates already described (<code>Nand</code> and <code>Not</code>).
 </p>
@@ -525,9 +532,9 @@ As a final example, the <code>Or</code> gate can be implmented using any of the 
 </div>
 </div>
 </div>
-<div id="outline-container-orgdcce13d" class="outline-2">
-<h2 id="orgdcce13d">Test harness</h2>
-<div class="outline-text-2" id="text-orgdcce13d">
+<div id="outline-container-org142a30b" class="outline-2">
+<h2 id="org142a30b">Test harness</h2>
+<div class="outline-text-2" id="text-org142a30b">
 <p>
 You can use the following test harness for all of the 2-input gates.
 </p>
@@ -572,9 +579,9 @@ You can use the following test harness for all of the 2-input gates.
 </div>
 </div>
 </div>
-<div id="outline-container-org0aef1c9" class="outline-2">
-<h2 id="org0aef1c9">Comlete example: Or</h2>
-<div class="outline-text-2" id="text-org0aef1c9">
+<div id="outline-container-org558ba21" class="outline-2">
+<h2 id="org558ba21">Comlete example: Or</h2>
+<div class="outline-text-2" id="text-org558ba21">
 <p>
 A complete example like you would turn in for <code>Or</code> is shown below:
 </p>

@@ -44,9 +44,9 @@
   - Ifxtheny.py
   - Constant1.py
 
-Note that you do not have to submit a ~Nand.py~ file. It will already be available for your modules to use.  Your files can use ~from Nand import Nand~ to use the provided implementation.  Also, your files can ~import~ other implementations you upload.  For example, if you uploaded ~And.py~, ~Or.py~ and ~Not.py~, then your implementation of ~Xor.py~ can include ~from And import And~ etc.
+  Note that you do not have to submit a ~Nand.py~ file. It will already be available for your modules to use.  Your files can use ~from Nand import Nand~ to use the provided implementation.  Also, your files can ~import~ other implementations you upload.  For example, if you uploaded ~And.py~, ~Or.py~ and ~Not.py~, then your implementation of ~Xor.py~ can include ~from And import And~ etc.
 
-Hint: when you are working on this assignment (either on your personal machine or silo), if you keep all these files in the same directory, it simplifies importing.
+  Hint: when you are working on this assignment (either on your personal machine or silo), if you keep all these files in the same directory, it simplifies importing.
 
 * MyHDL boilerplate
   For each primitive gate, you can start with the following "boilerplate" code and add your implementation:
@@ -96,9 +96,9 @@ if __name__ == "__main__":
   #+end_src
 
 * Provided gate: Nand
-Below is the implementation of ~Nand~.  Remember that this one is allowed to use Python's ~and~ and ~not~ keywords.
+  Below is the implementation of ~Nand~.  Remember that this one is allowed to use Python's ~and~ and ~not~ keywords.
 
-#+begin_src python
+  #+begin_src python
 # filename: Nand.py
 from myhdl import block, always_comb
 
@@ -108,12 +108,12 @@ def Nand(a, b, out):
     def f():
         out.next = not (a and b)
     return f
-#+end_src
+  #+end_src
 
 * Provided gate: Not
-Below is an implementation of ~Not~, using ~Nand~ as its building block.
+  Below is an implementation of ~Not~, using ~Nand~ as its building block.
 
-#+begin_src python
+  #+begin_src python
 # filename: Not.py
 from myhdl import block, always_comb, Signal
 from Nand import Nand
@@ -128,12 +128,12 @@ def Not(a, z):
         z.next = out
 
     return f, n1
-#+end_src
+  #+end_src
 
 * Provided gate: Or
-As a final example, the ~Or~ gate can be implmented using any of the gates already described (~Nand~ and ~Not~).
+  As a final example, the ~Or~ gate can be implmented using any of the gates already described (~Nand~ and ~Not~).
 
-#+begin_src python
+  #+begin_src python
 # filename: Or.py
 from myhdl import block, always_comb, Signal, intbv
 
@@ -155,11 +155,11 @@ def Or(a, b, z):
         z.next = out
 
     return f, n1, n2, n3
-#+end_src
+  #+end_src
 * Test harness
-You can use the following test harness for all of the 2-input gates.
+  You can use the following test harness for all of the 2-input gates.
 
-#+begin_src python
+  #+begin_src python
 from myhdl import block, instance, delay, Signal
 
 # two-input gate test harness
@@ -195,11 +195,11 @@ def test_one(func):
             print(a, int(z))
 
     return fun1, tester
-#+end_src
+  #+end_src
 * Comlete example: Or
-A complete example like you would turn in for ~Or~ is shown below:
+  A complete example like you would turn in for ~Or~ is shown below:
 
-#+begin_src python
+  #+begin_src python
 # save this file as Or.py
 from myhdl import block, always_comb, Signal
 from Nand import Nand
@@ -226,4 +226,4 @@ def Or(a, b, z):
 if __name__ == "__main__":
     test = test_two(Or)
     test.run_sim()
-#+end_src
+  #+end_src
