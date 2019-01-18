@@ -211,5 +211,5 @@ if __name__ == "__main__":
 * Supplemental: implementations
 You can find implementations of ~Test.py~, ~Nand.py~, ~Or.py~, and ~Not.py~ here:
 
-https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/code/A01
+https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A01
 
