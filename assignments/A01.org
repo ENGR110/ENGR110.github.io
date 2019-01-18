@@ -13,7 +13,7 @@
   | And         | x and y                            | 0 0 0 1 |
   | x And Not y | x and (not y)                      | 0 0 1 0 |
   | x           | x                                  | 0 0 1 1 |
-  | Not x And y | not (x and y)                      | 0 1 0 0 |
+  | Not x And y | (not x) and y                      | 0 1 0 0 |
   | y           | y                                  | 0 1 0 1 |
   | Xor         | (x and (not y)) or (not (x and y)) | 0 1 1 0 |
   | Or          | x or y                             | 0 1 1 1 |
@@ -26,10 +26,29 @@
   | Nand        | not (x and y)                      | 1 1 1 0 |
   | constant 1  | 1                                  | 1 1 1 1 |
 
+  The exact names of the files you should submit are:
+
+  - Constant0.py
+  - And.py
+  - Xandnoty.py
+  - X.py
+  - Notxandy.py
+  - Y.py
+  - Xor.py
+  - Or.py
+  - Nor.py
+  - Equivalence.py
+  - Noty.py
+  - Ifythenx.py
+  - Notx.py
+  - Ifxtheny.py
+  - Nand.py
+  - Constant1.py
+
 * MyHDL boilerplate
   For each primitive gate, you can start with the following "boilerplate" code and add your implementation:
 
-#+begin_src python
+  #+begin_src python
 
 # common imports
 from myhdl import block, always_comb, Signal, instance, delay
@@ -71,7 +90,7 @@ if __name__ == "__main__":
     test = test_gate(And)  # replace And with the name of your function
     test.run_sim()
 
-#+end_src
+  #+end_src
 
 * Provided gate: Nand
 Below is the implementation of ~Nand~.  Remember that this one is allowed to use Python's ~and~ and ~not~ keywords.
