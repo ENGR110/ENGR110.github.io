@@ -209,9 +209,9 @@ if __name__ == "__main__":
     test.run_sim()
   #+end_src
 * Supplemental: implementations
-You can find implementations of ~Test.py~, ~Nand.py~, ~Or.py~, and ~Not.py~ here:
+  You can find implementations of ~Test.py~, ~Nand.py~, ~Or.py~, and ~Not.py~ here:
 
-https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A01
+  https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A01
 
-Note that you /do/ need to submit ~Not.py~.
+  Note that you /do/ need to submit ~Not.py~.
 
