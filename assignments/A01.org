@@ -26,28 +26,181 @@
   | Nand        | not (x and y)                      | 1 1 1 0 |
   | constant 1  | 1                                  | 1 1 1 1 |
 
-
-* Background
-  Recall that Nand is a "universal gate" and can be used to construct all the other gates.
-
-  For example, if ~Nand~ was a regular function in Python, it might look like this:
-
-
-  We could use it to generate the other Boolean functions.
-
-  #+BEGIN_SRC python
-def Not(x):
-    return Nand(x, 1)
-
-def Or(x, y):
-    return Nand(Not(x), Not(y))
-
-def And(x, y):
-    return Not(Nand(x, y))
-  #END_SRC
-
-  Similarly we could write functions in terms of Nand:
-
 * MyHDL boilerplate
-  For each primitive gate, you can start with the following "boilerplate" code and add your implementation.
+  For each primitive gate, you can start with the following "boilerplate" code and add your implementation:
 
+#+begin_src python
+
+# common imports
+from myhdl import block, always_comb, Signal, instance, delay
+
+# import any gates you've already built, if you need them
+from Nand import Nand
+
+
+# implement the gate
+@block
+def Name_of_gate_to_implement(a, b, z):
+    # probably make some signals here, connect Nand (and other) gates together
+
+    @always_comb
+    def f():
+        z.next = ??? # replace ??? with this block's output
+    
+    return f
+
+# last, add the test harness, replacing And with the name of the function currently being implmented
+# the code at the bottom will be mostly identical for all of the tests
+@block
+def test_gate(func):
+    a, b, z = [Signal(0) for _ in range(3)]
+    impl1 = func(a, b, z)  # assumes you follow the same convention of a, b, z for input_a, input_b, output
+
+    @instance
+    def tester():
+        print("a b z")
+        for i in [0, 1]:
+            for j in [0, 1]:
+                a.next, b.next = i, j
+                yield delay(1)
+                print(a, b, int(z))
+
+    return impl1, tester
+
+if __name__ == "__main__":
+    test = test_gate(And)  # replace And with the name of your function
+    test.run_sim()
+
+#+end_src
+
+* Provided gate: Nand
+Below is the implementation of ~Nand~.  Remember that this one is allowed to use Python's ~and~ and ~not~ keywords.
+
+#+begin_src python
+# filename: Nand.py
+from myhdl import block, always_comb
+
+@block
+def Nand(a, b, out):
+    @always_comb
+    def f():
+        out.next = not (a and b)
+    return f
+#+end_src
+
+* Provided gate: Not
+Below is an implementation of ~Not~, using ~Nand~ as its building block.
+
+#+begin_src python
+# filename: Not.py
+from myhdl import block, always_comb, Signal
+from Nand import Nand
+
+@block
+def Not(a, z):
+    out = Signal(0)
+    n1 = Nand(a, 1, out)
+
+    @always_comb
+    def f():
+        z.next = out
+
+    return f, n1
+#+end_src
+
+* Provided gate: Or
+As a final example, the ~Or~ gate can be implmented using any of the gates already described (~Nand~ and ~Not~).
+
+#+begin_src python
+# filename: Or.py
+from myhdl import block, always_comb, Signal, intbv
+
+from Nand import Nand
+from Not import Not
+
+@block
+def Or(a, b, z):
+    nota = Signal(0)
+    notb = Signal(0)
+    out = Signal(0)
+
+    n1 = Not(a, nota)
+    n2 = Not(b, notb)
+    n3 = Nand(nota, notb, out)
+
+    @always_comb
+    def f():
+        z.next = out
+
+    return f, n1, n2, n3
+#+end_src
+* Test harness
+You can use the following test harness for all of the 2-input gates.
+
+#+begin_src python
+from myhdl import block, instance, delay, Signal
+
+# two-input gate test harness
+@block
+def test_two(func):
+    a, b, z = [Signal(0) for _ in range(3)]
+    fun1 = func(a, b, z)
+
+    @instance
+    def tester():
+        print("a b z")
+        for i in [0, 1]:
+            for j in [0, 1]:
+                a.next, b.next = i, j
+                yield delay(1)
+                print(a, b, int(z))
+
+    return fun1, tester
+
+
+# one-input gate test harness
+@block
+def test_one(func):
+    a, z = [Signal(0) for _ in range(2)]
+    fun1 = func(a, z)
+
+    @instance
+    def tester():
+        print("a z")
+        for i in [0, 1]:
+            a.next = i
+            yield delay(1)
+            print(a, int(z))
+
+    return fun1, tester
+#+end_src
+* Comlete example: Or
+A complete example like you would turn in for ~Or~ is shown below:
+
+#+begin_src python
+from myhdl import block, always_comb, Signal
+from Nand import Nand
+from Not import Not
+from Test import test_two
+
+@block
+def Or(a, b, z):
+    nota = Signal(0)
+    notb = Signal(0)
+    out = Signal(0)
+
+    n1 = Not(a, nota)
+    n2 = Not(b, notb)
+    n3 = Nand(nota, notb, out)
+
+    @always_comb
+    def f():
+        z.next = out
+
+    return f, n1, n2, n3
+
+
+if __name__ == "__main__":
+    test = test_two(Or)
+    test.run_sim()
+#+end_src
