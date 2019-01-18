@@ -213,3 +213,5 @@ You can find implementations of ~Test.py~, ~Nand.py~, ~Or.py~, and ~Not.py~ here
 
 https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A01
 
+Note that you /do/ need to submit ~Not.py~.
+
