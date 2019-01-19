@@ -4,7 +4,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
 * Assignment
-  Using only ~Nand~, ~0~, and ~1~, create MyHDL code for the following 16 functions (see also Figure 1.2 in [[https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf][Ch1]]).  Submissions are due 1 week after A01 appears in the autograder.
+  Starting with only ~Nand~, ~0~, and ~1~, create MyHDL code for the following 16 functions (see also Figure 1.2 in [[https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf][Ch1]]).  Submissions are due 1 week after A01 appears in the autograder.
 
   |             | x                                  | 0 0 1 1 |                     |
   | Function    | y                                  | 0 1 0 1 | submission filename |
@@ -28,9 +28,9 @@
 
 - Note :: Do not submit files for ~Or.py~ or ~Nand.py~. These are available in the Autograder environment for your modules to import.  Your files can use ~from Nand import Nand~ to use the provided implementation.
 
-- Hint :: Your files can ~import~ other implementations you upload.  For example, if you uploaded ~And.py~, ~Or.py~ and ~Not.py~, then your implementation of ~Xor.py~ can include ~from And import And~ etc.
+- Hint1 :: Once you have a working implementation for ~And~, you can use it in subsequent designs.
 
-          When you are working on this assignment (either on your personal machine or silo), keep all these files in the same directory for simpler importing.
+- Hint2 :: When you are working on this assignment (either on your personal machine or silo), keep all these files in the same directory for simpler importing.
 
 * MyHDL boilerplate
   For each primitive gate, you can start with the following "boilerplate" code and add your implementation:
