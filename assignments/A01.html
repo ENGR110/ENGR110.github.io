@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-01-18 Fri 14:56 -->
+<!-- 2019-01-19 Sat 13:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 01</title>
@@ -235,9 +235,9 @@ for the JavaScript code in this tag.
 <span class="subtitle">Logic Gates in MyHDL</span>
 </h1>
 
-<div id="outline-container-org8abb4d9" class="outline-2">
-<h2 id="org8abb4d9">Assignment</h2>
-<div class="outline-text-2" id="text-org8abb4d9">
+<div id="outline-container-org9d11170" class="outline-2">
+<h2 id="org9d11170">Assignment</h2>
+<div class="outline-text-2" id="text-org9d11170">
 <p>
 Using only <code>Nand</code>, <code>0</code>, and <code>1</code>, create MyHDL code for the following 16 functions (see also Figure 1.2 in <a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf">Ch1</a>).  Submissions are due 1 week after A01 appears in the autograder.
 </p>
@@ -251,18 +251,22 @@ Using only <code>Nand</code>, <code>0</code>, and <code>1</code>, create MyHDL c
 <col  class="org-left" />
 
 <col  class="org-left" />
+
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">Function</th>
+<th scope="col" class="org-left">&#xa0;</th>
 <th scope="col" class="org-left">x</th>
 <th scope="col" class="org-left">0 0 1 1</th>
+<th scope="col" class="org-left">&#xa0;</th>
 </tr>
 
 <tr>
-<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Function</th>
 <th scope="col" class="org-left">y</th>
 <th scope="col" class="org-left">0 1 0 1</th>
+<th scope="col" class="org-left">submission filename</th>
 </tr>
 </thead>
 <tbody>
@@ -270,347 +274,344 @@ Using only <code>Nand</code>, <code>0</code>, and <code>1</code>, create MyHDL c
 <td class="org-left">constant 0</td>
 <td class="org-left">0</td>
 <td class="org-left">0 0 0 0</td>
+<td class="org-left">Constant0.py</td>
 </tr>
 
 <tr>
 <td class="org-left">And</td>
 <td class="org-left">x and y</td>
 <td class="org-left">0 0 0 1</td>
+<td class="org-left">And.py</td>
 </tr>
 
 <tr>
 <td class="org-left">x And Not y</td>
 <td class="org-left">x and (not y)</td>
 <td class="org-left">0 0 1 0</td>
+<td class="org-left">Xandnoty.py</td>
 </tr>
 
 <tr>
 <td class="org-left">x</td>
 <td class="org-left">x</td>
 <td class="org-left">0 0 1 1</td>
+<td class="org-left">X.py</td>
 </tr>
 
 <tr>
 <td class="org-left">Not x And y</td>
 <td class="org-left">(not x) and y</td>
 <td class="org-left">0 1 0 0</td>
+<td class="org-left">Notxandy.py</td>
 </tr>
 
 <tr>
 <td class="org-left">y</td>
 <td class="org-left">y</td>
 <td class="org-left">0 1 0 1</td>
+<td class="org-left">Y.py</td>
 </tr>
 
 <tr>
 <td class="org-left">Xor</td>
 <td class="org-left">(x and (not y)) or (not (x and y))</td>
 <td class="org-left">0 1 1 0</td>
+<td class="org-left">Xor.py</td>
 </tr>
 
 <tr>
 <td class="org-left">Or</td>
 <td class="org-left">x or y</td>
 <td class="org-left">0 1 1 1</td>
+<td class="org-left">(none)</td>
 </tr>
 
 <tr>
 <td class="org-left">Nor</td>
 <td class="org-left">not (x or y)</td>
 <td class="org-left">1 0 0 0</td>
+<td class="org-left">Nor.py</td>
 </tr>
 
 <tr>
 <td class="org-left">Equivalence</td>
 <td class="org-left">x is y</td>
 <td class="org-left">1 0 0 1</td>
+<td class="org-left">Equivalence.py</td>
 </tr>
 
 <tr>
 <td class="org-left">Not y</td>
 <td class="org-left">not y</td>
 <td class="org-left">1 0 1 0</td>
+<td class="org-left">Not.py</td>
 </tr>
 
 <tr>
 <td class="org-left">If y then x</td>
 <td class="org-left">x or (not y)</td>
 <td class="org-left">1 0 1 1</td>
+<td class="org-left">Ifythenx.py</td>
 </tr>
 
 <tr>
 <td class="org-left">Not x</td>
 <td class="org-left">not x</td>
 <td class="org-left">1 1 0 0</td>
+<td class="org-left">Not.py</td>
 </tr>
 
 <tr>
 <td class="org-left">If x then y</td>
 <td class="org-left">(not x) or y</td>
 <td class="org-left">1 1 0 1</td>
+<td class="org-left">Ifxtheny.py</td>
 </tr>
 
 <tr>
 <td class="org-left">Nand</td>
 <td class="org-left">not (x and y)</td>
 <td class="org-left">1 1 1 0</td>
+<td class="org-left">(none)</td>
 </tr>
 
 <tr>
 <td class="org-left">constant 1</td>
 <td class="org-left">1</td>
 <td class="org-left">1 1 1 1</td>
+<td class="org-left">Constant1.py</td>
 </tr>
 </tbody>
 </table>
 
 <p>
-The exact names of the files you should submit are:
+Note that you do not have to submit files for <code>Or.py</code> (provided below) or <code>Nand.py</code>. These implementations will be available in the Autograder environment for your modules to import.  Your files can use <code>from Nand import Nand</code> to use the provided implementation.
 </p>
 
-<ul class="org-ul">
-<li>Constant0.py</li>
-<li>And.py</li>
-<li>Xandnoty.py</li>
-<li>X.py</li>
-<li>Notxandy.py</li>
-<li>Y.py</li>
-<li>Xor.py</li>
-<li>Nor.py</li>
-<li>Equivalence.py</li>
-<li>Noty.py</li>
-<li>Ifythenx.py</li>
-<li>Notx.py</li>
-<li>Ifxtheny.py</li>
-<li>Constant1.py</li>
-</ul>
-
-<p>
-Note that you do not have to submit files for <code>Or.py</code> (provided below) or <code>Nand.py</code>. These implementations will be available in the Autograder environment for your modules to import.  Your files can use <code>from Nand import Nand</code> to use the provided implementation.  Also, your files can <code>import</code> other implementations you upload.  For example, if you uploaded <code>And.py</code>, <code>Or.py</code> and <code>Not.py</code>, then your implementation of <code>Xor.py</code> can include <code>from And import And</code> etc.
+<dl class="org-dl">
+<dt>Hint</dt><dd><p>
+Your files can <code>import</code> other implementations you upload.  For example, if you uploaded <code>And.py</code>, <code>Or.py</code> and <code>Not.py</code>, then your implementation of <code>Xor.py</code> can include <code>from And import And</code> etc.
 </p>
 
 <p>
-Hint: when you are working on this assignment (either on your personal machine or silo), if you keep all these files in the same directory, it simplifies importing.
-</p>
+When you are working on this assignment (either on your personal machine or silo), if you keep all these files in the same directory, it simplifies importing.
+</p></dd>
+</dl>
 </div>
 </div>
 
-<div id="outline-container-orge0f7565" class="outline-2">
-<h2 id="orge0f7565">MyHDL boilerplate</h2>
-<div class="outline-text-2" id="text-orge0f7565">
+<div id="outline-container-org4a5497c" class="outline-2">
+<h2 id="org4a5497c">MyHDL boilerplate</h2>
+<div class="outline-text-2" id="text-org4a5497c">
 <p>
 For each primitive gate, you can start with the following "boilerplate" code and add your implementation:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #490026; font-weight: bold;">from</span> myhdl <span style="color: #490026; font-weight: bold;">import</span> block, always_comb, Signal  <span style="color: #373737;"># </span><span style="color: #373737;">bare minimum, possibly sufficient</span>
-<span style="color: #490026; font-weight: bold;">from</span> Nand <span style="color: #490026; font-weight: bold;">import</span> Nand  <span style="color: #373737;"># </span><span style="color: #373737;">import any gates you've already built, if you need them</span>
-<span style="color: #490026; font-weight: bold;">from</span> test <span style="color: #490026; font-weight: bold;">import</span> test  <span style="color: #373737;"># </span><span style="color: #373737;">import the test harness</span>
+<pre class="src src-python"><span style="color: #7aa5ff; font-weight: bold;">from</span> myhdl <span style="color: #7aa5ff; font-weight: bold;">import</span> block, always_comb, Signal  <span style="color: #666699;"># </span><span style="color: #666699;">bare minimum, possibly sufficient</span>
+<span style="color: #7aa5ff; font-weight: bold;">from</span> Nand <span style="color: #7aa5ff; font-weight: bold;">import</span> Nand  <span style="color: #666699;"># </span><span style="color: #666699;">import any gates you've already built, if you need them</span>
+<span style="color: #7aa5ff; font-weight: bold;">from</span> test <span style="color: #7aa5ff; font-weight: bold;">import</span> test  <span style="color: #666699;"># </span><span style="color: #666699;">import the test harness</span>
 
-<span style="color: #373737;"># </span><span style="color: #373737;">implement the gate</span>
-<span style="color: #373737;"># </span><span style="color: #373737;">replace "Name_of_gate_to_implement" with Nor, Xor, and the rest.</span>
-<span style="color: #014500;">@block</span>
-<span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">Name_of_gate_to_implement</span>(a, b, z):
-    <span style="color: #373737;"># </span><span style="color: #373737;">your code here</span>
-    <span style="color: #373737;"># </span><span style="color: #373737;">create instances of Nand or other blocks</span>
-    <span style="color: #373737;"># </span><span style="color: #373737;">connect them using Signal</span>
+<span style="color: #666699;"># </span><span style="color: #666699;">implement the gate</span>
+<span style="color: #666699;"># </span><span style="color: #666699;">replace "Name_of_gate_to_implement" with Nor, Xor, and the rest.</span>
+<span style="color: #ae81ff;">@block</span>
+<span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">Name_of_gate_to_implement</span>(a, b, z):
+    <span style="color: #666699;"># </span><span style="color: #666699;">your code here</span>
+    <span style="color: #666699;"># </span><span style="color: #666699;">create instances of Nand or other blocks</span>
+    <span style="color: #666699;"># </span><span style="color: #666699;">connect them using Signal</span>
 
-    <span style="color: #014500;">@always_comb</span>
-    <span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">f</span>():
-        <span style="color: #373737;"># </span><span style="color: #373737;">your code here</span>
-        <span style="color: #373737;"># </span><span style="color: #373737;">z.next = one_of_your_signals_here</span>
+    <span style="color: #ae81ff;">@always_comb</span>
+    <span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">f</span>():
+        <span style="color: #666699;"># </span><span style="color: #666699;">your code here</span>
+        <span style="color: #666699;"># </span><span style="color: #666699;">z.next = one_of_your_signals_here</span>
 
-    <span style="color: #490026; font-weight: bold;">return</span> f
+    <span style="color: #7aa5ff; font-weight: bold;">return</span> f
 
-<span style="color: #373737;"># </span><span style="color: #373737;">run the test function, using the name of the gate you implemented above</span>
-<span style="color: #490026; font-weight: bold;">if</span> <span style="color: #9e0045;">__name__</span> == <span style="color: #0f126e;">"__main__"</span>:
-    <span style="color: #014500;">test</span> = test_gate(Name_of_gate_to_implement)
+<span style="color: #666699;"># </span><span style="color: #666699;">run the test function, using the name of the gate you implemented above</span>
+<span style="color: #7aa5ff; font-weight: bold;">if</span> <span style="color: #8eaee0;">__name__</span> == <span style="color: #6dfedf;">"__main__"</span>:
+    <span style="color: #a0a0c5;">test</span> = test_gate(Name_of_gate_to_implement)
     test.run_sim()
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgc3929f8" class="outline-2">
-<h2 id="orgc3929f8">Provided gate: Nand</h2>
-<div class="outline-text-2" id="text-orgc3929f8">
+<div id="outline-container-org2ee4e74" class="outline-2">
+<h2 id="org2ee4e74">Provided gate: Nand</h2>
+<div class="outline-text-2" id="text-org2ee4e74">
 <p>
 Below is the implementation of <code>Nand</code>.  Remember that this one is allowed to use Python's <code>and</code> and <code>not</code> keywords.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #373737;"># </span><span style="color: #373737;">filename: Nand.py</span>
-<span style="color: #490026; font-weight: bold;">from</span> myhdl <span style="color: #490026; font-weight: bold;">import</span> block, always_comb
+<pre class="src src-python"><span style="color: #666699;"># </span><span style="color: #666699;">filename: Nand.py</span>
+<span style="color: #7aa5ff; font-weight: bold;">from</span> myhdl <span style="color: #7aa5ff; font-weight: bold;">import</span> block, always_comb
 
-<span style="color: #014500;">@block</span>
-<span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">Nand</span>(a, b, out):
-    <span style="color: #014500;">@always_comb</span>
-    <span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">f</span>():
-        out.<span style="color: #9e0045;">next</span> = <span style="color: #490026; font-weight: bold;">not</span> (a <span style="color: #490026; font-weight: bold;">and</span> b)
-    <span style="color: #490026; font-weight: bold;">return</span> f
+<span style="color: #ae81ff;">@block</span>
+<span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">Nand</span>(a, b, out):
+    <span style="color: #ae81ff;">@always_comb</span>
+    <span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">f</span>():
+        out.<span style="color: #8eaee0;">next</span> = <span style="color: #7aa5ff; font-weight: bold;">not</span> (a <span style="color: #7aa5ff; font-weight: bold;">and</span> b)
+    <span style="color: #7aa5ff; font-weight: bold;">return</span> f
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org03545ec" class="outline-2">
-<h2 id="org03545ec">Provided gate: Not</h2>
-<div class="outline-text-2" id="text-org03545ec">
+<div id="outline-container-orgd7d3543" class="outline-2">
+<h2 id="orgd7d3543">Provided gate: Not</h2>
+<div class="outline-text-2" id="text-orgd7d3543">
 <p>
 Below is an implementation of <code>Not</code>, using <code>Nand</code> as its building block.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #373737;"># </span><span style="color: #373737;">filename: Not.py</span>
-<span style="color: #490026; font-weight: bold;">from</span> myhdl <span style="color: #490026; font-weight: bold;">import</span> block, always_comb, Signal
-<span style="color: #490026; font-weight: bold;">from</span> Nand <span style="color: #490026; font-weight: bold;">import</span> Nand
+<pre class="src src-python"><span style="color: #666699;"># </span><span style="color: #666699;">filename: Not.py</span>
+<span style="color: #7aa5ff; font-weight: bold;">from</span> myhdl <span style="color: #7aa5ff; font-weight: bold;">import</span> block, always_comb, Signal
+<span style="color: #7aa5ff; font-weight: bold;">from</span> Nand <span style="color: #7aa5ff; font-weight: bold;">import</span> Nand
 
-<span style="color: #014500;">@block</span>
-<span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">Not</span>(a, z):
-    <span style="color: #014500;">out</span> = Signal(<span style="color: #374014;">0</span>)
-    <span style="color: #014500;">n1</span> = Nand(a, <span style="color: #374014;">1</span>, out)
+<span style="color: #ae81ff;">@block</span>
+<span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">Not</span>(a, z):
+    <span style="color: #a0a0c5;">out</span> = Signal(<span style="color: #efe4a1;">0</span>)
+    <span style="color: #a0a0c5;">n1</span> = Nand(a, <span style="color: #efe4a1;">1</span>, out)
 
-    <span style="color: #014500;">@always_comb</span>
-    <span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">f</span>():
-        z.<span style="color: #9e0045;">next</span> = out
+    <span style="color: #ae81ff;">@always_comb</span>
+    <span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">f</span>():
+        z.<span style="color: #8eaee0;">next</span> = out
 
-    <span style="color: #490026; font-weight: bold;">return</span> f, n1
+    <span style="color: #7aa5ff; font-weight: bold;">return</span> f, n1
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org636b0fa" class="outline-2">
-<h2 id="org636b0fa">Provided gate: Or</h2>
-<div class="outline-text-2" id="text-org636b0fa">
+<div id="outline-container-orgc00dcaf" class="outline-2">
+<h2 id="orgc00dcaf">Provided gate: Or</h2>
+<div class="outline-text-2" id="text-orgc00dcaf">
 <p>
 As a final example, the <code>Or</code> gate can be implmented using any of the gates already described (<code>Nand</code> and <code>Not</code>).
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #373737;"># </span><span style="color: #373737;">filename: Or.py</span>
-<span style="color: #490026; font-weight: bold;">from</span> myhdl <span style="color: #490026; font-weight: bold;">import</span> block, always_comb, Signal, intbv
+<pre class="src src-python"><span style="color: #666699;"># </span><span style="color: #666699;">filename: Or.py</span>
+<span style="color: #7aa5ff; font-weight: bold;">from</span> myhdl <span style="color: #7aa5ff; font-weight: bold;">import</span> block, always_comb, Signal, intbv
 
-<span style="color: #490026; font-weight: bold;">from</span> Nand <span style="color: #490026; font-weight: bold;">import</span> Nand
-<span style="color: #490026; font-weight: bold;">from</span> Not <span style="color: #490026; font-weight: bold;">import</span> Not
+<span style="color: #7aa5ff; font-weight: bold;">from</span> Nand <span style="color: #7aa5ff; font-weight: bold;">import</span> Nand
+<span style="color: #7aa5ff; font-weight: bold;">from</span> Not <span style="color: #7aa5ff; font-weight: bold;">import</span> Not
 
-<span style="color: #014500;">@block</span>
-<span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">Or</span>(a, b, z):
-    <span style="color: #014500;">nota</span> = Signal(<span style="color: #374014;">0</span>)
-    <span style="color: #014500;">notb</span> = Signal(<span style="color: #374014;">0</span>)
-    <span style="color: #014500;">out</span> = Signal(<span style="color: #374014;">0</span>)
+<span style="color: #ae81ff;">@block</span>
+<span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">Or</span>(a, b, z):
+    <span style="color: #a0a0c5;">nota</span> = Signal(<span style="color: #efe4a1;">0</span>)
+    <span style="color: #a0a0c5;">notb</span> = Signal(<span style="color: #efe4a1;">0</span>)
+    <span style="color: #a0a0c5;">out</span> = Signal(<span style="color: #efe4a1;">0</span>)
 
-    <span style="color: #014500;">n1</span> = Not(a, nota)
-    <span style="color: #014500;">n2</span> = Not(b, notb)
-    <span style="color: #014500;">n3</span> = Nand(nota, notb, out)
+    <span style="color: #a0a0c5;">n1</span> = Not(a, nota)
+    <span style="color: #a0a0c5;">n2</span> = Not(b, notb)
+    <span style="color: #a0a0c5;">n3</span> = Nand(nota, notb, out)
 
-    <span style="color: #014500;">@always_comb</span>
-    <span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">f</span>():
-        z.<span style="color: #9e0045;">next</span> = out
+    <span style="color: #ae81ff;">@always_comb</span>
+    <span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">f</span>():
+        z.<span style="color: #8eaee0;">next</span> = out
 
-    <span style="color: #490026; font-weight: bold;">return</span> f, n1, n2, n3
+    <span style="color: #7aa5ff; font-weight: bold;">return</span> f, n1, n2, n3
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org99bc984" class="outline-2">
-<h2 id="org99bc984">Test harness</h2>
-<div class="outline-text-2" id="text-org99bc984">
+<div id="outline-container-orged7ba82" class="outline-2">
+<h2 id="orged7ba82">Test harness</h2>
+<div class="outline-text-2" id="text-orged7ba82">
 <p>
 You can use the following test harness for all of the 2-input gates.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #490026; font-weight: bold;">from</span> myhdl <span style="color: #490026; font-weight: bold;">import</span> block, instance, delay, Signal
+<pre class="src src-python"><span style="color: #7aa5ff; font-weight: bold;">from</span> myhdl <span style="color: #7aa5ff; font-weight: bold;">import</span> block, instance, delay, Signal
 
-<span style="color: #373737;"># </span><span style="color: #373737;">two-input gate test harness</span>
-<span style="color: #014500;">@block</span>
-<span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">test_two</span>(func):
-    <span style="color: #014500;">a</span>, <span style="color: #014500;">b</span>, <span style="color: #014500;">z</span> = [Signal(<span style="color: #374014;">0</span>) <span style="color: #490026; font-weight: bold;">for</span> _ <span style="color: #490026; font-weight: bold;">in</span> <span style="color: #9e0045;">range</span>(<span style="color: #374014;">3</span>)]
-    <span style="color: #014500;">fun1</span> = func(a, b, z)
+<span style="color: #666699;"># </span><span style="color: #666699;">two-input gate test harness</span>
+<span style="color: #ae81ff;">@block</span>
+<span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">test_two</span>(func):
+    <span style="color: #a0a0c5;">a</span>, <span style="color: #a0a0c5;">b</span>, <span style="color: #a0a0c5;">z</span> = [Signal(<span style="color: #efe4a1;">0</span>) <span style="color: #7aa5ff; font-weight: bold;">for</span> _ <span style="color: #7aa5ff; font-weight: bold;">in</span> <span style="color: #8eaee0;">range</span>(<span style="color: #efe4a1;">3</span>)]
+    <span style="color: #a0a0c5;">fun1</span> = func(a, b, z)
 
-    <span style="color: #014500;">@instance</span>
-    <span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">tester</span>():
-        <span style="color: #490026; font-weight: bold;">print</span>(<span style="color: #0f126e;">"a b z"</span>)
-        <span style="color: #490026; font-weight: bold;">for</span> i <span style="color: #490026; font-weight: bold;">in</span> [<span style="color: #374014;">0</span>, <span style="color: #374014;">1</span>]:
-            <span style="color: #490026; font-weight: bold;">for</span> j <span style="color: #490026; font-weight: bold;">in</span> [<span style="color: #374014;">0</span>, <span style="color: #374014;">1</span>]:
-                a.<span style="color: #9e0045;">next</span>, b.<span style="color: #9e0045;">next</span> = i, j
-                <span style="color: #490026; font-weight: bold;">yield</span> delay(<span style="color: #374014;">1</span>)
-                <span style="color: #490026; font-weight: bold;">print</span>(a, b, <span style="color: #9e0045;">int</span>(z))
+    <span style="color: #ae81ff;">@instance</span>
+    <span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">tester</span>():
+        <span style="color: #7aa5ff; font-weight: bold;">print</span>(<span style="color: #6dfedf;">"a b z"</span>)
+        <span style="color: #7aa5ff; font-weight: bold;">for</span> i <span style="color: #7aa5ff; font-weight: bold;">in</span> [<span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">1</span>]:
+            <span style="color: #7aa5ff; font-weight: bold;">for</span> j <span style="color: #7aa5ff; font-weight: bold;">in</span> [<span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">1</span>]:
+                a.<span style="color: #8eaee0;">next</span>, b.<span style="color: #8eaee0;">next</span> = i, j
+                <span style="color: #7aa5ff; font-weight: bold;">yield</span> delay(<span style="color: #efe4a1;">1</span>)
+                <span style="color: #7aa5ff; font-weight: bold;">print</span>(a, b, <span style="color: #8eaee0;">int</span>(z))
 
-    <span style="color: #490026; font-weight: bold;">return</span> fun1, tester
+    <span style="color: #7aa5ff; font-weight: bold;">return</span> fun1, tester
 
 
-<span style="color: #373737;"># </span><span style="color: #373737;">one-input gate test harness</span>
-<span style="color: #014500;">@block</span>
-<span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">test_one</span>(func):
-    <span style="color: #014500;">a</span>, <span style="color: #014500;">z</span> = [Signal(<span style="color: #374014;">0</span>) <span style="color: #490026; font-weight: bold;">for</span> _ <span style="color: #490026; font-weight: bold;">in</span> <span style="color: #9e0045;">range</span>(<span style="color: #374014;">2</span>)]
-    <span style="color: #014500;">fun1</span> = func(a, z)
+<span style="color: #666699;"># </span><span style="color: #666699;">one-input gate test harness</span>
+<span style="color: #ae81ff;">@block</span>
+<span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">test_one</span>(func):
+    <span style="color: #a0a0c5;">a</span>, <span style="color: #a0a0c5;">z</span> = [Signal(<span style="color: #efe4a1;">0</span>) <span style="color: #7aa5ff; font-weight: bold;">for</span> _ <span style="color: #7aa5ff; font-weight: bold;">in</span> <span style="color: #8eaee0;">range</span>(<span style="color: #efe4a1;">2</span>)]
+    <span style="color: #a0a0c5;">fun1</span> = func(a, z)
 
-    <span style="color: #014500;">@instance</span>
-    <span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">tester</span>():
-        <span style="color: #490026; font-weight: bold;">print</span>(<span style="color: #0f126e;">"a z"</span>)
-        <span style="color: #490026; font-weight: bold;">for</span> i <span style="color: #490026; font-weight: bold;">in</span> [<span style="color: #374014;">0</span>, <span style="color: #374014;">1</span>]:
-            a.<span style="color: #9e0045;">next</span> = i
-            <span style="color: #490026; font-weight: bold;">yield</span> delay(<span style="color: #374014;">1</span>)
-            <span style="color: #490026; font-weight: bold;">print</span>(a, <span style="color: #9e0045;">int</span>(z))
+    <span style="color: #ae81ff;">@instance</span>
+    <span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">tester</span>():
+        <span style="color: #7aa5ff; font-weight: bold;">print</span>(<span style="color: #6dfedf;">"a z"</span>)
+        <span style="color: #7aa5ff; font-weight: bold;">for</span> i <span style="color: #7aa5ff; font-weight: bold;">in</span> [<span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">1</span>]:
+            a.<span style="color: #8eaee0;">next</span> = i
+            <span style="color: #7aa5ff; font-weight: bold;">yield</span> delay(<span style="color: #efe4a1;">1</span>)
+            <span style="color: #7aa5ff; font-weight: bold;">print</span>(a, <span style="color: #8eaee0;">int</span>(z))
 
-    <span style="color: #490026; font-weight: bold;">return</span> fun1, tester
+    <span style="color: #7aa5ff; font-weight: bold;">return</span> fun1, tester
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org8756824" class="outline-2">
-<h2 id="org8756824">Comlete example: Or</h2>
-<div class="outline-text-2" id="text-org8756824">
+<div id="outline-container-org9eb8a39" class="outline-2">
+<h2 id="org9eb8a39">Comlete example: Or</h2>
+<div class="outline-text-2" id="text-org9eb8a39">
 <p>
 A complete example like you would turn in for <code>Or</code> is shown below:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #373737;"># </span><span style="color: #373737;">save this file as Or.py</span>
-<span style="color: #490026; font-weight: bold;">from</span> myhdl <span style="color: #490026; font-weight: bold;">import</span> block, always_comb, Signal
-<span style="color: #490026; font-weight: bold;">from</span> Nand <span style="color: #490026; font-weight: bold;">import</span> Nand  <span style="color: #373737;"># </span><span style="color: #373737;">provided by Autograder</span>
-<span style="color: #490026; font-weight: bold;">from</span> Not <span style="color: #490026; font-weight: bold;">import</span> Not    <span style="color: #373737;"># </span><span style="color: #373737;">assume we also uploaded a working Not.py</span>
-<span style="color: #490026; font-weight: bold;">from</span> Test <span style="color: #490026; font-weight: bold;">import</span> test_two
+<pre class="src src-python"><span style="color: #666699;"># </span><span style="color: #666699;">save this file as Or.py</span>
+<span style="color: #7aa5ff; font-weight: bold;">from</span> myhdl <span style="color: #7aa5ff; font-weight: bold;">import</span> block, always_comb, Signal
+<span style="color: #7aa5ff; font-weight: bold;">from</span> Nand <span style="color: #7aa5ff; font-weight: bold;">import</span> Nand  <span style="color: #666699;"># </span><span style="color: #666699;">provided by Autograder</span>
+<span style="color: #7aa5ff; font-weight: bold;">from</span> Not <span style="color: #7aa5ff; font-weight: bold;">import</span> Not    <span style="color: #666699;"># </span><span style="color: #666699;">assume we also uploaded a working Not.py</span>
+<span style="color: #7aa5ff; font-weight: bold;">from</span> Test <span style="color: #7aa5ff; font-weight: bold;">import</span> test_two
 
-<span style="color: #014500;">@block</span>
-<span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">Or</span>(a, b, z):
-    <span style="color: #014500;">nota</span> = Signal(<span style="color: #374014;">0</span>)
-    <span style="color: #014500;">notb</span> = Signal(<span style="color: #374014;">0</span>)
-    <span style="color: #014500;">out</span> = Signal(<span style="color: #374014;">0</span>)
+<span style="color: #ae81ff;">@block</span>
+<span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">Or</span>(a, b, z):
+    <span style="color: #a0a0c5;">nota</span> = Signal(<span style="color: #efe4a1;">0</span>)
+    <span style="color: #a0a0c5;">notb</span> = Signal(<span style="color: #efe4a1;">0</span>)
+    <span style="color: #a0a0c5;">out</span> = Signal(<span style="color: #efe4a1;">0</span>)
 
-    <span style="color: #014500;">n1</span> = Not(a, nota)
-    <span style="color: #014500;">n2</span> = Not(b, notb)
-    <span style="color: #014500;">n3</span> = Nand(nota, notb, out)
+    <span style="color: #a0a0c5;">n1</span> = Not(a, nota)
+    <span style="color: #a0a0c5;">n2</span> = Not(b, notb)
+    <span style="color: #a0a0c5;">n3</span> = Nand(nota, notb, out)
 
-    <span style="color: #014500;">@always_comb</span>
-    <span style="color: #490026; font-weight: bold;">def</span> <span style="color: #340557; font-weight: bold;">f</span>():
-        z.<span style="color: #9e0045;">next</span> = out
+    <span style="color: #ae81ff;">@always_comb</span>
+    <span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">f</span>():
+        z.<span style="color: #8eaee0;">next</span> = out
 
-    <span style="color: #490026; font-weight: bold;">return</span> f, n1, n2, n3
+    <span style="color: #7aa5ff; font-weight: bold;">return</span> f, n1, n2, n3
 
 
-<span style="color: #490026; font-weight: bold;">if</span> <span style="color: #9e0045;">__name__</span> == <span style="color: #0f126e;">"__main__"</span>:
-    <span style="color: #014500;">test</span> = test_two(Or)
+<span style="color: #7aa5ff; font-weight: bold;">if</span> <span style="color: #8eaee0;">__name__</span> == <span style="color: #6dfedf;">"__main__"</span>:
+    <span style="color: #a0a0c5;">test</span> = test_two(Or)
     test.run_sim()
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org41dc159" class="outline-2">
-<h2 id="org41dc159">Supplemental: implementations</h2>
-<div class="outline-text-2" id="text-org41dc159">
+<div id="outline-container-org9d218a1" class="outline-2">
+<h2 id="org9d218a1">Supplemental: implementations</h2>
+<div class="outline-text-2" id="text-org9d218a1">
 <p>
 You can find implementations of <code>Test.py</code>, <code>Nand.py</code>, <code>Or.py</code>, and <code>Not.py</code> here:
 </p>
 
 <p>
 <a href="https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A01">https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A01</a>
-</p>
-
-<p>
-Note that you <i>do</i> need to submit <code>Not.py</code>.
 </p>
 </div>
 </div>
