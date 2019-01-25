@@ -1,8 +1,9 @@
-#+TITLE: ENGR-E110
+#+TITLE: https://ENGR110.github.io
 #+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="assignments/org.css"/>
 
 Welcome to E110!  "Engineering Computing Architecture" is about how computers are built from simpler components, and how they encode information into physical parts.  Along the way, we will also cover the Linux shell, Hardware Description Languages (HDL) and intermediate Python programming.
+
 
 * Prerequisites
   Students should have already taken ENGR-E 101 Innovation and Design: https://registrar.indiana.edu/browser/soc4192/ENGR/ENGR-E101.shtml
@@ -23,13 +24,13 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
   - MyHDL (hardware description language in the form of a Python library)
   - intermediate Python
 
-* People
+* Contact
 
-  | name            | role       | office     | email           |
-  |-----------------|------------|------------|-----------------|
-  | Alex Shroyer    | instructor | Luddy 4148 | ashroyer@iu.edu |
-  | Juliette Zerick | AI         | Luddy 4125 | jzerick@iu.edu  |
-  | Daniel Osei     | AI         | Luddy 4125 | dosei@iu.edu    |
+  | name            | role       | office      | email           | office hours             |
+  |-----------------+------------+-------------+-----------------+--------------------------|
+  | Alex Shroyer    | instructor | Luddy 4148  | ashroyer@iu.edu | (Tues;Thurs) 01:00-02:00 |
+  | Juliette Zerick | AI         | Luddy 4114M | jzerick@iu.edu  | (Mon) 03:00-04:00        |
+  | Daniel Osei     | AI         | Luddy 4125  | dosei@iu.edu    |                          |
 
 * Classroom location, meeting times
 
@@ -37,13 +38,6 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
   |---------|-------------------|--------------------------|------------|
   |   10678 | (Mon) 10:10-11:00 | (Tues;Thurs) 11:15-12:30 | Luddy 4111 |
   |   29714 | (Mon) 11:15-12:05 | (Tues;Thurs) 04:00-05:15 | Luddy 4111 |
-
-* Office Hours
-
-  | time                | location   |
-  |---------------------|------------|
-  | (Tues) 01:00-02:00  | Luddy 4148 |
-  | (Thurs) 01:00-02:00 | Luddy 4148 |
 
 * Announcements
   We will post to Canvas with updates/clarifications/announcements.  By default, you should already have notifications from Canvas enabled.  It is your responsibility to ensure you can receive such announcements.
