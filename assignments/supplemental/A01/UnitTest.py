@@ -53,9 +53,9 @@ class A01(unittest.TestCase):
             # ['Or',          [0,1,1,1]],  # provided
             ['Nor',         [1,0,0,0]],
             ['Equivalence', [1,0,0,1]],
-            ['Noty',        [1,0,1,0]],
+            # ['Noty',        [1,0,1,0]],  # decided to omit
             ['Ifythenx',    [1,0,1,1]],
-            ['Notx',        [1,1,0,0]],
+            # ['Notx',        [1,1,0,0]],  # decided to omit
             ['Ifxtheny',    [1,1,0,1]],
             # ['Nand',        [1,1,1,0]],  # provided
             ['Constant1',   [1,1,1,1]],

@@ -1,4 +1,4 @@
-from myhdl import block, always_comb, Signal, intbv, instance, delay
+from myhdl import block, always_comb
 from Test import test_two
 
 @block

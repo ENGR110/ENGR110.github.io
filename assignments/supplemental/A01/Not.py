@@ -1,6 +1,6 @@
 from myhdl import block, always_comb, Signal
 from Nand import Nand
-from Test import test_two
+from Test import test_one
 
 @block
 def Not(a, z):
@@ -15,5 +15,5 @@ def Not(a, z):
 
 
 if __name__ == "__main__":
-    test = test_two(Not)
+    test = test_one(Not)
     test.run_sim()
