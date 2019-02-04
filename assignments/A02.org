@@ -1,0 +1,57 @@
+#+TITLE: Assignment 02
+#+SUBTITLE: Multiple Signals
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
+
+* Assignment
+  Implement these gates, using these signatures:
+
+  #+begin_src python
+Or16(inp_a, inp_b, out)
+Not16(inp_a, inp_b, out)
+And16(inp_a, inp_b, out)
+Or8Way(inp, out)
+Mux(select, inp_a, inp_b, out)
+Dmux(select, inp, out_a, out_b)
+Mux16(select, inp_a, inp_b, out)
+Mux4Way16(select, inp_a, inp_b, inp_c, inp_d, out)
+Mux8Way16(select, inp_a, inp_b, inp_c, inp_d, inp_e, inp_f, inp_g, inp_h, out)
+DMux4Way(select, inp, out_a, out_b, out_c, out_d)
+DMux8Way(select, inp, out_a, out_b, out_c, out_d, out_e, out_f, out_g, out_h)
+  #+end_src
+
+  Ensure your filename matches the the name of the gate. For example:
+
+  | filename    | name of gate |
+  |-------------+--------------|
+  | Or16.py     | Or16         |
+  | DMux8Way.py | DMux8Way     |
+
+  Refer to the 2nd half of [[https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf][Chapter 1]], beginning around page 20, for more detail on Mux, Demux, and multi-bit gates.
+
+* Testing
+  Each gate will be tested by comparing the /actual/ outputs with the /expected/ outputs for the given inputs.
+
+  | filename | gatename | 5 tests                                                                   |
+  |----------+----------+---------------------------------------------------------------------------|
+  | Or16.py  | Or16     | =[[0, 0, 0], [1, 0, 1], [2, 3, 3], [65535, 0, 65535], [65535, 1, 65535]]= |
+  | Mux.py   | Mux      | =[[0, 1, 1, 1], [0, 0, 0, 0], [0, 0, 1, 0], [1, 0, 0, 0], [1, 0, 1, 1]]=  |
+  | etc.     |          |                                                                           |
+
+  - Or16 has 3 parameters (=inp_a=, =inp_b=, =out=) so each of its tests has 3 values.  Also, because Or16 takes 2 16-bit values, its inputs are in =range(0, 2**16)= (minimum value 0, maximum value 65535).
+  - Mux has 4 parameters, so each of its 5 tests has 4 values.  Since it's a 1-bit Mux, each of the values in its tests are 0 or 1.
+
+  Provide a variable called =tests=, which is a list containing 5 or more test cases.
+  Each test case is a list, with the same number of parameters as the gate.
+
+  #+begin_src python
+# inside Mux.py 
+tests = [
+# select, inp_a, inp_b, out
+  [0,     1,     1,     1], # first test
+  [0,     0,     0,     0],
+  [0,     0,     1,     0],
+  [1,     0,     0,     0],
+  [1,     0,     1,     1], # fifth test
+]
+  #+end_src
