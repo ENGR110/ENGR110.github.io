@@ -23,4 +23,19 @@ class TestGate:  # empty class prevents unittest running base class
         # TODO the rest of the methods
         def test_simulation_works(self):
             """MyHDL simulation output should match given test values."""
-            pass
+
+
+
+
+        def runner(self, test, gates):
+            """Run the tests."""
+            num_signals = 1 + int(log2(len(gates[0][1])))  # n inputs, plus 1 output
+            for gate in gates:
+                with self.subTest(gate=gate):
+                    m = import_module(gate[0])
+                    f = m.__dict__[gate[0]]  # Module name must be the same as Gate name
+                    sigs = [Signal(0) for _ in range(num_signals)]
+                    check = test(gate[0], sigs, gate[1])
+                    sim = Simulation(f(*sigs), check)
+                    sim.run(quiet=1)
+                    print('OK: {}'.format(gate[0]))
