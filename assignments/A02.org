@@ -20,6 +20,8 @@ DMux4Way(select, inp, out_a, out_b, out_c, out_d)
 DMux8Way(select, inp, out_a, out_b, out_c, out_d, out_e, out_f, out_g, out_h)
   #+end_src
 
+  Each file should include both the gate and a value called =tests= containing 5 or more test cases.  
+
   Ensure your filename matches the the name of the gate. For example:
 
   | filename    | name of gate |
@@ -30,7 +32,9 @@ DMux8Way(select, inp, out_a, out_b, out_c, out_d, out_e, out_f, out_g, out_h)
   Refer to the 2nd half of [[https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf][Chapter 1]], beginning around page 20, for more detail on Mux, Demux, and multi-bit gates.
 
 * Testing
-  Each gate will be tested by comparing the /actual/ outputs with the /expected/ outputs for the given inputs.
+  See [[./supplemental/A02/Mux.py][Mux.py]] or [[./supplemental/A02/Or8Way.py][Or8Way.py]] for examples.
+
+  Each gate will be tested by comparing the /actual/ outputs (from the myHDL block) with the /expected/ outputs (from the test) for the given inputs.
 
   | filename | gatename | 5 tests                                                                   |
   |----------+----------+---------------------------------------------------------------------------|
