@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-04 Mon 09:29 -->
+<!-- 2019-02-04 Mon 09:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 02</title>
@@ -235,9 +235,9 @@ for the JavaScript code in this tag.
 <span class="subtitle">Multiple Signals</span>
 </h1>
 
-<div id="outline-container-org030ec5b" class="outline-2">
-<h2 id="org030ec5b">Assignment</h2>
-<div class="outline-text-2" id="text-org030ec5b">
+<div id="outline-container-org75bf33f" class="outline-2">
+<h2 id="org75bf33f">Assignment</h2>
+<div class="outline-text-2" id="text-org75bf33f">
 <p>
 Implement these gates, using these signatures:
 </p>
@@ -298,13 +298,13 @@ Refer to the 2nd half of <a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f
 </div>
 </div>
 
-<div id="outline-container-org3f6eecf" class="outline-2">
-<h2 id="org3f6eecf">Testing</h2>
-<div class="outline-text-2" id="text-org3f6eecf">
+<div id="outline-container-orge32e16c" class="outline-2">
+<h2 id="orge32e16c">Testing</h2>
+<div class="outline-text-2" id="text-orge32e16c">
 </div>
-<div id="outline-container-org41c9c05" class="outline-3">
-<h3 id="org41c9c05">Inside each .py file</h3>
-<div class="outline-text-3" id="text-org41c9c05">
+<div id="outline-container-orga6c5161" class="outline-3">
+<h3 id="orga6c5161">Inside each .py file</h3>
+<div class="outline-text-3" id="text-orga6c5161">
 <p>
 See <a href="./supplemental/A02/Mux.py">Mux.py</a> or <a href="./supplemental/A02/Or8Way.py">Or8Way.py</a> for examples.
 </p>
@@ -361,24 +361,43 @@ Provide a variable called <code>tests</code>, which is a list containing 5 or mo
 Each test case is a list, with the same number of parameters as the gate.
 </p>
 
+<p>
+For example, <a href="https://github.com/ENGR110/ENGR110.github.io/blob/master/assignments/supplemental/A02/Mux.py">Mux.py</a> looks like this:
+</p>
+
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">inside Mux.py </span>
+<pre class="src src-python"><span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">Mux.py </span>
+<span style="color: #859900; font-weight: bold;">from</span> myhdl <span style="color: #859900; font-weight: bold;">import</span> block, always_comb
+
+<span style="color: #b58900;">@block</span>
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">Mux</span>(select, inp_a, inp_b, out):
+
+    <span style="color: #b58900;">@always_comb</span>
+    <span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">f</span>():
+        out.<span style="color: #657b83; font-weight: bold;">next</span> = inp_b <span style="color: #859900; font-weight: bold;">if</span> select <span style="color: #859900; font-weight: bold;">else</span> inp_a
+
+    <span style="color: #859900; font-weight: bold;">return</span> f
+
 <span style="color: #268bd2;">tests</span> = [
-<span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">select, inp_a, inp_b, out</span>
-  [<span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">1</span>,     <span style="color: #6c71c4;">1</span>,     <span style="color: #6c71c4;">1</span>], <span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">first test</span>
-  [<span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">0</span>],
-  [<span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">1</span>,     <span style="color: #6c71c4;">0</span>],
-  [<span style="color: #6c71c4;">1</span>,     <span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">0</span>],
-  [<span style="color: #6c71c4;">1</span>,     <span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">1</span>,     <span style="color: #6c71c4;">1</span>], <span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">fifth test</span>
+<span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">sel a  b  out</span>
+  [<span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">0</span>],
+  [<span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">1</span>],
+  [<span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">1</span>],
+  [<span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">1</span>],
+  [<span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">1</span>],
 ]
 </pre>
 </div>
+
+<p>
+Another example, <a href="https://github.com/ENGR110/ENGR110.github.io/blob/master/assignments/supplemental/A02/Or8Way.py">Or8Way.py</a> is also provided for reference.
+</p>
 </div>
 </div>
 
-<div id="outline-container-org3f42711" class="outline-3">
-<h3 id="org3f42711">Run the autograder tests locally</h3>
-<div class="outline-text-3" id="text-org3f42711">
+<div id="outline-container-orgfc515a6" class="outline-3">
+<h3 id="orgfc515a6">Run the autograder tests locally</h3>
+<div class="outline-text-3" id="text-orgfc515a6">
 <p>
 You can download all the tests from <a href="https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A02">here</a> in order to test before submitting to the autograder.  Test files have the same name as the gate files, but start with "Test".
 </p>
@@ -410,9 +429,9 @@ python3 TestOr8Way.py
 </div>
 </div>
 
-<div id="outline-container-org5c6f915" class="outline-3">
-<h3 id="org5c6f915">Note</h3>
-<div class="outline-text-3" id="text-org5c6f915">
+<div id="outline-container-org95a6652" class="outline-3">
+<h3 id="org95a6652">Note</h3>
+<div class="outline-text-3" id="text-org95a6652">
 <p>
 Working implementations for <code>Or8Way.py</code> and <code>Mux.py</code> are already provided, and <code>Test.py</code> is used by all of the <code>TestGate.py</code> files, so don't remove it.
 </p>

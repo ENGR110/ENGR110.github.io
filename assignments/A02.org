@@ -49,17 +49,32 @@ DMux8Way(select, inp, out_a, out_b, out_c, out_d, out_e, out_f, out_g, out_h)
    Provide a variable called =tests=, which is a list containing 5 or more test cases.
    Each test case is a list, with the same number of parameters as the gate.
 
+   For example, [[https://github.com/ENGR110/ENGR110.github.io/blob/master/assignments/supplemental/A02/Mux.py][Mux.py]] looks like this:
+
    #+begin_src python
-# inside Mux.py 
+# Mux.py 
+from myhdl import block, always_comb
+
+@block
+def Mux(select, inp_a, inp_b, out):
+
+    @always_comb
+    def f():
+        out.next = inp_b if select else inp_a
+
+    return f
+
 tests = [
-# select, inp_a, inp_b, out
-  [0,     1,     1,     1], # first test
-  [0,     0,     0,     0],
-  [0,     0,     1,     0],
-  [1,     0,     0,     0],
-  [1,     0,     1,     1], # fifth test
+# sel a  b  out
+  [0, 0, 0, 0],
+  [1, 1, 1, 1],
+  [0, 1, 0, 1],
+  [1, 0, 0, 1],
+  [1, 0, 1, 1],
 ]
    #+end_src
+
+   Another example, [[https://github.com/ENGR110/ENGR110.github.io/blob/master/assignments/supplemental/A02/Or8Way.py][Or8Way.py]] is also provided for reference.
 
 ** Run the autograder tests locally
    You can download all the tests from [[https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A02][here]] in order to test before submitting to the autograder.  Test files have the same name as the gate files, but start with "Test".
