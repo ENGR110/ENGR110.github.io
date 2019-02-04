@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-04 Mon 09:08 -->
+<!-- 2019-02-04 Mon 09:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 02</title>
@@ -235,9 +235,9 @@ for the JavaScript code in this tag.
 <span class="subtitle">Multiple Signals</span>
 </h1>
 
-<div id="outline-container-orgbc91a7a" class="outline-2">
-<h2 id="orgbc91a7a">Assignment</h2>
-<div class="outline-text-2" id="text-orgbc91a7a">
+<div id="outline-container-org030ec5b" class="outline-2">
+<h2 id="org030ec5b">Assignment</h2>
+<div class="outline-text-2" id="text-org030ec5b">
 <p>
 Implement these gates, using these signatures:
 </p>
@@ -298,9 +298,13 @@ Refer to the 2nd half of <a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f
 </div>
 </div>
 
-<div id="outline-container-org98f10a5" class="outline-2">
-<h2 id="org98f10a5">Testing</h2>
-<div class="outline-text-2" id="text-org98f10a5">
+<div id="outline-container-org3f6eecf" class="outline-2">
+<h2 id="org3f6eecf">Testing</h2>
+<div class="outline-text-2" id="text-org3f6eecf">
+</div>
+<div id="outline-container-org41c9c05" class="outline-3">
+<h3 id="org41c9c05">Inside each .py file</h3>
+<div class="outline-text-3" id="text-org41c9c05">
 <p>
 See <a href="./supplemental/A02/Mux.py">Mux.py</a> or <a href="./supplemental/A02/Or8Way.py">Or8Way.py</a> for examples.
 </p>
@@ -368,6 +372,50 @@ Each test case is a list, with the same number of parameters as the gate.
   [<span style="color: #6c71c4;">1</span>,     <span style="color: #6c71c4;">0</span>,     <span style="color: #6c71c4;">1</span>,     <span style="color: #6c71c4;">1</span>], <span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">fifth test</span>
 ]
 </pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3f42711" class="outline-3">
+<h3 id="org3f42711">Run the autograder tests locally</h3>
+<div class="outline-text-3" id="text-org3f42711">
+<p>
+You can download all the tests from <a href="https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A02">here</a> in order to test before submitting to the autograder.  Test files have the same name as the gate files, but start with "Test".
+</p>
+
+<p>
+To run:
+</p>
+
+<ol class="org-ol">
+<li><code>cd</code> into the directory containing your files and the test scripts</li>
+<li>then use <code>python3 TestName.py</code> from the terminal</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-shell"><span style="color: #657b83; font-weight: bold;">cd</span> ~/folder-where-you-saved-your-files-and-the-tests/
+python3 TestAnd16.py
+python3 TestDMux4Way.py
+python3 TestDMux8Way.py
+python3 TestDmux.py
+python3 TestMux16.py
+python3 TestMux4Way16.py
+python3 TestMux8Way16.py
+python3 TestMux.py
+python3 TestNot16.py
+python3 TestOr16.py
+python3 TestOr8Way.py
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5c6f915" class="outline-3">
+<h3 id="org5c6f915">Note</h3>
+<div class="outline-text-3" id="text-org5c6f915">
+<p>
+Working implementations for <code>Or8Way.py</code> and <code>Mux.py</code> are already provided, and <code>Test.py</code> is used by all of the <code>TestGate.py</code> files, so don't remove it.
+</p>
 </div>
 </div>
 </div>
