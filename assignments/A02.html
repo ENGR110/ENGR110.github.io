@@ -3,11 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-04 Mon 10:30 -->
+<!-- 2019-02-04 Mon 17:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 02</title>
 <meta name="generator" content="Org mode" />
+<meta name="author" content="lx" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -234,9 +235,9 @@ for the JavaScript code in this tag.
 <span class="subtitle">Multiple Signals</span>
 </h1>
 
-<div id="outline-container-orga0670b7" class="outline-2">
-<h2 id="orga0670b7">Assignment</h2>
-<div class="outline-text-2" id="text-orga0670b7">
+<div id="outline-container-org5b4d279" class="outline-2">
+<h2 id="org5b4d279">Assignment</h2>
+<div class="outline-text-2" id="text-org5b4d279">
 <p>
 Implement these gates, using these signatures:
 </p>
@@ -247,7 +248,7 @@ Not16(inp_a, inp_b, out)
 And16(inp_a, inp_b, out)
 Or8Way(inp, out)
 Mux(select, inp_a, inp_b, out)
-Dmux(select, inp, out_a, out_b)
+DMux(select, inp, out_a, out_b)
 Mux16(select, inp_a, inp_b, out)
 Mux4Way16(select, inp_a, inp_b, inp_c, inp_d, out)
 Mux8Way16(select, inp_a, inp_b, inp_c, inp_d, inp_e, inp_f, inp_g, inp_h, out)
@@ -297,13 +298,13 @@ Refer to the 2nd half of <a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f
 </div>
 </div>
 
-<div id="outline-container-org339a443" class="outline-2">
-<h2 id="org339a443">Testing</h2>
-<div class="outline-text-2" id="text-org339a443">
+<div id="outline-container-org3efa37a" class="outline-2">
+<h2 id="org3efa37a">Testing</h2>
+<div class="outline-text-2" id="text-org3efa37a">
 </div>
-<div id="outline-container-org3f03d5f" class="outline-3">
-<h3 id="org3f03d5f">Inside each .py file</h3>
-<div class="outline-text-3" id="text-org3f03d5f">
+<div id="outline-container-org2dc6d35" class="outline-3">
+<h3 id="org2dc6d35">Inside each .py file</h3>
+<div class="outline-text-3" id="text-org2dc6d35">
 <p>
 See <a href="./supplemental/A02/Mux.py">Mux.py</a> or <a href="./supplemental/A02/Or8Way.py">Or8Way.py</a> for examples.
 </p>
@@ -365,25 +366,25 @@ For example, <a href="https://github.com/ENGR110/ENGR110.github.io/blob/master/a
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">Mux.py </span>
-<span style="color: #859900; font-weight: bold;">from</span> myhdl <span style="color: #859900; font-weight: bold;">import</span> block, always_comb
+<pre class="src src-python"><span style="color: #666699;"># </span><span style="color: #666699;">Mux.py </span>
+<span style="color: #7aa5ff; font-weight: bold;">from</span> myhdl <span style="color: #7aa5ff; font-weight: bold;">import</span> block, always_comb
 
-<span style="color: #b58900;">@block</span>
-<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">Mux</span>(select, inp_a, inp_b, out):
+<span style="color: #ae81ff;">@block</span>
+<span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">Mux</span>(select, inp_a, inp_b, out):
 
-    <span style="color: #b58900;">@always_comb</span>
-    <span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">f</span>():
-        out.<span style="color: #657b83; font-weight: bold;">next</span> = inp_b <span style="color: #859900; font-weight: bold;">if</span> select <span style="color: #859900; font-weight: bold;">else</span> inp_a
+    <span style="color: #ae81ff;">@always_comb</span>
+    <span style="color: #7aa5ff; font-weight: bold;">def</span> <span style="color: #2de0a7; font-weight: bold;">f</span>():
+        out.<span style="color: #8eaee0;">next</span> = inp_b <span style="color: #7aa5ff; font-weight: bold;">if</span> select <span style="color: #7aa5ff; font-weight: bold;">else</span> inp_a
 
-    <span style="color: #859900; font-weight: bold;">return</span> f
+    <span style="color: #7aa5ff; font-weight: bold;">return</span> f
 
-<span style="color: #268bd2;">tests</span> = [
-<span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">sel a  b  out</span>
-  [<span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">0</span>],
-  [<span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">1</span>],
-  [<span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">1</span>],
-  [<span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">1</span>],
-  [<span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">0</span>, <span style="color: #6c71c4;">1</span>, <span style="color: #6c71c4;">1</span>],
+<span style="color: #a0a0c5;">tests</span> = [
+<span style="color: #666699;"># </span><span style="color: #666699;">sel a  b  out</span>
+  [<span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">0</span>],
+  [<span style="color: #efe4a1;">1</span>, <span style="color: #efe4a1;">1</span>, <span style="color: #efe4a1;">1</span>, <span style="color: #efe4a1;">1</span>],
+  [<span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">1</span>, <span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">1</span>],
+  [<span style="color: #efe4a1;">1</span>, <span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">1</span>],
+  [<span style="color: #efe4a1;">1</span>, <span style="color: #efe4a1;">0</span>, <span style="color: #efe4a1;">1</span>, <span style="color: #efe4a1;">1</span>],
 ]
 </pre>
 </div>
@@ -394,9 +395,9 @@ Another example, <a href="https://github.com/ENGR110/ENGR110.github.io/blob/mast
 </div>
 </div>
 
-<div id="outline-container-org0f1e4cc" class="outline-3">
-<h3 id="org0f1e4cc">Run the autograder tests locally</h3>
-<div class="outline-text-3" id="text-org0f1e4cc">
+<div id="outline-container-orgb95a2e9" class="outline-3">
+<h3 id="orgb95a2e9">Run the autograder tests locally</h3>
+<div class="outline-text-3" id="text-orgb95a2e9">
 <p>
 You can download all the tests from <a href="https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A02">here</a> in order to test before submitting to the autograder.  Test files have the same name as the gate files, but start with "Test".
 </p>
@@ -411,7 +412,7 @@ To run:
 </ol>
 
 <div class="org-src-container">
-<pre class="src src-shell"><span style="color: #657b83; font-weight: bold;">cd</span> ~/folder-where-you-saved-your-files-and-the-tests/
+<pre class="src src-shell"><span style="color: #8eaee0;">cd</span> ~/folder-where-you-saved-your-files-and-the-tests/
 python3 TestAnd16.py
 python3 TestDMux4Way.py
 python3 TestDMux8Way.py
@@ -424,16 +425,16 @@ python3 TestNot16.py
 python3 TestOr16.py
 python3 TestOr8Way.py
 
-<span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">alternatively, you can add verbose logging to unittest like this:</span>
+<span style="color: #666699;"># </span><span style="color: #666699;">alternatively, you can add verbose logging to unittest like this:</span>
 python3 -m unittest -v TestMux.py 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orga497739" class="outline-3">
-<h3 id="orga497739">Note</h3>
-<div class="outline-text-3" id="text-orga497739">
+<div id="outline-container-orgf057ee5" class="outline-3">
+<h3 id="orgf057ee5">Note</h3>
+<div class="outline-text-3" id="text-orgf057ee5">
 <p>
 Working implementations for <code>Or8Way.py</code> and <code>Mux.py</code> are already provided, and <code>Test.py</code> is used by all of the <code>TestGate.py</code> files, so don't remove it.
 </p>
