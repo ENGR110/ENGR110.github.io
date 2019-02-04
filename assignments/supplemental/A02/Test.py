@@ -1,5 +1,6 @@
 import unittest
 from inspect import signature
+from importlib import import_module
 from myhdl import Signal, delay, Simulation
 
 class TestGate:  # empty class prevents unittest running base class

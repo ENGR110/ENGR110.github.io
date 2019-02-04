@@ -97,6 +97,9 @@ python3 TestMux.py
 python3 TestNot16.py
 python3 TestOr16.py
 python3 TestOr8Way.py
+
+# alternatively, you can add verbose logging to unittest like this:
+python3 -m unittest -v TestMux.py 
    #+end_src
 
 ** Note

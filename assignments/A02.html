@@ -3,12 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-04 Mon 09:33 -->
+<!-- 2019-02-04 Mon 10:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 02</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="lx" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -235,9 +234,9 @@ for the JavaScript code in this tag.
 <span class="subtitle">Multiple Signals</span>
 </h1>
 
-<div id="outline-container-org75bf33f" class="outline-2">
-<h2 id="org75bf33f">Assignment</h2>
-<div class="outline-text-2" id="text-org75bf33f">
+<div id="outline-container-orga0670b7" class="outline-2">
+<h2 id="orga0670b7">Assignment</h2>
+<div class="outline-text-2" id="text-orga0670b7">
 <p>
 Implement these gates, using these signatures:
 </p>
@@ -298,13 +297,13 @@ Refer to the 2nd half of <a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f
 </div>
 </div>
 
-<div id="outline-container-orge32e16c" class="outline-2">
-<h2 id="orge32e16c">Testing</h2>
-<div class="outline-text-2" id="text-orge32e16c">
+<div id="outline-container-org339a443" class="outline-2">
+<h2 id="org339a443">Testing</h2>
+<div class="outline-text-2" id="text-org339a443">
 </div>
-<div id="outline-container-orga6c5161" class="outline-3">
-<h3 id="orga6c5161">Inside each .py file</h3>
-<div class="outline-text-3" id="text-orga6c5161">
+<div id="outline-container-org3f03d5f" class="outline-3">
+<h3 id="org3f03d5f">Inside each .py file</h3>
+<div class="outline-text-3" id="text-org3f03d5f">
 <p>
 See <a href="./supplemental/A02/Mux.py">Mux.py</a> or <a href="./supplemental/A02/Or8Way.py">Or8Way.py</a> for examples.
 </p>
@@ -395,9 +394,9 @@ Another example, <a href="https://github.com/ENGR110/ENGR110.github.io/blob/mast
 </div>
 </div>
 
-<div id="outline-container-orgfc515a6" class="outline-3">
-<h3 id="orgfc515a6">Run the autograder tests locally</h3>
-<div class="outline-text-3" id="text-orgfc515a6">
+<div id="outline-container-org0f1e4cc" class="outline-3">
+<h3 id="org0f1e4cc">Run the autograder tests locally</h3>
+<div class="outline-text-3" id="text-org0f1e4cc">
 <p>
 You can download all the tests from <a href="https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A02">here</a> in order to test before submitting to the autograder.  Test files have the same name as the gate files, but start with "Test".
 </p>
@@ -424,14 +423,17 @@ python3 TestMux.py
 python3 TestNot16.py
 python3 TestOr16.py
 python3 TestOr8Way.py
+
+<span style="color: #93a1a1;"># </span><span style="color: #93a1a1;">alternatively, you can add verbose logging to unittest like this:</span>
+python3 -m unittest -v TestMux.py 
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org95a6652" class="outline-3">
-<h3 id="org95a6652">Note</h3>
-<div class="outline-text-3" id="text-org95a6652">
+<div id="outline-container-orga497739" class="outline-3">
+<h3 id="orga497739">Note</h3>
+<div class="outline-text-3" id="text-orga497739">
 <p>
 Working implementations for <code>Or8Way.py</code> and <code>Mux.py</code> are already provided, and <code>Test.py</code> is used by all of the <code>TestGate.py</code> files, so don't remove it.
 </p>
