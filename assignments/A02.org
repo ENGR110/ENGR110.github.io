@@ -89,7 +89,7 @@ cd ~/folder-where-you-saved-your-files-and-the-tests/
 python3 TestAnd16.py
 python3 TestDMux4Way.py
 python3 TestDMux8Way.py
-python3 TestDmux.py
+python3 TestDMux.py
 python3 TestMux16.py
 python3 TestMux4Way16.py
 python3 TestMux8Way16.py
