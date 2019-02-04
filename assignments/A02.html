@@ -3,11 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-04 Mon 08:06 -->
+<!-- 2019-02-04 Mon 09:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 02</title>
 <meta name="generator" content="Org mode" />
+<meta name="author" content="lx" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -234,9 +235,9 @@ for the JavaScript code in this tag.
 <span class="subtitle">Multiple Signals</span>
 </h1>
 
-<div id="outline-container-orgb2b4914" class="outline-2">
-<h2 id="orgb2b4914">Assignment</h2>
-<div class="outline-text-2" id="text-orgb2b4914">
+<div id="outline-container-orgbc91a7a" class="outline-2">
+<h2 id="orgbc91a7a">Assignment</h2>
+<div class="outline-text-2" id="text-orgbc91a7a">
 <p>
 Implement these gates, using these signatures:
 </p>
@@ -255,6 +256,10 @@ DMux4Way(select, inp, out_a, out_b, out_c, out_d)
 DMux8Way(select, inp, out_a, out_b, out_c, out_d, out_e, out_f, out_g, out_h)
 </pre>
 </div>
+
+<p>
+Each file should include both the gate and a value called <code>tests</code> containing 5 or more test cases.  
+</p>
 
 <p>
 Ensure your filename matches the the name of the gate. For example:
@@ -293,11 +298,15 @@ Refer to the 2nd half of <a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f
 </div>
 </div>
 
-<div id="outline-container-org385b5db" class="outline-2">
-<h2 id="org385b5db">Testing</h2>
-<div class="outline-text-2" id="text-org385b5db">
+<div id="outline-container-org98f10a5" class="outline-2">
+<h2 id="org98f10a5">Testing</h2>
+<div class="outline-text-2" id="text-org98f10a5">
 <p>
-Each gate will be tested by comparing the <i>actual</i> outputs with the <i>expected</i> outputs for the given inputs.
+See <a href="./supplemental/A02/Mux.py">Mux.py</a> or <a href="./supplemental/A02/Or8Way.py">Or8Way.py</a> for examples.
+</p>
+
+<p>
+Each gate will be tested by comparing the <i>actual</i> outputs (from the myHDL block) with the <i>expected</i> outputs (from the test) for the given inputs.
 </p>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
