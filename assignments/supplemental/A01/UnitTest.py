@@ -72,7 +72,9 @@ class A01(unittest.TestCase):
                 f = m.__dict__[gate[0]]  # Module name must be the same as Gate name
                 sigs = [Signal(0) for _ in range(num_signals)]
                 check = test(gate[0], sigs, gate[1])
-                sim = Simulation(f(*sigs), check)
+                sim = Simulation(f(*sigs), check) # works
+                #sim = Simulation(check)  # many failures
+                #sim = Simulation(f(*sigs)) # all pass
                 sim.run(quiet=1)
                 print('OK: {}'.format(gate[0]))
 
