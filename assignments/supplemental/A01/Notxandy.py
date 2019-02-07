@@ -10,7 +10,7 @@ def Notxandy(a, b, z):
     out = Signal(0)
 
     n1 = Not(a, notx)
-    n2 = And(notx, 0, out)
+    n2 = And(notx, b, out)
 
     @always_comb
     def f():
