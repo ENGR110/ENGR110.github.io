@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-04 Mon 17:25 -->
+<!-- 2019-02-08 Fri 09:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 02</title>
@@ -235,18 +235,18 @@ for the JavaScript code in this tag.
 <span class="subtitle">Multiple Signals</span>
 </h1>
 
-<div id="outline-container-org398f0ad" class="outline-2">
-<h2 id="org398f0ad">Assignment</h2>
-<div class="outline-text-2" id="text-org398f0ad">
+<div id="outline-container-orgb39f976" class="outline-2">
+<h2 id="orgb39f976">Assignment</h2>
+<div class="outline-text-2" id="text-orgb39f976">
 <p>
 Implement these gates, using these signatures:
 </p>
 
 <div class="org-src-container">
 <pre class="src src-python">Or16(inp_a, inp_b, out)
-Not16(inp_a, inp_b, out)
+Not16(inp, out)
 And16(inp_a, inp_b, out)
-Or8Way(inp, out)
+Or8Way(inp_a, inp_b, inp_c, inp_d, inp_e, inp_f, inp_g, inp_h, out)
 Mux(select, inp_a, inp_b, out)
 DMux(select, inp, out_a, out_b)
 Mux16(select, inp_a, inp_b, out)
@@ -298,13 +298,13 @@ Refer to the 2nd half of <a href="https://docs.wixstatic.com/ugd/44046b_f2c9e41f
 </div>
 </div>
 
-<div id="outline-container-orga5a65f8" class="outline-2">
-<h2 id="orga5a65f8">Testing</h2>
-<div class="outline-text-2" id="text-orga5a65f8">
+<div id="outline-container-org5b98aa7" class="outline-2">
+<h2 id="org5b98aa7">Testing</h2>
+<div class="outline-text-2" id="text-org5b98aa7">
 </div>
-<div id="outline-container-org27c6913" class="outline-3">
-<h3 id="org27c6913">Inside each .py file</h3>
-<div class="outline-text-3" id="text-org27c6913">
+<div id="outline-container-org3b8e9e0" class="outline-3">
+<h3 id="org3b8e9e0">Inside each .py file</h3>
+<div class="outline-text-3" id="text-org3b8e9e0">
 <p>
 See <a href="./supplemental/A02/Mux.py">Mux.py</a> or <a href="./supplemental/A02/Or8Way.py">Or8Way.py</a> for examples.
 </p>
@@ -395,9 +395,9 @@ Another example, <a href="https://github.com/ENGR110/ENGR110.github.io/blob/mast
 </div>
 </div>
 
-<div id="outline-container-org384ec2f" class="outline-3">
-<h3 id="org384ec2f">Run the autograder tests locally</h3>
-<div class="outline-text-3" id="text-org384ec2f">
+<div id="outline-container-org70f927f" class="outline-3">
+<h3 id="org70f927f">Run the autograder tests locally</h3>
+<div class="outline-text-3" id="text-org70f927f">
 <p>
 You can download all the tests from <a href="https://github.com/ENGR110/ENGR110.github.io/tree/master/assignments/supplemental/A02">here</a> in order to test before submitting to the autograder.  Test files have the same name as the gate files, but start with "Test".
 </p>
@@ -432,9 +432,9 @@ python3 -m unittest -v TestMux.py
 </div>
 </div>
 
-<div id="outline-container-org896526f" class="outline-3">
-<h3 id="org896526f">Note</h3>
-<div class="outline-text-3" id="text-org896526f">
+<div id="outline-container-org3d36b7b" class="outline-3">
+<h3 id="org3d36b7b">Note</h3>
+<div class="outline-text-3" id="text-org3d36b7b">
 <p>
 Working implementations for <code>Or8Way.py</code> and <code>Mux.py</code> are already provided, and <code>Test.py</code> is used by all of the <code>TestGate.py</code> files, so don't remove it.
 </p>
