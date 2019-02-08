@@ -8,9 +8,9 @@
 
   #+begin_src python
 Or16(inp_a, inp_b, out)
-Not16(inp_a, inp_b, out)
+Not16(inp, out)
 And16(inp_a, inp_b, out)
-Or8Way(inp, out)
+Or8Way(inp_a, inp_b, inp_c, inp_d, inp_e, inp_f, inp_g, inp_h, out)
 Mux(select, inp_a, inp_b, out)
 DMux(select, inp, out_a, out_b)
 Mux16(select, inp_a, inp_b, out)
