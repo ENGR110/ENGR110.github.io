@@ -1,6 +1,6 @@
 import unittest
-from inspect import signature
 from importlib import import_module
+from inspect import signature
 from myhdl import Signal, delay, Simulation
 
 class TestGate:  # empty class prevents unittest running base class
@@ -19,6 +19,3 @@ class TestGate:  # empty class prevents unittest running base class
             arg_lengths = list(set([len(x) for x in self.m.tests]))
             self.assertEqual(len(arg_lengths), 1, 'some test is the wrong length')
             self.assertEqual(arg_lengths[0], len(signature(self.m.__dict__[self.gate]).parameters))
-
-
-

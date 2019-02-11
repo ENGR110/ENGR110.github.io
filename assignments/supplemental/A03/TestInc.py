@@ -1,6 +1,6 @@
 # test bench for Inc
 import random
-from myhdl import block, always, instance, Signal, ResetSignal, modbv, delay, StopSimulation
+from myhdl import block, always, instance, Signal, ResetSignal, modbv, delay, StopSimulation, bin
 from Inc import Inc
 
 random.seed(1)
@@ -29,7 +29,7 @@ def testbench():
         reset.next = ACTIVE_LOW
         yield clock.negedge
         reset.next = INACTIVE_HIGH
-        for i in range(16):
+        for i in range(32):
             enable.next = min(1, randrange(3))
             yield clock.negedge
         raise StopSimulation()
@@ -41,7 +41,7 @@ def testbench():
         while 1:
             yield clock.posedge
             yield delay(1)
-            print("     {}    {}".format(int(enable), count))
+            print("     {}    {}".format(int(enable), bin(count, width=5)))
 
     return clockGen, stimulus, monitor, inc_1
 

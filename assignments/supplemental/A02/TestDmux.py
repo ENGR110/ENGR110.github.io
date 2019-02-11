@@ -1,8 +1,8 @@
 from Test import TestGate, unittest, import_module
 
-class TestMux8Way16(TestGate.TestGate):
+class TestDmux(TestGate.TestGate):
     def setUp(self):
-        self.gate = 'Mux8Way16'
+        self.gate = 'Dmux'
         self.m = import_module(self.gate)
 
 if __name__ == '__main__':
