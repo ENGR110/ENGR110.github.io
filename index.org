@@ -108,7 +108,7 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
   | 02/05 | Tues  |                                |                          |            |
   | 02/07 | Thurs |                                |                          |            |
   | 02/11 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf][Ch3]] and [[https://docs.wixstatic.com/ugd/56440f_3b9f5721e3e149fba8687847da395c43.pdf][slides3]]          |            |
-  | 02/12 | Tues  |                                |                          |            |
+  | 02/12 | Tues  |                                | [[http://docs.myhdl.org/en/stable/manual/rtl.html#sequential-logic][M4]]                       | A03        |
   | 02/14 | Thurs |                                |                          |            |
   | 02/18 | Mon   |                                |                          |            |
   | 02/19 | Tues  |                                |                          |            |
