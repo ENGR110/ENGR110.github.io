@@ -1,3 +1,5 @@
+# Increment with reset
+# from http://docs.myhdl.org/en/stable/manual/rtl.html
 from myhdl import always_seq, block
 
 @block
