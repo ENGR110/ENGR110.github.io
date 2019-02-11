@@ -1,4 +1,5 @@
 # test bench for Inc
+# from http://docs.myhdl.org/en/stable/manual/rtl.html
 import random
 from myhdl import block, always, instance, Signal, ResetSignal, modbv, delay, StopSimulation, bin
 from Inc import Inc
@@ -10,7 +11,7 @@ ACTIVE_LOW, INACTIVE_HIGH = 0, 1
 
 @block
 def testbench():
-    m = 4
+    m = 3
     count = Signal(modbv(0)[m:])
     enable = Signal(bool(0))
     clock = Signal(bool(0))
