@@ -1,6 +1,8 @@
-#+TITLE: https://ENGR110.github.io
+#+TITLE: ENGR-E110
 #+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="assignments/org.css"/>
+
+https://ENGR110.github.io
 
 Welcome to E110!  "Engineering Computing Architecture" is about how computers are built from simpler components, and how they encode information into physical parts.  Along the way, we will also cover the Linux shell, Hardware Description Languages (HDL) and intermediate Python programming.
 
