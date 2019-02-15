@@ -8,9 +8,10 @@ def Inc(count, enable, clock, reset):
     # enable: control, increment when 1 else retain last value
     # clock: input
     # reset: asynchronous reset input
-    @always_seq(clock.posedge, reset=reset)
+    @always_seq(clock.posedge, reset=reset)  # sensitivity list
     def seq():
         if enable:
             count.next = count+1
 
     return seq
+

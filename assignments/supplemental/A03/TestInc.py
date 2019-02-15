@@ -30,9 +30,11 @@ def testbench():
         reset.next = ACTIVE_LOW
         yield clock.negedge
         reset.next = INACTIVE_HIGH
-        for i in range(32):
+
+        for i in range(16):
             enable.next = min(1, randrange(3))
             yield clock.negedge
+
         raise StopSimulation()
 
     @instance
@@ -42,7 +44,7 @@ def testbench():
         while 1:
             yield clock.posedge
             yield delay(1)
-            print("     {}    {}".format(int(enable), bin(count, width=5)))
+            print("     {}    {}".format(int(enable), count)) # bin(count, width=5)))
 
     return clockGen, stimulus, monitor, inc_1
 
