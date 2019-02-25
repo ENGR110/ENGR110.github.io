@@ -92,64 +92,64 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
 * Schedule
   See also: [[https://registrar.indiana.edu/official-calendar/official-calendar-spring.shtml?s=16w][Official IU Calendar for Spring 2019]]
  
-  | Date  | Day   | Topic                          | Reading                  | Assignment |
-  |-------+-------+--------------------------------+--------------------------+------------|
-  | 01/07 | Mon   | Intro, Linux CLI               | [[https://beebom.com/essential-linux-commands/][Essential Linux Commands]] |            |
-  | 01/08 | Tues  | Python CLI, number conversion  | [[https://docs.python.org/3/library/functions.html#int][Python builtin functions]] | [[./assignments/A00a.html][A00a]]       |
-  | 01/10 | Thurs | Autograder practice            | MyHDL manual [[http://docs.myhdl.org/en/stable/manual/preface.html][M1]], [[http://docs.myhdl.org/en/stable/manual/background.html][M2]], [[http://docs.myhdl.org/en/stable/manual/intro.html][M3]]  | [[./assignments/A00b.html][A00b]]       |
-  | 01/14 | Mon   | MyHDL, Boolean Logic           | [[https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf][Ch1]] and [[https://drive.google.com/file/d/1MY1buFHo_Wx5DPrKhCNSA2cm5ltwFJzM/view][slides1]]          | [[./assignments/A01.html][A01]]        |
-  | 01/15 | Tues  | truth tables                   |                          |            |
-  | 01/17 | Thurs | truth tables, continued        |                          |            |
-  | 01/21 | Mon   | MLK Jr. Day                    |                          |            |
-  | 01/22 | Tues  | Gates: 16-input and/or/etc.    | [[https://docs.wixstatic.com/ugd/44046b_f0eaab042ba042dcb58f3e08b46bb4d7.pdf][Ch2]] and [[https://docs.wixstatic.com/ugd/56440f_2e6113c60ec34ed0bc2035c9d1313066.pdf][slides2]]          |            |
-  | 01/24 | Thurs | Gates: Mux, Demux              |                          |            |
-  | 01/28 | Mon   |                                |                          |            |
-  | 01/29 | Tues  |                                |                          |            |
-  | 01/31 | Thurs |                                |                          |            |
-  | 02/04 | Mon   |                                | [[http://docs.myhdl.org/en/stable/manual/hwtypes.html][hwtypes]] and [[http://docs.myhdl.org/en/stable/manual/structure.html][structure]]    | [[./assignments/A02.html][A02]]        |
-  | 02/05 | Tues  |                                |                          |            |
-  | 02/07 | Thurs |                                |                          |            |
-  | 02/11 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf][Ch3]] and [[https://docs.wixstatic.com/ugd/56440f_3b9f5721e3e149fba8687847da395c43.pdf][slides3]]          |            |
-  | 02/12 | Tues  |                                | [[http://docs.myhdl.org/en/stable/manual/rtl.html#sequential-logic][M4]]                       | A03        |
-  | 02/14 | Thurs |                                |                          |            |
-  | 02/18 | Mon   |                                |                          |            |
-  | 02/19 | Tues  |                                |                          |            |
-  | 02/21 | Thurs |                                |                          |            |
-  | 02/25 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_7ef1c00a714c46768f08c459a6cab45a.pdf][Ch4]] and [[https://docs.wixstatic.com/ugd/56440f_12f488fe481344328506857e6a799f79.pdf][slides4]]          |            |
-  | 02/26 | Tues  |                                |                          |            |
-  | 02/28 | Thurs |                                |                          |            |
-  | 03/04 | Mon   |                                |                          |            |
-  | 03/05 | Tues  | Midterm Review                 |                          |            |
-  | 03/07 | Thurs | Midterm - normal class time    |                          |            |
-  | 03/11 | Mon   | Spring Break                   |                          |            |
-  | 03/12 | Tues  | Spring Break                   |                          |            |
-  | 03/14 | Thurs | Spring Break                   |                          |            |
-  | 03/18 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_b2cad2eea33847869b86c541683551a7.pdf][Ch5]] and [[https://docs.wixstatic.com/ugd/56440f_96cbb9c6b8b84760a04c369453b62908.pdf][slides5]]          |            |
-  | 03/19 | Tues  |                                |                          |            |
-  | 03/21 | Thurs |                                |                          |            |
-  | 03/25 | Mon   |                                |                          |            |
-  | 03/26 | Tues  |                                |                          |            |
-  | 03/28 | Thurs |                                |                          |            |
-  | 04/01 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_89a8e226476741a3b7c5204575b8a0b2.pdf][Ch6]] and [[https://docs.wixstatic.com/ugd/56440f_65a2d8eef0ed4e0ea2471030206269b5.pdf][slides6]]          |            |
-  | 04/02 | Tues  |                                |                          |            |
-  | 04/04 | Thurs |                                |                          |            |
-  | 04/08 | Mon   |                                |                          |            |
-  | 04/09 | Tues  |                                |                          |            |
-  | 04/11 | Thurs |                                |                          |            |
-  | 04/15 | Mon   |                                |                          |            |
-  | 04/16 | Tues  |                                |                          |            |
-  | 04/18 | Thurs |                                |                          |            |
-  | 04/22 | Mon   |                                |                          |            |
-  | 04/23 | Tues  | Final Review                   | None                     | None       |
-  | 04/25 | Thurs | Final Exam - normal class time | None                     | None       |
-  | 04/29 | Mon   | Finals Week                    |                          |            |
-  | 04/30 | Tues  | Finals Week                    |                          |            |
-  | 05/02 | Thurs | Finals Week                    |                          |            |
-  | 05/06 | Mon   |                                |                          |            |
-  | 05/07 | Tues  |                                |                          |            |
-  | 05/09 | Thurs | Semester Ends                  |                          |            |
+  | Date  | Day   | Topic                          | Reading                  | Assignment    |
+  |-------+-------+--------------------------------+--------------------------+---------------|
+  | 01/07 | Mon   | Intro, Linux CLI               | [[https://beebom.com/essential-linux-commands/][Essential Linux Commands]] |               |
+  | 01/08 | Tues  | Python CLI, number conversion  | [[https://docs.python.org/3/library/functions.html#int][Python builtin functions]] | [[./assignments/A00a.html][A00a]]          |
+  | 01/10 | Thurs | Autograder practice            | MyHDL manual [[http://docs.myhdl.org/en/stable/manual/preface.html][M1]], [[http://docs.myhdl.org/en/stable/manual/background.html][M2]], [[http://docs.myhdl.org/en/stable/manual/intro.html][M3]]  | [[./assignments/A00b.html][A00b]]          |
+  | 01/14 | Mon   | MyHDL, Boolean Logic           | [[https://docs.wixstatic.com/ugd/44046b_f2c9e41f0b204a34ab78be0ae4953128.pdf][Ch1]] and [[https://drive.google.com/file/d/1MY1buFHo_Wx5DPrKhCNSA2cm5ltwFJzM/view][slides1]]          | [[./assignments/A01.html][A01]]           |
+  | 01/15 | Tues  | truth tables                   |                          |               |
+  | 01/17 | Thurs | truth tables, continued        |                          |               |
+  | 01/21 | Mon   | MLK Jr. Day                    |                          |               |
+  | 01/22 | Tues  | Gates: 16-input and/or/etc.    | [[https://docs.wixstatic.com/ugd/44046b_f0eaab042ba042dcb58f3e08b46bb4d7.pdf][Ch2]] and [[https://docs.wixstatic.com/ugd/56440f_2e6113c60ec34ed0bc2035c9d1313066.pdf][slides2]]          |               |
+  | 01/24 | Thurs | Gates: Mux, Demux              |                          |               |
+  | 01/28 | Mon   |                                |                          |               |
+  | 01/29 | Tues  |                                |                          |               |
+  | 01/31 | Thurs |                                |                          |               |
+  | 02/04 | Mon   |                                | [[http://docs.myhdl.org/en/stable/manual/hwtypes.html][hwtypes]] and [[http://docs.myhdl.org/en/stable/manual/structure.html][structure]]    | [[./assignments/A02.html][A02]]           |
+  | 02/05 | Tues  |                                |                          |               |
+  | 02/07 | Thurs |                                |                          |               |
+  | 02/11 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf][Ch3]] and [[https://docs.wixstatic.com/ugd/56440f_3b9f5721e3e149fba8687847da395c43.pdf][slides3]]          |               |
+  | 02/12 | Tues  |                                | [[http://docs.myhdl.org/en/stable/manual/rtl.html#sequential-logic][M4]]                       |               |
+  | 02/14 | Thurs |                                |                          |               |
+  | 02/18 | Mon   |                                |                          |               |
+  | 02/19 | Tues  |                                |                          |               |
+  | 02/21 | Thurs |                                |                          |               |
+  | 02/25 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_7ef1c00a714c46768f08c459a6cab45a.pdf][Ch4]] and [[https://docs.wixstatic.com/ugd/56440f_12f488fe481344328506857e6a799f79.pdf][slides4]]          | [[./assignments/A03.html][A03]] (due Wed) |
+  | 02/26 | Tues  |                                |                          |               |
+  | 02/28 | Thurs |                                |                          |               |
+  | 03/04 | Mon   |                                |                          |               |
+  | 03/05 | Tues  | Midterm Review                 |                          |               |
+  | 03/07 | Thurs | Midterm - normal class time    |                          |               |
+  | 03/11 | Mon   | Spring Break                   |                          |               |
+  | 03/12 | Tues  | Spring Break                   |                          |               |
+  | 03/14 | Thurs | Spring Break                   |                          |               |
+  | 03/18 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_b2cad2eea33847869b86c541683551a7.pdf][Ch5]] and [[https://docs.wixstatic.com/ugd/56440f_96cbb9c6b8b84760a04c369453b62908.pdf][slides5]]          |               |
+  | 03/19 | Tues  |                                |                          |               |
+  | 03/21 | Thurs |                                |                          |               |
+  | 03/25 | Mon   |                                |                          |               |
+  | 03/26 | Tues  |                                |                          |               |
+  | 03/28 | Thurs |                                |                          |               |
+  | 04/01 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_89a8e226476741a3b7c5204575b8a0b2.pdf][Ch6]] and [[https://docs.wixstatic.com/ugd/56440f_65a2d8eef0ed4e0ea2471030206269b5.pdf][slides6]]          |               |
+  | 04/02 | Tues  |                                |                          |               |
+  | 04/04 | Thurs |                                |                          |               |
+  | 04/08 | Mon   |                                |                          |               |
+  | 04/09 | Tues  |                                |                          |               |
+  | 04/11 | Thurs |                                |                          |               |
+  | 04/15 | Mon   |                                |                          |               |
+  | 04/16 | Tues  |                                |                          |               |
+  | 04/18 | Thurs |                                |                          |               |
+  | 04/22 | Mon   |                                |                          |               |
+  | 04/23 | Tues  | Final Review                   | None                     | None          |
+  | 04/25 | Thurs | Final Exam - normal class time | None                     | None          |
+  | 04/29 | Mon   | Finals Week                    |                          |               |
+  | 04/30 | Tues  | Finals Week                    |                          |               |
+  | 05/02 | Thurs | Finals Week                    |                          |               |
+  | 05/06 | Mon   |                                |                          |               |
+  | 05/07 | Tues  |                                |                          |               |
+  | 05/09 | Thurs | Semester Ends                  |                          |               |
 
-#  [[./assignments/A03.html][A03]]
+ [./assignments/A03.html][A03]]
 #  [[./assignments/A04.html][A04]]
 #  [[./assignments/A05.html][A05]]
 #  [[./assignments/A06.html][A06]]
