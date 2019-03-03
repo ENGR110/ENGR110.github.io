@@ -118,8 +118,8 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
   | 02/25 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_7ef1c00a714c46768f08c459a6cab45a.pdf][Ch4]] and [[https://docs.wixstatic.com/ugd/56440f_12f488fe481344328506857e6a799f79.pdf][slides4]]          | [[./assignments/A03.html][A03]] (due Wed) |
   | 02/26 | Tues  |                                |                          |               |
   | 02/28 | Thurs |                                |                          |               |
-  | 03/04 | Mon   |                                |                          |               |
-  | 03/05 | Tues  | Midterm Review                 |                          |               |
+  | 03/04 | Mon   | [[./assignments/MidtermReview.html][Midterm Review]]                 |                          |               |
+  | 03/05 | Tues  | [[./assignments/MidtermReview.html][Midterm Review]]                 |                          |               |
   | 03/07 | Thurs | Midterm - normal class time    |                          |               |
   | 03/11 | Mon   | Spring Break                   |                          |               |
   | 03/12 | Tues  | Spring Break                   |                          |               |
