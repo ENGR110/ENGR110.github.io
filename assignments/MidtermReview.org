@@ -1,0 +1,23 @@
+#+TITLE: Midterm Review
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
+
+* Where and When
+The ENGR-E110 midterm exam will take place during normal lab time on 2019/03/07.
+
+* Format
+16 multiple choice, 4 short answer
+
+* Topics
+
+- two's complement number representation
+  - negative and positive numbers convert to/from binary/decimal
+  - two's complement addition
+- combinational and sequential logic
+  - compare/contrast, recognize each type
+  - truth tables for various logic elements (Nand, Mux, Full Adder, etc.)
+  - sum-of-products form
+  - boolean arithmetic (De Morgan's law)
+- Hack machine instructions (A and C forms)
+  - recognize the A and C forms by their binary representation
+  - given the tables for COMP, DEST, and JUMP, convert a C instruction to/from binary/mnemonic format
