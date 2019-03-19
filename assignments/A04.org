@@ -1,9 +1,9 @@
-#+TITLE: Assignment 04
-#+SUBTITLE: Multiple Signals
+#+TITLE: Hands-On Lab
+#+SUBTITLE: Full Adder
 #+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
-* Hands-On Lab: Full Adder
+* Part 1 of 2: single bit adders
 
   Given the chips:
 

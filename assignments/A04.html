@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-03-19 Tue 19:45 -->
+<!-- 2019-03-19 Tue 19:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Assignment 04</title>
+<title>Hands-On Lab</title>
 <meta name="generator" content="Org mode" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
@@ -242,14 +242,14 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Assignment 04
+<h1 class="title">Hands-On Lab
 <br />
-<span class="subtitle">Multiple Signals</span>
+<span class="subtitle">Full Adder</span>
 </h1>
 
-<div id="outline-container-org30b1adf" class="outline-2">
-<h2 id="org30b1adf">Hands-On Lab: Full Adder</h2>
-<div class="outline-text-2" id="text-org30b1adf">
+<div id="outline-container-orgaebfeff" class="outline-2">
+<h2 id="orgaebfeff">Part 1 of 2: single bit adders</h2>
+<div class="outline-text-2" id="text-orgaebfeff">
 <p>
 Given the chips:
 </p>
@@ -354,9 +354,9 @@ Construct a 1-bit full adder which satisfies this truth table:
 </table>
 </div>
 
-<div id="outline-container-org5602285" class="outline-3">
-<h3 id="org5602285">steps to complete:</h3>
-<div class="outline-text-3" id="text-org5602285">
+<div id="outline-container-org352b7a7" class="outline-3">
+<h3 id="org352b7a7">steps to complete:</h3>
+<div class="outline-text-3" id="text-org352b7a7">
 <ol class="org-ol">
 <li>find pinout for each chip</li>
 <li>test all gates on each chip are functional</li>
@@ -365,9 +365,9 @@ Construct a 1-bit full adder which satisfies this truth table:
 </div>
 </div>
 
-<div id="outline-container-orga432875" class="outline-3">
-<h3 id="orga432875">Complications</h3>
-<div class="outline-text-3" id="text-orga432875">
+<div id="outline-container-org334d175" class="outline-3">
+<h3 id="org334d175">Complications</h3>
+<div class="outline-text-3" id="text-org334d175">
 <ul class="org-ul">
 <li>74LS132 contains only NAND. How can we construct a full adder using only XOR and NAND?</li>
 <li>74LS136 has open-collector outputs. Use a pull-up resistor to provide logic high for each XOR output you use.</li>
@@ -384,9 +384,9 @@ Possible Full Adder implementations:
 </div>
 </div>
 
-<div id="outline-container-orgb41af9a" class="outline-3">
-<h3 id="orgb41af9a">Hints</h3>
-<div class="outline-text-3" id="text-orgb41af9a">
+<div id="outline-container-org7ba4b83" class="outline-3">
+<h3 id="org7ba4b83">Hints</h3>
+<div class="outline-text-3" id="text-org7ba4b83">
 <p>
 Connect wires one at a time, double-checking as you go.  Debugging circuits with many wires is harder than debugging small circuits with few wires.
 </p>
