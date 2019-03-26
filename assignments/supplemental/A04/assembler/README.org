@@ -3,3 +3,6 @@ In this folder are 3 files:
 
 - =asm.py= and =asm2.py=, which each contain 2 slightly different implementations of assembling an A instruction.
 - =ac.py= which has a more full featured assembler.  It handles A instructions in a similar way as shown in the =asm*.py= files, and also (mostly) handles C instructions.
+
+** ac.py
+This file has some of the functionality of generating the machine code for A and C instructions.

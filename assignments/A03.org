@@ -1,0 +1,15 @@
+#+TITLE: Assignment 03
+#+SUBTITLE: Concepts
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
+
+* Assignment
+  Briefly describe (in 1 or 2 sentences) the following:
+
+  1. What is hierarchical modeling in a Hardware Description Language?
+  2. How is a =Register= is constructed in the Hack architecture?
+  3. How does RAM work in the Hack architecture?
+  4. What is the difference between a Python integer type and MyHDL's =modbv= type?
+  5. What additional features are required when testing a sequential logic, compared to testing a combinational logic?
+  
+  Submit answers to Canvas in the form of a text entry.
