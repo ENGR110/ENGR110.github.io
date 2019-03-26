@@ -48,7 +48,7 @@ def lookup_dest(dest):
 
 def encode_a(inst):
     # example: encode_a("@234") returns '0000000011101010'
-    ii = int(inst[1:])
+    ii = int(inst)
     if ii < 0 or ii >= 2**15:
         raise
     b = bin(ii)[2:]  # remove the '0b' from the start
@@ -72,6 +72,6 @@ def encode_ac(line):
     # Given an A or C instruction, encode it as Hack machine code.
     # Return a string of 16 1s or 0s.
     if line[0] == '@':
-        encode_a(line[1:]) # TODO - handle symbols
+        return encode_a(line[1:]) # TODO - handle symbols
     else:
-        encode_c(line)
+        return encode_c(line)
