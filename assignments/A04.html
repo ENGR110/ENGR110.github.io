@@ -3,12 +3,20 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<<<<<<< HEAD
 <!-- 2019-03-26 Tue 11:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 04</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="lx" />
+=======
+<!-- 2019-03-19 Tue 19:55 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hands-On Lab</title>
+<meta name="generator" content="Org mode" />
+>>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -161,6 +169,22 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+<<<<<<< HEAD
+=======
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+>>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -186,7 +210,11 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
+<<<<<<< HEAD
 Copyright (C) 2012-2018 Free Software Foundation, Inc.
+=======
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+>>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -230,6 +258,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
+<<<<<<< HEAD
 <h1 class="title">Assignment 04
 <br />
 <span class="subtitle">From Datasheets to Truth Tables</span>
@@ -265,6 +294,160 @@ For example, the DMUX should be constructed of only primitive gates such as AND,
 <li>which specific pins end up as the input and output interface to the DMUX?</li>
 <li>what should be done with unused input and output pins?</li>
 </ol>
+=======
+<h1 class="title">Hands-On Lab
+<br />
+<span class="subtitle">Full Adder</span>
+</h1>
+
+<div id="outline-container-orgaebfeff" class="outline-2">
+<h2 id="orgaebfeff">Part 1 of 2: single bit adders</h2>
+<div class="outline-text-2" id="text-orgaebfeff">
+<p>
+Given the chips:
+</p>
+
+<ul class="org-ul">
+<li>74LS132</li>
+<li>74LS136</li>
+</ul>
+
+<p>
+Construct a 1-bit full adder which satisfies this truth table:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">carry in</th>
+<th scope="col" class="org-right">A</th>
+<th scope="col" class="org-right">B</th>
+<th scope="col" class="org-right">sum</th>
+<th scope="col" class="org-right">carry out</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org352b7a7" class="outline-3">
+<h3 id="org352b7a7">steps to complete:</h3>
+<div class="outline-text-3" id="text-org352b7a7">
+<ol class="org-ol">
+<li>find pinout for each chip</li>
+<li>test all gates on each chip are functional</li>
+<li>wire the circuit on a breadboard</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org334d175" class="outline-3">
+<h3 id="org334d175">Complications</h3>
+<div class="outline-text-3" id="text-org334d175">
+<ul class="org-ul">
+<li>74LS132 contains only NAND. How can we construct a full adder using only XOR and NAND?</li>
+<li>74LS136 has open-collector outputs. Use a pull-up resistor to provide logic high for each XOR output you use.</li>
+</ul>
+
+<p>
+Possible Full Adder implementations:
+</p>
+
+<ul class="org-ul">
+<li><img src="https://accendoreliability.com/wp-content/uploads/2017/07/full-adder-using-NAND-logic.png" alt="full-adder-using-NAND-logic.png" /></li>
+<li><img src="https://www.ahirlabs.com/wp-content/uploads/2017/06/Full_Adder.png" alt="Full_Adder.png" /></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7ba4b83" class="outline-3">
+<h3 id="org7ba4b83">Hints</h3>
+<div class="outline-text-3" id="text-org7ba4b83">
+<p>
+Connect wires one at a time, double-checking as you go.  Debugging circuits with many wires is harder than debugging small circuits with few wires.
+</p>
+
+<p>
+Make connections <i>before</i> applying power.  A misplaced wire can destroy a chip in milliseconds.
+</p>
+>>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f
 </div>
 </div>
 </div>

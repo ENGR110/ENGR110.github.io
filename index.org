@@ -125,7 +125,7 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
   | 03/12 | Tues  | Spring Break                   |                          |               |
   | 03/14 | Thurs | Spring Break                   |                          |               |
   | 03/18 | Mon   |                                | [[https://docs.wixstatic.com/ugd/44046b_b2cad2eea33847869b86c541683551a7.pdf][Ch5]] and [[https://docs.wixstatic.com/ugd/56440f_96cbb9c6b8b84760a04c369453b62908.pdf][slides5]]          |               |
-  | 03/19 | Tues  |                                |                          |               |
+  | 03/19 | Tues  |                                |                          | [[./assignments/A04.html][A04]]           |
   | 03/21 | Thurs |                                |                          |               |
   | 03/25 | Mon   |                                |                          |               |
   | 03/26 | Tues  |                                |                          | [[./assignments/A04.html][A04]]           |
@@ -149,7 +149,6 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
   | 05/07 | Tues  |                                |                          |               |
   | 05/09 | Thurs | Semester Ends                  |                          |               |
 
- [./assignments/A03.html][A03]]
 #  [[./assignments/A05.html][A05]]
 #  [[./assignments/A06.html][A06]]
 #  [[./assignments/A07.html][A07]]

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #+TITLE: Assignment 04
 #+SUBTITLE: From Datasheets to Truth Tables
 #+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
@@ -16,3 +17,49 @@ For example, the DMUX should be constructed of only primitive gates such as AND,
 2. how do you find the physical pin locations on the chips?
 3. which specific pins end up as the input and output interface to the DMUX?
 4. what should be done with unused input and output pins?
+=======
+#+TITLE: Hands-On Lab
+#+SUBTITLE: Full Adder
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
+
+* Part 1 of 2: single bit adders
+
+  Given the chips:
+
+  - 74LS132
+  - 74LS136
+
+  Construct a 1-bit full adder which satisfies this truth table:
+
+  | carry in | A | B | sum | carry out |
+  |----------+---+---+-----+-----------|
+  |        0 | 0 | 0 |   0 |         0 |
+  |        0 | 0 | 1 |   1 |         0 |
+  |        0 | 1 | 0 |   1 |         0 |
+  |        0 | 1 | 1 |   0 |         1 |
+  |        1 | 0 | 0 |   1 |         0 |
+  |        1 | 0 | 1 |   0 |         1 |
+  |        1 | 1 | 0 |   0 |         1 |
+  |        1 | 1 | 1 |   1 |         1 |
+
+** steps to complete:
+
+   1. find pinout for each chip
+   2. test all gates on each chip are functional
+   3. wire the circuit on a breadboard
+
+** Complications
+   - 74LS132 contains only NAND. How can we construct a full adder using only XOR and NAND?
+   - 74LS136 has open-collector outputs. Use a pull-up resistor to provide logic high for each XOR output you use.
+
+   Possible Full Adder implementations:
+
+   - https://accendoreliability.com/wp-content/uploads/2017/07/full-adder-using-NAND-logic.png
+   - https://www.ahirlabs.com/wp-content/uploads/2017/06/Full_Adder.png
+
+** Hints
+   Connect wires one at a time, double-checking as you go.  Debugging circuits with many wires is harder than debugging small circuits with few wires.
+
+   Make connections /before/ applying power.  A misplaced wire can destroy a chip in milliseconds.
+>>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f
