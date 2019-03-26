@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-#+TITLE: Assignment 04
-#+SUBTITLE: From Datasheets to Truth Tables
-#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
-
-* Process
-Describe the process of starting with a truth table (as a requirement) and realizing the result in hardware using physical chips.
-
-* Task: DMUX
-This task is to describe the implementation of a 2-output Demultiplexer, using the same hierarchical approach as was used in the MyHDL.
-
-For example, the DMUX should be constructed of only primitive gates such as AND, XOR, NOT, etc.
-
-** questions
-1. list the subcomponents (primitive gates) and any leftover gates
-2. how do you find the physical pin locations on the chips?
-3. which specific pins end up as the input and output interface to the DMUX?
-4. what should be done with unused input and output pins?
-=======
 #+TITLE: Hands-On Lab
-#+SUBTITLE: Full Adder
+#+SUBTITLE: (A04) Full Adder
 #+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
@@ -62,4 +42,3 @@ For example, the DMUX should be constructed of only primitive gates such as AND,
    Connect wires one at a time, double-checking as you go.  Debugging circuits with many wires is harder than debugging small circuits with few wires.
 
    Make connections /before/ applying power.  A misplaced wire can destroy a chip in milliseconds.
->>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f

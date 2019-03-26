@@ -3,20 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<<<<<<< HEAD
-<!-- 2019-03-26 Tue 11:17 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Assignment 04</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="lx" />
-=======
-<!-- 2019-03-19 Tue 19:55 -->
+<!-- 2019-03-26 Tue 15:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hands-On Lab</title>
 <meta name="generator" content="Org mode" />
->>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f
+<meta name="author" content="lx" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -169,22 +161,6 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
-<<<<<<< HEAD
-=======
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
->>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -210,11 +186,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-<<<<<<< HEAD
 Copyright (C) 2012-2018 Free Software Foundation, Inc.
-=======
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
->>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -258,51 +230,14 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<<<<<<< HEAD
-<h1 class="title">Assignment 04
-<br />
-<span class="subtitle">From Datasheets to Truth Tables</span>
-</h1>
-
-<div id="outline-container-orga6dd3d6" class="outline-2">
-<h2 id="orga6dd3d6">Process</h2>
-<div class="outline-text-2" id="text-orga6dd3d6">
-<p>
-Describe the process of starting with a truth table (as a requirement) and realizing the result in hardware using physical chips.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgd68b135" class="outline-2">
-<h2 id="orgd68b135">Task: DMUX</h2>
-<div class="outline-text-2" id="text-orgd68b135">
-<p>
-This task is to describe the implementation of a 2-output Demultiplexer, using the same hierarchical approach as was used in the MyHDL.
-</p>
-
-<p>
-For example, the DMUX should be constructed of only primitive gates such as AND, XOR, NOT, etc.
-</p>
-</div>
-
-<div id="outline-container-orgada0ded" class="outline-3">
-<h3 id="orgada0ded">questions</h3>
-<div class="outline-text-3" id="text-orgada0ded">
-<ol class="org-ol">
-<li>list the subcomponents (primitive gates) and any leftover gates</li>
-<li>how do you find the physical pin locations on the chips?</li>
-<li>which specific pins end up as the input and output interface to the DMUX?</li>
-<li>what should be done with unused input and output pins?</li>
-</ol>
-=======
 <h1 class="title">Hands-On Lab
 <br />
-<span class="subtitle">Full Adder</span>
+<span class="subtitle">(A04) Full Adder</span>
 </h1>
 
-<div id="outline-container-orgaebfeff" class="outline-2">
-<h2 id="orgaebfeff">Part 1 of 2: single bit adders</h2>
-<div class="outline-text-2" id="text-orgaebfeff">
+<div id="outline-container-org51de5e1" class="outline-2">
+<h2 id="org51de5e1">Part 1 of 2: single bit adders</h2>
+<div class="outline-text-2" id="text-org51de5e1">
 <p>
 Given the chips:
 </p>
@@ -407,9 +342,9 @@ Construct a 1-bit full adder which satisfies this truth table:
 </table>
 </div>
 
-<div id="outline-container-org352b7a7" class="outline-3">
-<h3 id="org352b7a7">steps to complete:</h3>
-<div class="outline-text-3" id="text-org352b7a7">
+<div id="outline-container-org8897848" class="outline-3">
+<h3 id="org8897848">steps to complete:</h3>
+<div class="outline-text-3" id="text-org8897848">
 <ol class="org-ol">
 <li>find pinout for each chip</li>
 <li>test all gates on each chip are functional</li>
@@ -418,9 +353,9 @@ Construct a 1-bit full adder which satisfies this truth table:
 </div>
 </div>
 
-<div id="outline-container-org334d175" class="outline-3">
-<h3 id="org334d175">Complications</h3>
-<div class="outline-text-3" id="text-org334d175">
+<div id="outline-container-org1d853b3" class="outline-3">
+<h3 id="org1d853b3">Complications</h3>
+<div class="outline-text-3" id="text-org1d853b3">
 <ul class="org-ul">
 <li>74LS132 contains only NAND. How can we construct a full adder using only XOR and NAND?</li>
 <li>74LS136 has open-collector outputs. Use a pull-up resistor to provide logic high for each XOR output you use.</li>
@@ -437,9 +372,9 @@ Possible Full Adder implementations:
 </div>
 </div>
 
-<div id="outline-container-org7ba4b83" class="outline-3">
-<h3 id="org7ba4b83">Hints</h3>
-<div class="outline-text-3" id="text-org7ba4b83">
+<div id="outline-container-org716e841" class="outline-3">
+<h3 id="org716e841">Hints</h3>
+<div class="outline-text-3" id="text-org716e841">
 <p>
 Connect wires one at a time, double-checking as you go.  Debugging circuits with many wires is harder than debugging small circuits with few wires.
 </p>
@@ -447,7 +382,6 @@ Connect wires one at a time, double-checking as you go.  Debugging circuits with
 <p>
 Make connections <i>before</i> applying power.  A misplaced wire can destroy a chip in milliseconds.
 </p>
->>>>>>> f71ede146ee1a5dc765dac1e3cd7bba2b859fd9f
 </div>
 </div>
 </div>
