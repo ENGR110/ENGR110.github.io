@@ -1,5 +1,5 @@
 #+TITLE: Hands-On Lab
-#+SUBTITLE: Full Adder
+#+SUBTITLE: (A04) Full Adder
 #+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
