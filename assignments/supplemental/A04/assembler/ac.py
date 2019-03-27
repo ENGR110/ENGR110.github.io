@@ -2,7 +2,7 @@
 # given an A or C instruction in Hack assembly language,
 # output the corresponding Hack machine code for that instruction.
 
-# first step: split the whole instruction into 3 parts
+# split a 'C' instruction into 3 parts
 def split(s):
     # default values for dest, comp and jump:
     comp = s  # the input string
@@ -20,7 +20,8 @@ def split(s):
         # comp = s.split(";")[0]   # SUBTLE BUG! s might still have an '=' sign...
         comp = comp.split(";")[0]  # ...but this works
 
-    return [dest, comp, jump]
+    # use string.strip() to remove leading and trailing spaces
+    return [dest.strip(), comp.strip(), jump.strip()]
 
 
 # next step: look up the bits which match the given instruction
@@ -41,10 +42,10 @@ def lookup_jump(jump):
 
 # TODO - use a similar look-up table approach for dest and comp
 def lookup_comp(comp):
-    pass
+    return '0101010'
 
 def lookup_dest(dest):
-    pass
+    return '000'
 
 def encode_a(inst):
     # example: encode_a("@234") returns '0000000011101010'
@@ -66,9 +67,9 @@ def encode_c(inst):
     ldest = lookup_dest(dest)
     lcomp = lookup_comp(comp)
     ljump = lookup_jump(jump)
-    return '111' + ldest + lcomp + ljump
+    return '111' + lcomp + ldest + ljump
 
-def encode_ac(line):
+def encode(line):
     # Given an A or C instruction, encode it as Hack machine code.
     # Return a string of 16 1s or 0s.
     if line[0] == '@':
