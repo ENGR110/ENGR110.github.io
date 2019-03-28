@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-03-26 Tue 15:58 -->
+<!-- 2019-03-27 Wed 14:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Assignmnet 05</title>
+<title>Assignment 05</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="lx" />
 <style type="text/css">
@@ -230,37 +230,81 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Assignmnet 05
+<h1 class="title">Assignment 05
 <br />
 <span class="subtitle">From Datasheets to Truth Tables</span>
 </h1>
-
-<div id="outline-container-org8f099a8" class="outline-2">
-<h2 id="org8f099a8">Process</h2>
-<div class="outline-text-2" id="text-org8f099a8">
 <p>
-Describe the <i>process</i> of starting with a truth table (as a requirement) and realizing that truth table in hardware, using physical chips.
+In this assignment, describe the <i>engineering process</i> involved when you are given a truth table and asked to realize the functionality of the truth table using hardware.
 </p>
-</div>
 
-<div id="outline-container-orgbb4b78c" class="outline-3">
-<h3 id="orgbb4b78c">Task: DMUX</h3>
-<div class="outline-text-3" id="text-orgbb4b78c">
+<div id="outline-container-orgd59ed50" class="outline-2">
+<h2 id="orgd59ed50">Requirements</h2>
+<div class="outline-text-2" id="text-orgd59ed50">
 <p>
-Describe the implementation of a 2-output Demultiplexer, using the same hierarchical approach as was used in the MyHDL.
+Implement a 1-bit, 2-output demultiplexer.
 </p>
 
 <p>
-For example, the DMUX should be constructed of only primitive gates such as AND, XOR, NOT, etc.
+It's (abbreviated) truth table is:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">select</th>
+<th scope="col" class="org-left">out<sub>a</sub></th>
+<th scope="col" class="org-left">out<sub>b</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">input</td>
+<td class="org-left">0</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">0</td>
+<td class="org-left">input</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Your task is to design a circuit which satisfies this truth table.  Additional requirements are:
 </p>
 
 <ol class="org-ol">
-<li>list the subcomponents (primitive gates) and any leftover gates</li>
-<li>how do you find the physical pin locations on the chips?</li>
-<li>which specific pins end up as the input and output interface to the DMUX?</li>
-<li>what should be done with unused input and output pins?</li>
+<li>logical 1 should be approximately 5V</li>
+<li>logical 0 should be approximately 0V</li>
+<li>you may not use a ready-made Dmux chip</li>
+<li>you may use any of the primitive gates (And, Xor, Not, etc.)</li>
 </ol>
 </div>
+</div>
+
+
+<div id="outline-container-org4cf6cf5" class="outline-2">
+<h2 id="org4cf6cf5">Deliverables</h2>
+<div class="outline-text-2" id="text-org4cf6cf5">
+<ol class="org-ol">
+<li>list the chips used in your design, and their quantities</li>
+<li>list the pins (pin number on each chip) that comprise the "outer" interface to the Dmux</li>
+<li>describe the "internal" connections of the subcomponents (which pins of And/Or/Not/etc. connect to other gates of your implementation)</li>
+<li>provide links to datasheets used to find the physical pinout of the chips you used</li>
+<li>based on reading the datasheet, what should be done with unused inputs (if your design has any)</li>
+</ol>
 </div>
 </div>
 </div>

@@ -1,0 +1,32 @@
+#+TITLE: Assignment 05
+#+SUBTITLE: From Datasheets to Truth Tables
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
+
+In this assignment, describe the /engineering process/ involved when you are given a truth table and asked to realize the functionality of the truth table using hardware.
+
+* Requirements
+  Implement a 1-bit, 2-output demultiplexer.
+
+  It's (abbreviated) truth table is:
+
+  | select | out_a | out_b |
+  |--------+-------+-------|
+  |      0 | input | 0     |
+  |      1 | 0     | input |
+
+  Your task is to design a circuit which satisfies this truth table.  Additional requirements are:
+
+  1. logical 1 should be approximately 5V
+  2. logical 0 should be approximately 0V
+  3. you may not use a ready-made Dmux chip
+  4. you may use any of the primitive gates (And, Xor, Not, etc.)
+
+
+* Deliverables
+  1. list the chips used in your design, and their quantities
+  2. list the pins (pin number on each chip) that comprise the "outer" interface to the Dmux
+  3. describe the "internal" connections of the subcomponents (which pins of And/Or/Not/etc. connect to other gates of your implementation)
+  4. provide links to datasheets used to find the physical pinout of the chips you used
+  5. based on reading the datasheet, what should be done with unused inputs (if your design has any)
+
