@@ -12,9 +12,10 @@ def repeat(s, i):
 
 # test where input length is multiplied
 print('testing repeat')
-for i in [1, 2, 100, 99]:
+for i in [1, 2, 100, 101]:
     if len(repeat('ab', i)) != (2*i):
-        print(i + ' failed')
+        print(str(i) + ' failed')
+
 # test where input is returned unaltered
 for i in [0, -1, -100, 101]:
     if (len(repeat('ab', i)) != 2):
