@@ -4,20 +4,33 @@
 # symbols:
 # recognize them
 # map them to memory locations
-symbols = []
-def find_symbol(line):
+labels = []
+label_num = []
+def find_symbol(line, linenum):
     # anything after @ which is not a number
     # (sym) things inside parentheses
     sym = ''
+    inc = 1
     if line[0] == '@':
         if not line[1:].isnumeric():
             sym = line[1:] # validate sym (skipping this step for now)
     if line[0] == '(':
+        inc = 0
         sym = line[1:-1]  # remove '(' and ')', leaving the symbol
-    return sym
+        labels.append(sym)
+        label_num.append(linenum + 1)
+    return [sym, inc]
 
-def map_symbol():
-    pass
+def map_symbol(line):
+    # assume already made one pass with find_symbol
+    # replace @LOOP with @5 etc.
+    if line[0] == '@':
+        if not line[1:].isnumeric():
+            this_label = line[1:] # validate sym (skipping this step for now)
+            if this_label in labels:
+                # replace @val with the number
+                return '@' + str(label_num[labels.index(this_label)])
+    return line
 
 def remove_whitespace(f):
     ls = []
@@ -48,5 +61,12 @@ if __name__ == "__main__":
         # print(remove_whitespace(remove_comments(f)))
         commentless = remove_comments(f)
         spaceless = remove_whitespace(commentless)
+        i = 0
         for line in spaceless:
-            print(find_symbol(line))
+            [s, j] = find_symbol(line, i)
+            i += j
+        for line in spaceless:
+            print(line, map_symbol(line))
+
+        print(labels)
+        print(label_num)

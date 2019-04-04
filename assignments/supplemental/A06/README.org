@@ -1,10 +1,9 @@
 * Assembler
-
-See chapters 5 and 6 for more detail.
+  See chapters 5 and 6 for more detail.
 
 ** Hack Assembly Language
-- Files end in =.asm=
-- 2-ish types of instructions (A, C, and label pseudo-instructions)
-- comments start with =//=
-- symbols 
-- case sensitive symbols
+   - Files end in =.asm=
+   - A and C instructions
+   - (label) pseudo-instructions
+   - comments start with =//=
+   - case sensitive symbols
