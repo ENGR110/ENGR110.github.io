@@ -1,0 +1,6 @@
+D=M
+D;JLE
+M=D
+D=A
+M=D
+0;JMP

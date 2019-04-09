@@ -56,6 +56,9 @@ def remove_comments(f):
             ls.append(this_line)
     return ls
 
+def only_instructions(f):
+    return remove_whitespace(remove_comments(f))
+
 if __name__ == "__main__":
     with open("a.hack") as f:
         # print(remove_whitespace(remove_comments(f)))

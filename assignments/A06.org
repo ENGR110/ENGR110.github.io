@@ -1,0 +1,105 @@
+#+TITLE: Assignment 06
+#+SUBTITLE: Assembler
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
+This assignment is in several parts.
+
+In total, there are 5 files to upload:
+- =a.py=
+- =c.py=
+- =st0.py=
+- =st1.py=
+- =st2.py=
+
+* Part 1: Translate A instructions
+  Write a program, =a.py= which translates numeric-only A instructions.
+
+  Test input files for part 1: 
+  - [[./supplemental/A06/tests/a_numeric_1.asm]]
+  - [[./supplemental/A06/tests/a_numeric_2.asm]] (whitespace and comments)
+
+  Your program should print the following for each of the above inputs:
+
+  #+begin_src
+0000000000101010
+0000000001111011
+0111111111111111
+0000000000000000
+0110000000000000
+0100000000000000 
+  #+end_src
+
+* Part 2: Translate C instructions
+  Write a program, =c.py= which translates C instructions, and ignores everything else.
+
+  Test input files for part 2:
+  - [[./supplemental/A06/tests/c_1.asm]]
+  - [[./supplemental/A06/tests/c_2.asm]] (whitespace and comments)
+
+Your program should print the following for each of the above inputs:
+
+  #+begin_src
+(todo)
+  #+end_src
+
+* Part 3: Symbol Table
+** Part 3.1: Default Table
+   Create a file, =st0.py=, containing the default symbol table that every Hack assembly program uses, as a python dictionary.
+
+Keys in the dictionary should match the names used in the Hack assembly: =SCREEN=, =R13=, =SP=, etc.  Values for each of these keys can be found in Chapter 6.
+
+   #+begin_src python
+symbol_table = {}  # fill in the table
+   #+end_src
+
+** Part 3.2: Add Labels
+   Create a file, =st1.py=, with an updated symbol table.  This symbol table should still contain the default symbols from the previous step, but in addition should have all the labels from the input file.
+
+   Scan through the input assembly program and add labels to the symbol table.  The key in the table should be the label, without the enclosing parentheses.  The value should be the number of the instruction that immediately follows the label.
+
+** Part 3.3: Add Variables
+Create a file, =st2.py=, with an updated symbol table.  It should contain the same entries from the previous step, but also contain variables from the input file.
+
+   Scan through the input assembly program again, adding variables to the symbol table.  The key should be the varialbe name, and the value should start at 16 and increment for each new variable.
+
+* Appendix: Input/Output
+  Each part of this assignment should accept a filename as input from the command line, so that you can compare your program's output to the expected output for a given input.
+
+  For example, running your program would call =python3= followed by your program's name, followed finally by the input file:
+
+  #+begin_src bash
+$ python3 yourfile.py folder/to/example_input.asm
+  #+end_src
+
+  To read a file from the command line in Python, you may use the following in your code:
+
+  #+begin_src python
+import sys
+filename = sys.argv[-1]
+with open(filename) as f:
+    for line in f:
+        print(line)
+  #+end_src
+
+  Note that if you want to iterate over the lines in =f= again, you can seek to the beginning of the file, or store the lines in a list:
+
+  #+begin_src python
+import sys
+filename = sys.argv[-1]
+with open(filename) as f:
+     for line in f:
+         process(line)
+     f.seek(0)  # go back to the beginning of f
+     for line in f:
+         process_again(line)
+     
+     # alternatively, store lines in a list:
+     lines = []
+     for line in f:
+         lines.append(line)
+     # now you can iterate over lines multiple times:
+     for line in lines:
+         process(line)
+     for line in lines:  # no need to f.seek(0) since lines is a list
+         process_again(line)
+  #+end_src
