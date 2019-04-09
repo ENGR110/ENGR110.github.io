@@ -3,12 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-03-26 Tue 16:02 -->
+<!-- 2019-04-08 Mon 23:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ENGR-E110</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="lx" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -161,6 +160,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -186,7 +198,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -240,9 +252,9 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
 </p>
 
 
-<div id="outline-container-org7b44139" class="outline-2">
-<h2 id="org7b44139">Prerequisites</h2>
-<div class="outline-text-2" id="text-org7b44139">
+<div id="outline-container-org374e722" class="outline-2">
+<h2 id="org374e722">Prerequisites</h2>
+<div class="outline-text-2" id="text-org374e722">
 <p>
 Students should have already taken ENGR-E 101 Innovation and Design: <a href="https://registrar.indiana.edu/browser/soc4192/ENGR/ENGR-E101.shtml">https://registrar.indiana.edu/browser/soc4192/ENGR/ENGR-E101.shtml</a>
 </p>
@@ -260,9 +272,9 @@ Students should also come to E110 prepared with:
 </div>
 </div>
 
-<div id="outline-container-org716518b" class="outline-2">
-<h2 id="org716518b">Outcomes</h2>
-<div class="outline-text-2" id="text-org716518b">
+<div id="outline-container-org4c0ffce" class="outline-2">
+<h2 id="org4c0ffce">Outcomes</h2>
+<div class="outline-text-2" id="text-org4c0ffce">
 <p>
 Students will finish E110 with knowledge in:
 </p>
@@ -277,9 +289,9 @@ Students will finish E110 with knowledge in:
 </div>
 </div>
 
-<div id="outline-container-org8b6bafe" class="outline-2">
-<h2 id="org8b6bafe">Contact</h2>
-<div class="outline-text-2" id="text-org8b6bafe">
+<div id="outline-container-orgde418aa" class="outline-2">
+<h2 id="orgde418aa">Contact</h2>
+<div class="outline-text-2" id="text-orgde418aa">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -332,9 +344,9 @@ Students will finish E110 with knowledge in:
 </div>
 </div>
 
-<div id="outline-container-org6e61538" class="outline-2">
-<h2 id="org6e61538">Classroom location, meeting times</h2>
-<div class="outline-text-2" id="text-org6e61538">
+<div id="outline-container-org2eeb145" class="outline-2">
+<h2 id="org2eeb145">Classroom location, meeting times</h2>
+<div class="outline-text-2" id="text-org2eeb145">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -374,18 +386,18 @@ Students will finish E110 with knowledge in:
 </div>
 </div>
 
-<div id="outline-container-org8ae719d" class="outline-2">
-<h2 id="org8ae719d">Announcements</h2>
-<div class="outline-text-2" id="text-org8ae719d">
+<div id="outline-container-org4f9ee6f" class="outline-2">
+<h2 id="org4f9ee6f">Announcements</h2>
+<div class="outline-text-2" id="text-org4f9ee6f">
 <p>
 We will post to Canvas with updates/clarifications/announcements.  By default, you should already have notifications from Canvas enabled.  It is your responsibility to ensure you can receive such announcements.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org74608b7" class="outline-2">
-<h2 id="org74608b7">Autograder</h2>
-<div class="outline-text-2" id="text-org74608b7">
+<div id="outline-container-orgad822d8" class="outline-2">
+<h2 id="orgad822d8">Autograder</h2>
+<div class="outline-text-2" id="text-orgad822d8">
 <p>
 We will an automated grading system for assignments: <a href="https://autograder.sice.indiana.edu">autograder link</a>
 </p>
@@ -396,9 +408,9 @@ For security reasons, you must access it through the IU network - either access 
 </div>
 </div>
 
-<div id="outline-container-orgdf18d9c" class="outline-2">
-<h2 id="orgdf18d9c">Materials/Textbooks</h2>
-<div class="outline-text-2" id="text-orgdf18d9c">
+<div id="outline-container-org82e3add" class="outline-2">
+<h2 id="org82e3add">Materials/Textbooks</h2>
+<div class="outline-text-2" id="text-org82e3add">
 <ul class="org-ul">
 <li><p>
 Textbook: <i>The Elements of Computing Systems</i> by Noam Nisan and Shimon Schocken. ISBN 978-0262640688
@@ -413,9 +425,9 @@ Textbook: <i>The Elements of Computing Systems</i> by Noam Nisan and Shimon Scho
 </div>
 </div>
 
-<div id="outline-container-org5cf55ae" class="outline-2">
-<h2 id="org5cf55ae">Conduct</h2>
-<div class="outline-text-2" id="text-org5cf55ae">
+<div id="outline-container-org1a4a890" class="outline-2">
+<h2 id="org1a4a890">Conduct</h2>
+<div class="outline-text-2" id="text-org1a4a890">
 <p>
 <b><b>Lab/Classroom etiquette</b></b>
 </p>
@@ -461,9 +473,9 @@ We will take attendance at random times throughout the semester, primarily for e
 </div>
 </div>
 
-<div id="outline-container-orgb524bca" class="outline-2">
-<h2 id="orgb524bca">Get the help you need</h2>
-<div class="outline-text-2" id="text-orgb524bca">
+<div id="outline-container-orgd7b2528" class="outline-2">
+<h2 id="orgd7b2528">Get the help you need</h2>
+<div class="outline-text-2" id="text-orgd7b2528">
 <p>
 <b><b>Disability Assistance</b></b>
 </p>
@@ -482,9 +494,9 @@ SICE tutoring is available free of charge for this course (and others you may be
 </div>
 </div>
 
-<div id="outline-container-org673bc6f" class="outline-2">
-<h2 id="org673bc6f">Schedule</h2>
-<div class="outline-text-2" id="text-org673bc6f">
+<div id="outline-container-orgaa14867" class="outline-2">
+<h2 id="orgaa14867">Schedule</h2>
+<div class="outline-text-2" id="text-orgaa14867">
 <p>
 See also: <a href="https://registrar.indiana.edu/official-calendar/official-calendar-spring.shtml?s=16w">Official IU Calendar for Spring 2019</a>
 </p>
@@ -838,7 +850,7 @@ See also: <a href="https://registrar.indiana.edu/official-calendar/official-cale
 <td class="org-left">Tues</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="./assignments/A06.html">A06</a></td>
 </tr>
 
 <tr>
