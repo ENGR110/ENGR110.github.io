@@ -136,7 +136,7 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
   | 04/08 | Mon   |                                |                          |               |
   | 04/09 | Tues  |                                |                          | [[./assignments/A06.html][A06]]           |
   | 04/11 | Thurs |                                |                          |               |
-  | 04/15 | Mon   |                                |                          |               |
+  | 04/15 | Mon   |                                |                          | [[./assignments/A07.html][A07]]           |
   | 04/16 | Tues  |                                |                          |               |
   | 04/18 | Thurs |                                |                          |               |
   | 04/22 | Mon   |                                |                          |               |
@@ -149,7 +149,6 @@ Welcome to E110!  "Engineering Computing Architecture" is about how computers ar
   | 05/07 | Tues  |                                |                          |               |
   | 05/09 | Thurs | Semester Ends                  |                          |               |
 
-#  [[./assignments/A07.html][A07]]
 #  [[./assignments/A08.html][A08]]
 #  [[./assignments/A09.html][A09]]
 #  [[./assignments/A10.html][A10]]
