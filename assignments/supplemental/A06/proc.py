@@ -64,6 +64,9 @@ if __name__ == "__main__":
         # print(remove_whitespace(remove_comments(f)))
         commentless = remove_comments(f)
         spaceless = remove_whitespace(commentless)
+        remove_comments(remove_whitespace(f))
+        # remove_comments(f)  # returns ["line"]
+        # remove_whitespace(f) # returns ["line"]
         i = 0
         for line in spaceless:
             [s, j] = find_symbol(line, i)
