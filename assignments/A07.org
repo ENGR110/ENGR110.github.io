@@ -1,0 +1,28 @@
+#+TITLE: Assignment 07
+#+SUBTITLE: Integration
+#+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
+
+* Implement the Hack CPU in MyHDL
+  : See Slide 48 of Lecture 5
+
+** Describe required components
+   Write interfaces (using MyHDL syntax) for each of the required top-level components of the Hack CPU:
+
+   - Arithmetic Logic Unit (ALU)
+   - Program Counter
+   - A register
+   - D register
+   - Mux16
+
+** Describe top-level interface
+
+   : See Slide 30 of Lecture 5
+
+   Write the interface (using MyHDL syntax) to the top-level of the CPU, i.e. the inputs and outputs of the CPU which connect to the larger Hack Computer.
+
+* Implement the Hack Computer in MyHDL + Python
+  Use Python3 to simulate screen/keyboard
+
+** Testing
+   Design a test that exercises the entire Hack CPU, from power-on time through interactive program usage.
