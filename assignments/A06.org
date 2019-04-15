@@ -39,7 +39,12 @@ In total, there are 5 files to upload:
 Your program should print the following for each of the above inputs:
 
   #+begin_src
-(todo)
+1111110000010000
+1110001100000110
+1110001100001000
+1110110000010000
+1110001100001000
+1110101010000111
   #+end_src
 
 * Part 3: Symbol Table

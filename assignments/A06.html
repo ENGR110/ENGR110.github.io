@@ -3,11 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-04-08 Mon 23:30 -->
+<!-- 2019-04-15 Mon 09:51 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assignment 06</title>
 <meta name="generator" content="Org mode" />
+<meta name="author" content="lx" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -160,19 +161,6 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -198,7 +186,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -261,9 +249,9 @@ In total, there are 5 files to upload:
 <li><code>st2.py</code></li>
 </ul>
 
-<div id="outline-container-org06978fb" class="outline-2">
-<h2 id="org06978fb">Part 1: Translate A instructions</h2>
-<div class="outline-text-2" id="text-org06978fb">
+<div id="outline-container-org7beff58" class="outline-2">
+<h2 id="org7beff58">Part 1: Translate A instructions</h2>
+<div class="outline-text-2" id="text-org7beff58">
 <p>
 Write a program, <code>a.py</code> which translates numeric-only A instructions.
 </p>
@@ -291,9 +279,9 @@ Your program should print the following for each of the above inputs:
 </div>
 </div>
 
-<div id="outline-container-org2ded862" class="outline-2">
-<h2 id="org2ded862">Part 2: Translate C instructions</h2>
-<div class="outline-text-2" id="text-org2ded862">
+<div id="outline-container-orga26b9b1" class="outline-2">
+<h2 id="orga26b9b1">Part 2: Translate C instructions</h2>
+<div class="outline-text-2" id="text-orga26b9b1">
 <p>
 Write a program, <code>c.py</code> which translates C instructions, and ignores everything else.
 </p>
@@ -311,18 +299,23 @@ Your program should print the following for each of the above inputs:
 </p>
 
 <pre class="example">
-(todo)
+1111110000010000
+1110001100000110
+1110001100001000
+1110110000010000
+1110001100001000
+1110101010000111
 </pre>
 </div>
 </div>
 
-<div id="outline-container-orgb712c2f" class="outline-2">
-<h2 id="orgb712c2f">Part 3: Symbol Table</h2>
-<div class="outline-text-2" id="text-orgb712c2f">
+<div id="outline-container-org0d1d2c9" class="outline-2">
+<h2 id="org0d1d2c9">Part 3: Symbol Table</h2>
+<div class="outline-text-2" id="text-org0d1d2c9">
 </div>
-<div id="outline-container-orgb469145" class="outline-3">
-<h3 id="orgb469145">Part 3.1: Default Table</h3>
-<div class="outline-text-3" id="text-orgb469145">
+<div id="outline-container-org13df8f0" class="outline-3">
+<h3 id="org13df8f0">Part 3.1: Default Table</h3>
+<div class="outline-text-3" id="text-org13df8f0">
 <p>
 Create a file, <code>st0.py</code>, containing the default symbol table that every Hack assembly program uses, as a python dictionary.
 </p>
@@ -332,15 +325,15 @@ Keys in the dictionary should match the names used in the Hack assembly: <code>S
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #af5fd7;">symbol_table</span> = {}  <span style="color: #008787; background-color: #ffffff;"># </span><span style="color: #008787; background-color: #ffffff;">fill in the table</span>
+<pre class="src src-python"><span style="color: #f6f080;">symbol_table</span> = {}  <span style="color: #798188;"># </span><span style="color: #798188;">fill in the table</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgf8700fa" class="outline-3">
-<h3 id="orgf8700fa">Part 3.2: Add Labels</h3>
-<div class="outline-text-3" id="text-orgf8700fa">
+<div id="outline-container-org13b7097" class="outline-3">
+<h3 id="org13b7097">Part 3.2: Add Labels</h3>
+<div class="outline-text-3" id="text-org13b7097">
 <p>
 Create a file, <code>st1.py</code>, with an updated symbol table.  This symbol table should still contain the default symbols from the previous step, but in addition should have all the labels from the input file.
 </p>
@@ -351,9 +344,9 @@ Scan through the input assembly program and add labels to the symbol table.  The
 </div>
 </div>
 
-<div id="outline-container-org46e7277" class="outline-3">
-<h3 id="org46e7277">Part 3.3: Add Variables</h3>
-<div class="outline-text-3" id="text-org46e7277">
+<div id="outline-container-org7c8a371" class="outline-3">
+<h3 id="org7c8a371">Part 3.3: Add Variables</h3>
+<div class="outline-text-3" id="text-org7c8a371">
 <p>
 Create a file, <code>st2.py</code>, with an updated symbol table.  It should contain the same entries from the previous step, but also contain variables from the input file.
 </p>
@@ -365,9 +358,9 @@ Scan through the input assembly program again, adding variables to the symbol ta
 </div>
 </div>
 
-<div id="outline-container-org7fa27aa" class="outline-2">
-<h2 id="org7fa27aa">Appendix: Input/Output</h2>
-<div class="outline-text-2" id="text-org7fa27aa">
+<div id="outline-container-org1733cda" class="outline-2">
+<h2 id="org1733cda">Appendix: Input/Output</h2>
+<div class="outline-text-2" id="text-org1733cda">
 <p>
 Each part of this assignment should accept a filename as input from the command line, so that you can compare your program's output to the expected output for a given input.
 </p>
@@ -386,11 +379,11 @@ To read a file from the command line in Python, you may use the following in you
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #268bd2; font-weight: bold;">import</span> sys
-<span style="color: #af5fd7;">filename</span> = sys.argv[-<span style="color: #8700af;">1</span>]
-<span style="color: #268bd2; font-weight: bold;">with</span> <span style="color: #268bd2;">open</span>(filename) <span style="color: #268bd2; font-weight: bold;">as</span> f:
-    <span style="color: #268bd2; font-weight: bold;">for</span> line <span style="color: #268bd2; font-weight: bold;">in</span> f:
-        <span style="color: #268bd2; font-weight: bold;">print</span>(line)
+<pre class="src src-python"><span style="color: #fa9a4b; font-weight: bold;">import</span> sys
+<span style="color: #f6f080;">filename</span> = sys.argv[-<span style="color: #b9d977;">1</span>]
+<span style="color: #fa9a4b; font-weight: bold;">with</span> <span style="color: #fa9a4b; font-weight: bold;">open</span>(filename) <span style="color: #fa9a4b; font-weight: bold;">as</span> f:
+    <span style="color: #fa9a4b; font-weight: bold;">for</span> line <span style="color: #fa9a4b; font-weight: bold;">in</span> f:
+        <span style="color: #fa9a4b; font-weight: bold;">print</span>(line)
 </pre>
 </div>
 
@@ -399,23 +392,23 @@ Note that if you want to iterate over the lines in <code>f</code> again, you can
 </p>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #268bd2; font-weight: bold;">import</span> sys
-<span style="color: #af5fd7;">filename</span> = sys.argv[-<span style="color: #8700af;">1</span>]
-<span style="color: #268bd2; font-weight: bold;">with</span> <span style="color: #268bd2;">open</span>(filename) <span style="color: #268bd2; font-weight: bold;">as</span> f:
-     <span style="color: #268bd2; font-weight: bold;">for</span> line <span style="color: #268bd2; font-weight: bold;">in</span> f:
+<pre class="src src-python"><span style="color: #fa9a4b; font-weight: bold;">import</span> sys
+<span style="color: #f6f080;">filename</span> = sys.argv[-<span style="color: #b9d977;">1</span>]
+<span style="color: #fa9a4b; font-weight: bold;">with</span> <span style="color: #fa9a4b; font-weight: bold;">open</span>(filename) <span style="color: #fa9a4b; font-weight: bold;">as</span> f:
+     <span style="color: #fa9a4b; font-weight: bold;">for</span> line <span style="color: #fa9a4b; font-weight: bold;">in</span> f:
          process(line)
-     f.seek(<span style="color: #8700af;">0</span>)  <span style="color: #008787; background-color: #ffffff;"># </span><span style="color: #008787; background-color: #ffffff;">go back to the beginning of f</span>
-     <span style="color: #268bd2; font-weight: bold;">for</span> line <span style="color: #268bd2; font-weight: bold;">in</span> f:
+     f.seek(<span style="color: #b9d977;">0</span>)  <span style="color: #798188;"># </span><span style="color: #798188;">go back to the beginning of f</span>
+     <span style="color: #fa9a4b; font-weight: bold;">for</span> line <span style="color: #fa9a4b; font-weight: bold;">in</span> f:
          process_again(line)
 
-     <span style="color: #008787; background-color: #ffffff;"># </span><span style="color: #008787; background-color: #ffffff;">alternatively, store lines in a list:</span>
-     <span style="color: #af5fd7;">lines</span> = []
-     <span style="color: #268bd2; font-weight: bold;">for</span> line <span style="color: #268bd2; font-weight: bold;">in</span> f:
+     <span style="color: #798188;"># </span><span style="color: #798188;">alternatively, store lines in a list:</span>
+     <span style="color: #f6f080;">lines</span> = []
+     <span style="color: #fa9a4b; font-weight: bold;">for</span> line <span style="color: #fa9a4b; font-weight: bold;">in</span> f:
          lines.append(line)
-     <span style="color: #008787; background-color: #ffffff;"># </span><span style="color: #008787; background-color: #ffffff;">now you can iterate over lines multiple times:</span>
-     <span style="color: #268bd2; font-weight: bold;">for</span> line <span style="color: #268bd2; font-weight: bold;">in</span> lines:
+     <span style="color: #798188;"># </span><span style="color: #798188;">now you can iterate over lines multiple times:</span>
+     <span style="color: #fa9a4b; font-weight: bold;">for</span> line <span style="color: #fa9a4b; font-weight: bold;">in</span> lines:
          process(line)
-     <span style="color: #268bd2; font-weight: bold;">for</span> line <span style="color: #268bd2; font-weight: bold;">in</span> lines:  <span style="color: #008787; background-color: #ffffff;"># </span><span style="color: #008787; background-color: #ffffff;">no need to f.seek(0) since lines is a list</span>
+     <span style="color: #fa9a4b; font-weight: bold;">for</span> line <span style="color: #fa9a4b; font-weight: bold;">in</span> lines:  <span style="color: #798188;"># </span><span style="color: #798188;">no need to f.seek(0) since lines is a list</span>
          process_again(line)
 </pre>
 </div>
