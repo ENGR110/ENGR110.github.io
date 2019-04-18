@@ -48,6 +48,8 @@ Your program should print the following for each of the above inputs:
   #+end_src
 
 * Part 3: Symbol Table
+For each of these parts, ensure your files use the name =symbol_table= to describe the symbol table dictionary.
+
 ** Part 3.1: Default Table
    Create a file, =st0.py=, containing the default symbol table that every Hack assembly program uses, as a python dictionary.
 
