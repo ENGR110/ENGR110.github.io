@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-04-23 Tue 10:30 -->
+<!-- 2019-04-23 Tue 11:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Final Review</title>
@@ -227,6 +227,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -243,27 +265,106 @@ You may bring 1 A4 (8.5 x 11 inches) paper of original (not photocopied) hand-wr
 Below is a list of potential topics to find in the exam.
 </p>
 
-<div id="outline-container-orgb11b27c" class="outline-2">
-<h2 id="orgb11b27c">Basic Logic Gates</h2>
-<div class="outline-text-2" id="text-orgb11b27c">
+<div id="outline-container-orgf3252f4" class="outline-2">
+<h2 id="orgf3252f4">Binary Arithmetic</h2>
+<div class="outline-text-2" id="text-orgf3252f4">
+<p>
+two's complement addition/subtraction
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf6c3e34" class="outline-2">
+<h2 id="orgf6c3e34">Python programming</h2>
+<div class="outline-text-2" id="text-orgf6c3e34">
+<ul class="org-ul">
+<li>variables</li>
+<li>loops (for, while)</li>
+<li>list (array-like) indexing by number</li>
+<li>dictionary (struct-like) indexing by name</li>
+<li>imports and accessing members of python modules (e.g. <code>import foo</code> followed by <code>foo.example(42)</code>)</li>
+</ul>
+</div>
+<div id="outline-container-org1b0e594" class="outline-3">
+<h3 id="org1b0e594">Libraries</h3>
+<div class="outline-text-3" id="text-org1b0e594">
+<ul class="org-ul">
+<li><code>str.split()</code></li>
+<li><code>myhdl.bin()</code></li>
+<li><code>sys.argv</code></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga265470" class="outline-3">
+<h3 id="orga265470">built-in datatypes</h3>
+<div class="outline-text-3" id="text-orga265470">
+</div>
+<div id="outline-container-orgf0db0c9" class="outline-4">
+<h4 id="orgf0db0c9">strings</h4>
+<div class="outline-text-4" id="text-orgf0db0c9">
+<ul class="org-ul">
+<li><code>mystring = ''</code></li>
+<li><code>mystring = 'hello world!'</code></li>
+<li><code>x = mystring[1:-4]</code></li>
+<li><code>mystring +</code> '\n'=</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org432ef69" class="outline-4">
+<h4 id="org432ef69">lists</h4>
+<div class="outline-text-4" id="text-org432ef69">
+<ul class="org-ul">
+<li><code>mylist = []</code></li>
+<li><code>mylist = [1,3,5]</code></li>
+<li><code>mylist[-1] = 10</code></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb847396" class="outline-4">
+<h4 id="orgb847396">dictionaries</h4>
+<div class="outline-text-4" id="text-orgb847396">
+<ul class="org-ul">
+<li><code>mydictionary = {}</code></li>
+<li><code>mydictionary = {'a': 1, 'b':2}</code></li>
+<li><code>mydictionary['key'] = value</code></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbfbbf20" class="outline-3">
+<h3 id="orgbfbbf20">scoping rules</h3>
+<div class="outline-text-3" id="text-orgbfbbf20">
+<ul class="org-ul">
+<li>define/assign values before they're referenced</li>
+<li>modifying values inside vs. outside of a function</li>
+<li>returning values from a function vs. modifying values external to a function</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge7cb96c" class="outline-2">
+<h2 id="orge7cb96c">Basic Logic Gates</h2>
+<div class="outline-text-2" id="text-orge7cb96c">
 <p>
 Nand, Or, etc.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3c55a25" class="outline-2">
-<h2 id="org3c55a25">Intermediate Logic Gates</h2>
-<div class="outline-text-2" id="text-org3c55a25">
+<div id="outline-container-org3d959d1" class="outline-2">
+<h2 id="org3d959d1">Intermediate Logic Gates</h2>
+<div class="outline-text-2" id="text-org3d959d1">
 <p>
 Mux, Demux, Or8Way, etc.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5f435e7" class="outline-2">
-<h2 id="org5f435e7">MyHDL concepts</h2>
-<div class="outline-text-2" id="text-org5f435e7">
+<div id="outline-container-orgcee568d" class="outline-2">
+<h2 id="orgcee568d">MyHDL concepts</h2>
+<div class="outline-text-2" id="text-orgcee568d">
 <ul class="org-ul">
 <li>hierarchical modeling</li>
 <li>difference between a <code>Signal</code> and a regular variable</li>
@@ -271,9 +372,9 @@ Mux, Demux, Or8Way, etc.
 <li>purpose of <code>always_comb</code> and <code>always_seq</code></li>
 </ul>
 </div>
-<div id="outline-container-org7736e09" class="outline-3">
-<h3 id="org7736e09">Describe required components</h3>
-<div class="outline-text-3" id="text-org7736e09">
+<div id="outline-container-org0d49a2b" class="outline-3">
+<h3 id="org0d49a2b">Describe required components</h3>
+<div class="outline-text-3" id="text-org0d49a2b">
 <p>
 Write interfaces (using MyHDL syntax) for each of the required top-level components of the Hack CPU:
 </p>
@@ -289,9 +390,9 @@ Write interfaces (using MyHDL syntax) for each of the required top-level compone
 </div>
 </div>
 
-<div id="outline-container-org4e68c52" class="outline-2">
-<h2 id="org4e68c52">Hack CPU</h2>
-<div class="outline-text-2" id="text-org4e68c52">
+<div id="outline-container-org2f72af1" class="outline-2">
+<h2 id="org2f72af1">Hack CPU</h2>
+<div class="outline-text-2" id="text-org2f72af1">
 <pre class="example">
 See Slides 30 and 48 of Lecture 5
 
@@ -300,9 +401,9 @@ See Slides 30 and 48 of Lecture 5
 Identify in a diagram, and describe the purpose of:
 </p>
 </div>
-<div id="outline-container-orgcd146b7" class="outline-3">
-<h3 id="orgcd146b7">registers</h3>
-<div class="outline-text-3" id="text-orgcd146b7">
+<div id="outline-container-org83b7ab9" class="outline-3">
+<h3 id="org83b7ab9">registers</h3>
+<div class="outline-text-3" id="text-org83b7ab9">
 <ul class="org-ul">
 <li>how to construct a 1-bit register using a DFF and Mux</li>
 <li>how to construct an N-bit register from N 1-bit registers</li>
@@ -310,18 +411,18 @@ Identify in a diagram, and describe the purpose of:
 </div>
 </div>
 
-<div id="outline-container-org3fd3518" class="outline-3">
-<h3 id="org3fd3518">program counter</h3>
-<div class="outline-text-3" id="text-org3fd3518">
+<div id="outline-container-org0d941a3" class="outline-3">
+<h3 id="org0d941a3">program counter</h3>
+<div class="outline-text-3" id="text-org0d941a3">
 <p>
 purpose and behavior
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbe134cb" class="outline-3">
-<h3 id="orgbe134cb">ALU</h3>
-<div class="outline-text-3" id="text-orgbe134cb">
+<div id="outline-container-org69f83c1" class="outline-3">
+<h3 id="org69f83c1">ALU</h3>
+<div class="outline-text-3" id="text-org69f83c1">
 <ul class="org-ul">
 <li>describe purpose of input control bits and output control bits</li>
 <li>how do these relate to the Hack Assembly and Hack binary formats?</li>
@@ -329,9 +430,9 @@ purpose and behavior
 </div>
 </div>
 
-<div id="outline-container-orgc90961f" class="outline-3">
-<h3 id="orgc90961f">program memory, data memory</h3>
-<div class="outline-text-3" id="text-orgc90961f">
+<div id="outline-container-orgd32926a" class="outline-3">
+<h3 id="orgd32926a">program memory, data memory</h3>
+<div class="outline-text-3" id="text-orgd32926a">
 <p>
 What is each used for?
 How does it relate to the symbol table?

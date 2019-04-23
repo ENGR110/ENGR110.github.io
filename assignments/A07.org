@@ -8,6 +8,39 @@ You may bring 1 A4 (8.5 x 11 inches) paper of original (not photocopied) hand-wr
 
 Below is a list of potential topics to find in the exam.
 
+* Binary Arithmetic
+  two's complement addition/subtraction
+
+* Python programming
+  - variables
+  - loops (for, while)
+  - list (array-like) indexing by number
+  - dictionary (struct-like) indexing by name
+  - imports and accessing members of python modules (e.g. =import foo= followed by =foo.example(42)=)
+** Libraries
+   - =str.split()=
+   - =myhdl.bin()=
+   - =sys.argv=
+** built-in datatypes
+*** strings
+   - =mystring = ''=
+   - =mystring = 'hello world!'=
+   - =x = mystring[1:-4]=
+   - =mystring += '\n'=
+*** lists 
+   - =mylist = []=
+   - =mylist = [1,3,5]=
+   - =mylist[-1] = 10=
+*** dictionaries
+   - =mydictionary = {}=
+   - =mydictionary = {'a': 1, 'b':2}=
+   - =mydictionary['key'] = value=
+
+** scoping rules
+   - define/assign values before they're referenced
+   - modifying values inside vs. outside of a function
+   - returning values from a function vs. modifying values external to a function
+
 * Basic Logic Gates
   Nand, Or, etc.
 
