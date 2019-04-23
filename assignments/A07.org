@@ -2,79 +2,83 @@
 #+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
-Final is at normal lab time on Thursday.
+* Logistics
+  - *Final Exam* is Thursday, April 25
+    - 11:15am- is at your normal lab time (11:15am or 4:00pm) on Thursday, April 25.
+  - *Make-up Final* for those unable to attend Thursday is:
+    - 10:15am-12:15am Thurs., May 2 (10678 lab section)
+    - 5:00pm-7:00pm Thurs., May 2 (29714 lab section)
 
-You may bring 1 A4 (8.5 x 11 inches) paper of original (not photocopied) hand-written notes.
+  You may bring 1 A4 (8.5 x 11 inches) paper of original (not photocopied) hand-written notes.
 
-Below is a list of potential topics to find in the exam.
+* Topics Covered
+** Binary Arithmetic
+   two's complement addition/subtraction
 
-* Binary Arithmetic
-  two's complement addition/subtraction
+** Python programming
+   - variables
+   - loops (for, while)
+   - list (array-like) indexing by number
+   - dictionary (struct-like) indexing by name
+   - imports and accessing members of python modules (e.g. =import foo= followed by =foo.example(42)=)
+*** Libraries
+    - =str.split()=
+    - =myhdl.bin()=
+    - =sys.argv=
+*** built-in datatypes
+**** strings
+     - =mystring = ''=
+     - =mystring = 'hello world!'=
+     - =x = mystring[1:-4]=
+     - =mystring += '\n'=
+**** lists
+     - =mylist = []=
+     - =mylist = [1,3,5]=
+     - =mylist[-1] = 10=
+**** dictionaries
+     - =mydictionary = {}=
+     - =mydictionary = {'a': 1, 'b':2}=
+     - =mydictionary['key'] = value=
 
-* Python programming
-  - variables
-  - loops (for, while)
-  - list (array-like) indexing by number
-  - dictionary (struct-like) indexing by name
-  - imports and accessing members of python modules (e.g. =import foo= followed by =foo.example(42)=)
-** Libraries
-   - =str.split()=
-   - =myhdl.bin()=
-   - =sys.argv=
-** built-in datatypes
-*** strings
-   - =mystring = ''=
-   - =mystring = 'hello world!'=
-   - =x = mystring[1:-4]=
-   - =mystring += '\n'=
-*** lists 
-   - =mylist = []=
-   - =mylist = [1,3,5]=
-   - =mylist[-1] = 10=
-*** dictionaries
-   - =mydictionary = {}=
-   - =mydictionary = {'a': 1, 'b':2}=
-   - =mydictionary['key'] = value=
+*** scoping rules
+    - define/assign values before they're referenced
+    - modifying values inside vs. outside of a function
+    - returning values from a function vs. modifying values external to a function
 
-** scoping rules
-   - define/assign values before they're referenced
-   - modifying values inside vs. outside of a function
-   - returning values from a function vs. modifying values external to a function
+** Basic Logic Gates
+   Nand, Or, etc.
 
-* Basic Logic Gates
-  Nand, Or, etc.
+** Intermediate Logic Gates
+   Mux, Demux, Or8Way, etc.
 
-* Intermediate Logic Gates
-  Mux, Demux, Or8Way, etc.
+** MyHDL concepts
+   - hierarchical modeling
+   - difference between a =Signal= and a regular variable
+   - combinational versus sequential logic
+   - purpose of =always_comb= and =always_seq=
+*** Describe required components
+    Write interfaces (using MyHDL syntax) for each of the required top-level components of the Hack CPU:
 
-* MyHDL concepts
-  - hierarchical modeling
-  - difference between a =Signal= and a regular variable
-  - combinational versus sequential logic
-  - purpose of =always_comb= and =always_seq=
-** Describe required components
-   Write interfaces (using MyHDL syntax) for each of the required top-level components of the Hack CPU:
+    - Arithmetic Logic Unit (ALU)
+    - Program Counter
+    - A register
+    - D register
+    - Mux16 (example: =def Mux16(a, b, select, out)=)
 
-   - Arithmetic Logic Unit (ALU)
-   - Program Counter
-   - A register
-   - D register
-   - Mux16 (example: =def Mux16(a, b, select, out)=)
+** Hack CPU
+   : See Slides 30 and 48 of Lecture 5
+   Identify in a diagram, and describe the purpose of:
+*** registers
+    - how to construct a 1-bit register using a DFF and Mux
+    - how to construct an N-bit register from N 1-bit registers
 
-* Hack CPU
-  : See Slides 30 and 48 of Lecture 5
-  Identify in a diagram, and describe the purpose of:
-** registers
-   - how to construct a 1-bit register using a DFF and Mux
-   - how to construct an N-bit register from N 1-bit registers 
+*** program counter
+    purpose and behavior
 
-** program counter
-   purpose and behavior
+*** ALU
+    - describe purpose of input control bits and output control bits
+    - how do these relate to the Hack Assembly and Hack binary formats?
 
-** ALU
-   - describe purpose of input control bits and output control bits
-   - how do these relate to the Hack Assembly and Hack binary formats?
-
-** program memory, data memory
-   What is each used for?
-   How does it relate to the symbol table?
+*** program memory, data memory
+    What is each used for?
+    How does it relate to the symbol table?
