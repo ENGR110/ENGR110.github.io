@@ -1,11 +1,24 @@
-#+TITLE: Assignment 07
-#+SUBTITLE: Integration
+#+TITLE: Final Review
 #+OPTIONS: toc:nil date:nil num:nil html-postamble:nil
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="org.css"/>
 
-* Implement the Hack CPU in MyHDL
-  : See Slide 48 of Lecture 5
+Final is at normal lab time on Thursday.
 
+You may bring 1 A4 (8.5 x 11 inches) paper of original (not photocopied) hand-written notes.
+
+Below is a list of potential topics to find in the exam.
+
+* Basic Logic Gates
+  Nand, Or, etc.
+
+* Intermediate Logic Gates
+  Mux, Demux, Or8Way, etc.
+
+* MyHDL concepts
+  - hierarchical modeling
+  - difference between a =Signal= and a regular variable
+  - combinational versus sequential logic
+  - purpose of =always_comb= and =always_seq=
 ** Describe required components
    Write interfaces (using MyHDL syntax) for each of the required top-level components of the Hack CPU:
 
@@ -13,16 +26,22 @@
    - Program Counter
    - A register
    - D register
-   - Mux16
+   - Mux16 (example: =def Mux16(a, b, select, out)=)
 
-** Describe top-level interface
+* Hack CPU
+  : See Slides 30 and 48 of Lecture 5
+  Identify in a diagram, and describe the purpose of:
+** registers
+   - how to construct a 1-bit register using a DFF and Mux
+   - how to construct an N-bit register from N 1-bit registers 
 
-   : See Slide 30 of Lecture 5
+** program counter
+   purpose and behavior
 
-   Write the interface (using MyHDL syntax) to the top-level of the CPU, i.e. the inputs and outputs of the CPU which connect to the larger Hack Computer.
+** ALU
+   - describe purpose of input control bits and output control bits
+   - how do these relate to the Hack Assembly and Hack binary formats?
 
-* Implement the Hack Computer in MyHDL + Python
-  Use Python3 to simulate screen/keyboard
-
-** Testing
-   Design a test that exercises the entire Hack CPU, from power-on time through interactive program usage.
+** program memory, data memory
+   What is each used for?
+   How does it relate to the symbol table?

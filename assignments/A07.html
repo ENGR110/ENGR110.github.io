@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-04-15 Mon 10:10 -->
+<!-- 2019-04-23 Tue 10:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Assignment 07</title>
+<title>Final Review</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="lx" />
 <style type="text/css">
@@ -230,23 +230,50 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Assignment 07
-<br />
-<span class="subtitle">Integration</span>
-</h1>
+<h1 class="title">Final Review</h1>
+<p>
+Final is at normal lab time on Thursday.
+</p>
 
-<div id="outline-container-org7b9060e" class="outline-2">
-<h2 id="org7b9060e">Implement the Hack CPU in MyHDL</h2>
-<div class="outline-text-2" id="text-org7b9060e">
-<pre class="example">
-See Slide 48 of Lecture 5
+<p>
+You may bring 1 A4 (8.5 x 11 inches) paper of original (not photocopied) hand-written notes.
+</p>
 
-</pre>
+<p>
+Below is a list of potential topics to find in the exam.
+</p>
+
+<div id="outline-container-orgb11b27c" class="outline-2">
+<h2 id="orgb11b27c">Basic Logic Gates</h2>
+<div class="outline-text-2" id="text-orgb11b27c">
+<p>
+Nand, Or, etc.
+</p>
+</div>
 </div>
 
-<div id="outline-container-orgede2fd0" class="outline-3">
-<h3 id="orgede2fd0">Describe required components</h3>
-<div class="outline-text-3" id="text-orgede2fd0">
+<div id="outline-container-org3c55a25" class="outline-2">
+<h2 id="org3c55a25">Intermediate Logic Gates</h2>
+<div class="outline-text-2" id="text-org3c55a25">
+<p>
+Mux, Demux, Or8Way, etc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f435e7" class="outline-2">
+<h2 id="org5f435e7">MyHDL concepts</h2>
+<div class="outline-text-2" id="text-org5f435e7">
+<ul class="org-ul">
+<li>hierarchical modeling</li>
+<li>difference between a <code>Signal</code> and a regular variable</li>
+<li>combinational versus sequential logic</li>
+<li>purpose of <code>always_comb</code> and <code>always_seq</code></li>
+</ul>
+</div>
+<div id="outline-container-org7736e09" class="outline-3">
+<h3 id="org7736e09">Describe required components</h3>
+<div class="outline-text-3" id="text-org7736e09">
 <p>
 Write interfaces (using MyHDL syntax) for each of the required top-level components of the Hack CPU:
 </p>
@@ -256,39 +283,58 @@ Write interfaces (using MyHDL syntax) for each of the required top-level compone
 <li>Program Counter</li>
 <li>A register</li>
 <li>D register</li>
-<li>Mux16</li>
+<li>Mux16 (example: <code>def Mux16(a, b, select, out)</code>)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4e68c52" class="outline-2">
+<h2 id="org4e68c52">Hack CPU</h2>
+<div class="outline-text-2" id="text-org4e68c52">
+<pre class="example">
+See Slides 30 and 48 of Lecture 5
+
+</pre>
+<p>
+Identify in a diagram, and describe the purpose of:
+</p>
+</div>
+<div id="outline-container-orgcd146b7" class="outline-3">
+<h3 id="orgcd146b7">registers</h3>
+<div class="outline-text-3" id="text-orgcd146b7">
+<ul class="org-ul">
+<li>how to construct a 1-bit register using a DFF and Mux</li>
+<li>how to construct an N-bit register from N 1-bit registers</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5fb05c4" class="outline-3">
-<h3 id="org5fb05c4">Describe top-level interface</h3>
-<div class="outline-text-3" id="text-org5fb05c4">
-<pre class="example">
-See Slide 30 of Lecture 5
-
-</pre>
-
+<div id="outline-container-org3fd3518" class="outline-3">
+<h3 id="org3fd3518">program counter</h3>
+<div class="outline-text-3" id="text-org3fd3518">
 <p>
-Write the interface (using MyHDL syntax) to the top-level of the CPU, i.e. the inputs and outputs of the CPU which connect to the larger Hack Computer.
+purpose and behavior
 </p>
 </div>
 </div>
+
+<div id="outline-container-orgbe134cb" class="outline-3">
+<h3 id="orgbe134cb">ALU</h3>
+<div class="outline-text-3" id="text-orgbe134cb">
+<ul class="org-ul">
+<li>describe purpose of input control bits and output control bits</li>
+<li>how do these relate to the Hack Assembly and Hack binary formats?</li>
+</ul>
+</div>
 </div>
 
-<div id="outline-container-org1177b99" class="outline-2">
-<h2 id="org1177b99">Implement the Hack Computer in MyHDL + Python</h2>
-<div class="outline-text-2" id="text-org1177b99">
+<div id="outline-container-orgc90961f" class="outline-3">
+<h3 id="orgc90961f">program memory, data memory</h3>
+<div class="outline-text-3" id="text-orgc90961f">
 <p>
-Use Python3 to simulate screen/keyboard
-</p>
-</div>
-
-<div id="outline-container-org411e57a" class="outline-3">
-<h3 id="org411e57a">Testing</h3>
-<div class="outline-text-3" id="text-org411e57a">
-<p>
-Design a test that exercises the entire Hack CPU, from power-on time through interactive program usage.
+What is each used for?
+How does it relate to the symbol table?
 </p>
 </div>
 </div>
